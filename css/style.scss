@@ -1,10 +1,16 @@
 body {
   color: #222;
 }
+
 .header-wrapper {
   width: 1200px;
-  height: 150px;
+  height: 100px;
+
+  img {
+    width: 100px;
+    }
 }
+
 .content-wrapper {
   width: 1200px;
 }
