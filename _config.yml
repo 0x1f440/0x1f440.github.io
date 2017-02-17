@@ -1,1 +1,4 @@
 encoding: UTF-8
+
+sass:
+  style: compressed
