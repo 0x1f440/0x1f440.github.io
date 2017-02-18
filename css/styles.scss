@@ -6,7 +6,8 @@ body {
 }
 
 .header-wrapper {
-  width: 1200px;
+  margin: 0 auto;
+  width: 800px;
   height: 100px;
 
   img {
@@ -14,6 +15,7 @@ body {
     }
 }
 
-.content-wrapper {
-  width: 1200px;
+.content-wrapper, .footer {
+  margin: 0 auto;
+  width: 800px;
 }
