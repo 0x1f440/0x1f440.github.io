@@ -1,0 +1,46 @@
+.project-list {
+  margin: 2%;
+  width: 96%;
+  height: 250px;
+
+  background-size: cover;
+
+  vertical-align: top;
+  box-sizing: border-box;
+
+  .meta {
+    padding: 30px;
+    height: 250px;
+
+    background-color: rgba(0,0,0,.6);
+
+    box-sizing: border-box;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+
+    .title {
+      margin-bottom: 10px;
+
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      margin-bottom: 4px;
+
+      font-size: .8em;
+
+      background-color: rgba(255,255,255,.8);
+    }
+  }
+}
+
+.project-list:hover > .meta {
+  visibility: visible;
+  opacity: 1;
+}

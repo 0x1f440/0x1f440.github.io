@@ -1,6 +1,7 @@
 ---
 ---
 @import 'grid';
+@import 'project';
 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
@@ -50,14 +51,14 @@ a {
 }
 
 footer {
-  padding: 60px 0;
+  padding: 30px 0;
 
   background-color: #f1f1f1;
 }
 
 .content-wrapper {
+  margin: 60px auto;
   width: $grid;
-  margin: 0 auto;
 }
 
 .main-text {

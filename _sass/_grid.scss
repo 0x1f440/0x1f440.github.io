@@ -1,3 +1,13 @@
+[class*='col-'] {
+  display: inline-block;
+  padding: 5px;
+
+  min-height: 1px;
+
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
 .col-33 {
   width: 33%;
 }
