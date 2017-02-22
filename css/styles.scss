@@ -12,6 +12,7 @@ $theme-color: #7e2cff;
 
 
 body {
+  margin: 0;
   height: 100%;
 
   font-family: 'Spoqa Han Sans', 'Sans-serif';
@@ -22,6 +23,10 @@ body {
 a {
   text-decoration: none;
   color: #333;
+}
+
+img {
+  width: 100%;
 }
 
 .header-wrapper {
