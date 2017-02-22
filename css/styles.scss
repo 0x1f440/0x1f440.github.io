@@ -1,11 +1,15 @@
 ---
 ---
+@import 'grid';
+
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+$grid: 800px;
 
 body {
   height: 100%;
 
-  color: #222;
+  color: #333;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
 
@@ -14,32 +18,51 @@ a {
 }
 
 .header-wrapper {
-  width: 150px;
-  height: 100%;
-  border-right: 1px solid #ddd;
+  width: $grid;
+  margin: 0 auto;
 
   img {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
+    width: 50px;
     }
 
   ul {
-    list-style-type: none;
+    float: right;
+    margin: 0;
     padding: 0;
+
+    list-style-type: none;
   }
 
   li {
-    padding: 10px;
+    display: block;
+    float: left;
+
+    padding: 16px 30px;
     margin: 0;
+
+    color: #333;
+    font-size: 14px;
   }
 
+  a {
+    color: #333;
+  }
 }
 
-.footer {
-  background-color: #eee;
+footer {
+  padding: 60px 0;
+
+  background-color: #f1f1f1;
 }
 
 .content-wrapper {
-  min-height: 700px;
+  width: $grid;
+  margin: 0 auto;
+}
+
+.main-text {
+  margin: 120px auto;
+
+  font-weight: 700;
+  font-size: 60px;
 }
