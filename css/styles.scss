@@ -16,6 +16,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 .header-wrapper {
@@ -51,10 +52,16 @@ a {
 }
 
 footer {
-  padding: 30px 0;
+  padding: 45px 0;
 
   background-color: #f1f1f1;
+
+  .footer {
+    margin: 0 auto;
+    width: $grid;
+  }
 }
+
 
 .content-wrapper {
   margin: 60px auto;
@@ -63,7 +70,7 @@ footer {
 
 .main-text {
   display: inline-block;
-  margin: 120px auto;
+  margin: 100px auto;
   padding-bottom: 10px;
 
   font-weight: 700;
