@@ -53,3 +53,6 @@
   font-weight: bold;
   font-size: 2em;
 }
+.active {
+  border-bottom: 2px solid $theme-color;
+}

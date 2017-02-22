@@ -1,7 +1,7 @@
 <div class="header-wrapper">
   <a href="{{ site.url }}"><img src="{{ site.baseurl }}/img/Eyes_Emoji.png" alt="http://shapecatcher.com/unicode_info/128064.html"></a>
   <ul>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/about">About</a></li>
+    <li {% if page.group == 'projects' %}class="active"{% endif %} ><a href="/projects">Projects</a></li>
+    <li {% if page.group == 'about' %}class="active"{% endif %} ><a href="/about">About</a></li>
   </ul>
 </div>
