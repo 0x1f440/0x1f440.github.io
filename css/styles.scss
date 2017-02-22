@@ -3,6 +3,8 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 body {
+  height: 100%;
+
   color: #222;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
@@ -24,6 +26,7 @@ a {
 
   ul {
     list-style-type: none;
+    padding: 0;
   }
 
   li {
