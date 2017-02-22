@@ -62,8 +62,12 @@ footer {
 }
 
 .main-text {
+  display: inline-block;
   margin: 120px auto;
+  padding-bottom: 10px;
 
   font-weight: 700;
   font-size: 60px;
+
+  border-bottom: 8px solid #7e2cff;
 }
