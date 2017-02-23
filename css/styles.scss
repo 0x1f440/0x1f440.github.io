@@ -67,8 +67,13 @@ img {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+ 
   padding: 45px 0;
-
+  width: 100%;
+  
   background-color: #f1f1f1;
 
   .footer {
@@ -79,9 +84,12 @@ footer {
 
 
 .content-wrapper {
+  position: relative;
   margin: 45px auto;
   margin-bottom: 80px;
+  
   width: $grid;
+  min-height:100%;
 }
 
 .main-text {
