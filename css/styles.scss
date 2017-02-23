@@ -10,6 +10,9 @@ $theme-color: #7e2cff;
 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -67,25 +70,6 @@ img {
   }
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
- 
-  padding: 40px 0;
-  width: 100%;
-  height: 150px;
-  
-  background-color: #f1f1f1;
-
-  box-sizing: border-box;
-  
-  .footer {
-    margin: 0 auto;
-    width: $grid;
-  }
-}
-
 #container {
   position: relative;
   min-height: 100%;
@@ -93,10 +77,10 @@ footer {
 
 .content-wrapper {
   padding-top: 45px;
-  padding-bottom: 150px;
-  
+  padding-bottom: 220px;
+
   margin: 0 auto;
-  
+
   width: $grid;
 }
 
@@ -110,4 +94,23 @@ footer {
   line-height: 1.3;
 
   border-bottom: 8px solid $theme-color;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 40px 0;
+  width: 100%;
+  height: 150px;
+
+  background-color: #f1f1f1;
+
+  box-sizing: border-box;
+
+  .footer {
+    margin: 0 auto;
+    width: $grid;
+  }
 }
