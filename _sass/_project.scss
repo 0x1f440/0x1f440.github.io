@@ -53,6 +53,14 @@
   font-weight: bold;
   font-size: 2em;
 }
+
+.project-caption {
+  margin-bottom: 50px;
+
+  font-size: 1.1em;
+  color: #666;
+}
+
 .active {
   border-bottom: 2px solid $theme-color;
 }
