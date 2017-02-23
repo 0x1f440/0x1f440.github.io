@@ -1,0 +1,55 @@
+{% assign url = include.url | split: "/" %}
+{% assign id = url.last | remove: "watch?v=" %}
+
+
+<div class="yt">
+  <picture>
+    <!--[if IE 9]><video style="display: none"><![endif]-->
+    <source type="image/webp"
+            srcset="//i.ytimg.com/vi_webp/{{ id }}/maxresdefault.webp 1080w,
+                    //i.ytimg.com/vi_webp/{{ id }}/sddefault.webp 640w,
+                    //i.ytimg.com/vi_webp/{{ id }}/hqdefault.webp 480w,
+                    //i.ytimg.com/vi_webp/{{ id }}/mqdefault.webp 320w" />
+
+    <source srcset="//i.ytimg.com/vi/{{ id }}/maxresdefault.jpg 1080w,
+                    //i.ytimg.com/vi/{{ id }}/sddefault.jpg 640w,
+                    //i.ytimg.com/vi/{{ id }}/hqdefault.jpg 480w,
+                    //i.ytimg.com/vi/{{ id }}/mqdefault.jpg 320w" />
+
+    <img src="//i.ytimg.com/vi/{{ id }}/hqdefault.jpg" />
+    <!--[if IE 9]></video><![endif]-->
+  </picture>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" onclick="playVideo('{{ id }}', this)">
+    <path d="M85.2 47.7L20.6 6.5c-5.3-3.3-9.5-1-9.5 5.2V88c0 6.2 4.4 8.8 9.8 5.8l63.9-34.7C90.1 56 90.3 50.9 85.2 47.7z"/>
+  </svg>
+
+  <noscript>
+    <a href="{{ include.url }}">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+        <path d="M85.2 47.7L20.6 6.5c-5.3-3.3-9.5-1-9.5 5.2V88c0 6.2 4.4 8.8 9.8 5.8l63.9-34.7C90.1 56 90.3 50.9 85.2 47.7z"/>
+      </svg>
+    </a>
+  </noscript>
+</div>
+
+<script>
+  function findAncestor (el, sel) {
+      while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
+      return el;
+  }
+
+  function playVideo(id, e){
+    // Create an iFrame with autoplay set to true
+    var iframe = document.createElement("iframe");
+    var iframe_url = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&autoplay=1&autohide=1";
+    iframe.setAttribute("src", iframe_url);
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "true");
+
+    // Replace the YouTube thumbnail with YouTube Player
+    var video_wrapper = findAncestor(e, ".yt");
+    video_wrapper.innerHTML = "";
+    video_wrapper.appendChild(iframe);
+  }
+</script>
