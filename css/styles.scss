@@ -13,6 +13,7 @@ $theme-color: #7e2cff;
 
 body {
   margin: 0;
+  padding: 0;
   height: 100%;
 
   font-family: 'Spoqa Han Sans', 'Sans-serif';
@@ -68,7 +69,7 @@ img {
 
 footer {
   position: absolute;
-  bottom: -150px;
+  bottom: 0;
   left: 0;
  
   padding: 40px 0;
@@ -85,14 +86,16 @@ footer {
   }
 }
 
+#container {
+  position: relative;
+  min-height: 100%;
+}
 
 .content-wrapper {
-  position: relative;
-  margin: 45px auto;
-  margin-bottom: 80px;
+  padding-top: 45px;
+  padding-bottom: 150px;
   
   width: $grid;
-  min-height:100%;
 }
 
 .main-text {
