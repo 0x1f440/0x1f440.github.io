@@ -23,6 +23,10 @@ body {
   height: calc(100%)!important;
 }
 
+img {
+  display: none;
+}
+
 .title {
   position: absolute;
   top: calc(50% - 30px);
