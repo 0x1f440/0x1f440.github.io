@@ -405,11 +405,14 @@ egg.children[3].children[0].children[3].position.x = map(event.point.x, 0, 1150,
 
 egg0.children[2].children[0].style.fillColor = faceColor;
 
+
 egg0.position = event.point;
 egg1.scaling = map(event.point.x, 0, 1150, 0.2, 0.5);
 
 egg0.children[2].children[0].rotate(
     map(event.point.x, 0, 1150, 0, 5));
+
+egg8.children[2].children[0].style.fillColor = faceColor;
 
 egg3.opacity = Math.random();
 
@@ -446,6 +449,7 @@ function onKeyDown(event){
           strokeColor: randomColor,
           strokeWidth: 35
         };
+
         egg7.children[0].style = {
           strokeColor: randomColor,
           strokeWidth: 35
