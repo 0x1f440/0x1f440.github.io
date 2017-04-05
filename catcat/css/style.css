@@ -24,7 +24,8 @@ body {
 }
 
 #preload {
-  display: none;
+  position: absolute;
+  top:-9999px;
 }
 
 .title {

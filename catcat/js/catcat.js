@@ -15,7 +15,7 @@ var preload = $('#preload');
 var count = 7; // number of images
 
 for(var i = 1; i <= count; i++) {
-    preload.append('<li><img src="img/cat (' + i + ').png"></li>');
+    preload.append('<img src="img/cat (' + i + ').png" style="width:1px; height:1px;">');
 }
 
 function onMouseDown(event) {
