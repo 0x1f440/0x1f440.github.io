@@ -23,7 +23,7 @@ body {
   height: calc(100%)!important;
 }
 
-img {
+#preload {
   display: none;
 }
 

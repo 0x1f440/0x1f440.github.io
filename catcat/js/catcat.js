@@ -11,12 +11,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-var cats = 7;
+var preload = $('#preload');
+var count = 7; // number of images
 
-function preload() {
-  for (i = 0; i < cats; i++) {
-    document.body.innerHTML = "<img 'src = img/cat (" + i + ").png' id = '{{i}}' >";
-  }
+for(var i = 1; i <= count; i++) {
+    preload.append('<li><img src="img/cat (' + i + ').png"></li>');
 }
 
 function onMouseDown(event) {
