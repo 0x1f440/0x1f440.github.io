@@ -417,6 +417,7 @@ egg5.rotate(2);
 }
 
 function onKeyDown(event){
+    randomColor = new Color(Math.random(),Math.random(),Math.random());
     console.log(event);
 
     if(event.key =='d'){
@@ -433,12 +434,29 @@ function onKeyDown(event){
         egg.position.y -= 10;
         egg7.rotate(-5);
         egg2.scale(1.01);
+        egg3.opacity += 0.05;
+
+        egg7.children[2].style = {
+          fillColor: randomColor,
+          strokeColor: randomColor,
+          strokeWidth: 5
+        };
+
+        egg7.children[1].style = {
+          strokeColor: randomColor,
+          strokeWidth: 35
+        };
+        egg7.children[0].style = {
+          strokeColor: randomColor,
+          strokeWidth: 35
+        };
     }
 
     if(event.key =='s'){
         egg.position.y += 10;
         egg7.rotate(-5);
         egg2.scale(0.99);
+        egg3.opacity -= 0.05;
     }
 }
 
