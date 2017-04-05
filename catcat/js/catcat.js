@@ -4,12 +4,19 @@
 function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
-
 /**
  * Get a random integer between `min` and `max`.
  */
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+var cats = 7;
+
+function preload() {
+  for (i = 0; i < cats; i++) {
+    document.body.innerHTML = "<img 'src = img/cat (" + i + ").png' id = '{{i}}' >";
+  }
 }
 
 function onMouseDown(event) {
