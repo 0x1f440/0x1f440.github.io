@@ -412,6 +412,8 @@ egg0.children[2].children[0].rotate(
     map(event.point.x, 0, 1150, 0, 5));
 
 egg3.opacity = Math.random();
+
+egg5.rotate(2);
 }
 
 function onKeyDown(event){
@@ -419,17 +421,32 @@ function onKeyDown(event){
 
     if(event.key =='d'){
         egg.position.x += 10;
+        egg7.rotate(5);
     }
 
     if(event.key =='a'){
         egg.position.x -= 10;
+        egg7.rotate(-5);
     }
 
+    if(event.key =='w'){
+        egg.position.y -= 10;
+        egg7.rotate(-5);
+        egg2.scale(1.01);
+    }
+
+    if(event.key =='s'){
+        egg.position.y += 10;
+        egg7.rotate(-5);
+        egg2.scale(0.99);
+    }
 }
 
 function onFrame(){
   randomColor = new Color(Math.random(),Math.random(),Math.random());
   egg4.children[2].children[1].style.fillColor = randomColor;
+
+  egg6.children[2].children[0].rotate(1);
 }
 
 function map(value, start1, stop1, start2, stop2) {
