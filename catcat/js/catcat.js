@@ -12,14 +12,14 @@ function getRandomInt(min, max) {
 }
 
 var preload = $('#preload');
-var count = 7; // number of images
+var count = 20; // number of images
 
 for(var i = 1; i <= count; i++) {
     preload.append('<img src="img/cat (' + i + ').png" style="width:1px; height:1px;">');
 }
 
 function onMouseDown(event) {
-  var cat = 'img/cat (' + getRandomInt(1, 7) + ').png';
+  var cat = 'img/cat (' + getRandomInt(1, 20) + ').png';
   var raster = new Raster(cat, event.point);
   raster
   raster.scale(getRandom(0.3, 0.8));
