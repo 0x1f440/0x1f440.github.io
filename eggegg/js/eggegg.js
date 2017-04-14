@@ -464,7 +464,7 @@ function onKeyDown(event){
     }
 }
 
-function onFrame(){
+function onFrame(event){
   randomColor = new Color(Math.random(),Math.random(),Math.random());
   egg4.children[2].children[1].style.fillColor = randomColor;
 
