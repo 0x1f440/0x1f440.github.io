@@ -689,7 +689,7 @@ function onKeyDown(event){
     conversation(event);
 }
 
-function onFrame(event){
+function onFrame(){
   randomColor = new Color(Math.random(),Math.random(),Math.random());
   egg_crazy.children[2].children[1].style.fillColor = randomColor;
 
@@ -717,7 +717,10 @@ function positionEggs(){
 }
 
 var resizecount = 0;
-
+bgColor = new Color(bgR, bgG, bgB);
+bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
+bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
+bgB = map(view.viewSize.width, 0, 1800, 0.55, 0.85);
 function onResize(){
   bgColor = new Color(bgR, bgG, bgB);
   bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
