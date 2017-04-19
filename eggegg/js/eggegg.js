@@ -1,7 +1,15 @@
+var keycount = 0;
+var clickcount = 0;
+var mouse_clone_group = new Group();
+var mouse_clone;
 var faceR;
 var faceG;
 var faceB;
 var faceColor;
+var bgR;
+var bgG;
+var bgB;
+var bgColor;
 
 /* 몸통 */
 var albumen = new Path({
@@ -90,7 +98,6 @@ var arm_l = arm.clone();
 arm_l.position.x -= 20;
 arm_l.children[0].pivot = arm_l.children[0].segments[0].point;
 arm_l.rotate(20);
-
 var arm_r = arm.clone();
 arm_r.position.x += 310;
 arm_r.position.y -= 80;
@@ -158,7 +165,7 @@ var legs = new Group([leg_l, leg_r]);
 
 var egg = new Group([legs, arms, egg_body, eyes]);
 egg.applyMatrix = false;
-egg.scale(0.5);
+egg.scale(0.4);
 
 
 egg.position = view.center;
@@ -171,224 +178,228 @@ egg.children[2].children[0].style = {
 };
 
 
-var egg0 = egg.clone();
-egg0.children[1].visible = false;
-egg0.children[0].visible = false;
-egg0.scale(0.3);
+var egg_mouse = egg.clone();
+egg_mouse.children[1].visible = false;
+egg_mouse.children[0].visible = false;
+egg_mouse.scale(0.3);
 
-var egg1 = egg.clone();
-egg1.position.x += 220;
-egg1.children[1].children[1].position.x -= 10;
-egg1.children[0].position.y -= 20;
-egg1.children[1].children[1].rotate(-70);
-egg1.children[1].children[1].position.y += 10;
-egg1.children[1].children[0].rotate(180);
-egg1.children[1].children[0].position.y -= 70;
+var egg_gloomy = egg.clone();
+egg_gloomy.children[1].children[1].position.x -= 10;
+egg_gloomy.children[0].position.y -= 20;
+egg_gloomy.children[1].children[1].rotate(-70);
+egg_gloomy.children[1].children[1].position.y += 10;
+egg_gloomy.children[1].children[0].rotate(180);
+egg_gloomy.children[1].children[0].position.y -= 70;
 
 //arms
-egg1.children[1].children[0].strokeColor = '#ffd500';
-egg1.children[1].children[1].strokeColor = '#ffd500';
-egg1.children[1].children[0].rotate(50);
+egg_gloomy.children[1].children[0].strokeColor = '#ffd500';
+egg_gloomy.children[1].children[1].strokeColor = '#ffd500';
+egg_gloomy.children[1].children[0].rotate(50);
 
 //legs
-egg1.children[0].children[0].children[0].strokeColor = '#ffd500';
-egg1.children[0].children[1].children[0].strokeColor = '#ffd500';
+egg_gloomy.children[0].children[0].children[0].strokeColor = '#ffd500';
+egg_gloomy.children[0].children[1].children[0].strokeColor = '#ffd500';
 
 //shoes
-egg1.children[0].children[0].children[1].style = {
+egg_gloomy.children[0].children[0].children[1].style = {
   strokeColor : "blue",
   fillColor : "blue"
 };
-egg1.children[0].children[1].children[1].style = {
+egg_gloomy.children[0].children[1].children[1].style = {
   strokeColor : "blue",
   fillColor : "blue"
 };
 
 //face
-egg1.children[2].children[1].style = {
+egg_gloomy.children[2].children[1].style = {
   strokeColor : "blue",
   fillColor : "blue"
 };
 
 //eyes
-egg1.children[3].children[0].children[1].style = {
+egg_gloomy.children[3].children[0].children[1].style = {
   strokeColor : "blue",
   strokeWidth : 3,
   fillColor : "blue"
 };
 
-egg1.children[3].children[1].children[1].style = {
+egg_gloomy.children[3].children[1].children[1].style = {
   strokeColor : "blue",
   strokeWidth : 3,
   fillColor : "blue"
 };
 
-var egg2 = egg.clone();
-egg2.position.x -= 220;
+var egg_blacky = egg.clone();
 
 //eyes
-egg2.children[3].children[0].children[1].style = {
+egg_blacky.children[3].children[0].children[1].style = {
   strokeColor : "black",
   strokeWidth : 3,
   fillColor : "black"
 };
 
 //shoes
-egg2.children[0].children[0].children[1].style = {
+egg_blacky.children[0].children[0].children[1].style = {
   strokeColor : "black",
   fillColor : "black"
 };
-egg2.children[0].children[1].children[1].style = {
+egg_blacky.children[0].children[1].children[1].style = {
   strokeColor : "black",
   fillColor : "black"
 };
 
 //face
-egg2.children[2].children[1].style = {
+egg_blacky.children[2].children[1].style = {
   strokeColor : "black",
   fillColor : "black"
 };
 
 //arms
-egg2.children[1].children[0].rotate(-70);
-egg2.children[1].children[0].position.y -= 60;
+egg_blacky.children[1].children[0].rotate(-70);
+egg_blacky.children[1].children[0].position.y -= 60;
 
 //legs
-egg2.children[0].children[0].rotate(20);
-egg2.children[0].children[1].rotate(-10);
-egg2.children[0].children[1].position.y -= 10;
+egg_blacky.children[0].children[0].rotate(20);
+egg_blacky.children[0].children[1].rotate(-10);
+egg_blacky.children[0].children[1].position.y -= 10;
 
 
-egg2.children[2].children[0].rotate(-30);
+egg_blacky.children[2].children[0].rotate(-30);
 
-egg2.children[3].children[0].position.x -= 30;
-egg2.children[3].children[1].position.x -= 36;
-egg2.children[3].children[0].rotate(180);
-egg2.children[3].children[1].rotate(180);
+egg_blacky.children[3].children[0].position.x -= 30;
+egg_blacky.children[3].children[1].position.x -= 36;
+egg_blacky.children[3].children[0].rotate(180);
+egg_blacky.children[3].children[1].rotate(180);
 
-egg2.children[3].children[1].children[1].style = {
+egg_blacky.children[3].children[1].children[1].style = {
   strokeColor : "black",
   strokeWidth : 3,
   fillColor : "black"
 };
 
-var egg3 = egg.clone();
-egg3.position.x -= 220;
-egg3.position.y += 220;
+var egg_ghost = egg.clone();
+egg_ghost.children[0].children[0].rotate(50);
+egg_ghost.children[0].children[0].position.x -= 150;
+egg_ghost.children[0].children[0].position.y -= 100;
 
-egg3.children[0].children[0].rotate(50);
-egg3.children[0].children[0].position.x -= 150;
-egg3.children[0].children[0].position.y -= 100;
-
-egg3.children[0].children[1].rotate(-10);
-egg3.children[0].children[1].position.x += 50;
-egg3.children[0].children[1].position.y -= 10;
+egg_ghost.children[0].children[1].rotate(-10);
+egg_ghost.children[0].children[1].position.x += 50;
+egg_ghost.children[0].children[1].position.y -= 10;
 //arms
-egg3.children[1].children[0].position.x += 30;
-egg3.children[1].children[0].position.y += 60;
-var egg4 = egg.clone();
-egg4.position.y += 220;
+egg_ghost.children[1].children[0].position.x += 30;
+egg_ghost.children[1].children[0].position.y += 60;
 
+var egg_crazy = egg.clone();
 //face
-egg4.children[2].children[1].style = {
+egg_crazy.children[2].children[1].style = {
   strokeColor : "#ffd500",
   fillColor : "blue"
 };
-egg4.children[2].children[0].rotate(50);
+egg_crazy.children[2].children[0].rotate(50);
 
-var egg5 = egg.clone();
-egg5.position.x += 220;
-egg5.position.y += 220;
+var egg_roller = egg.clone();
 //face
-egg5.children[2].children[1].scale(1.4);
-egg5.children[2].children[1].style = {
+egg_roller.children[2].children[1].scale(1.4);
+egg_roller.children[2].children[1].style = {
   strokeColor : "#802bdb",
   fillColor : "#802bdb"
 };
-egg5.rotate(-10);
+egg_roller.rotate(-10);
 
 //eyes
-egg5.children[3].children[0].children[1].position.x -= 5;
-egg5.children[3].children[1].children[1].position.x -= 5;
+egg_roller.children[3].children[0].children[1].position.x -= 5;
+egg_roller.children[3].children[1].children[1].position.x -= 5;
 
-egg5.children[2].children[0].rotate(20);
+egg_roller.children[2].children[0].rotate(20);
 
-var egg6 = egg.clone();
-egg6.position.x -= 220;
-egg6.position.y -= 220;
+var egg_rollingface = egg.clone();
 
 //arms
-egg6.children[1].children[1].rotate(-70);
-egg6.children[1].children[1].position.y += 10;
-egg6.children[1].children[0].rotate(180);
-egg6.children[1].children[0].position.y -= 70;
+egg_rollingface.children[1].children[1].rotate(-70);
+egg_rollingface.children[1].children[1].position.y += 10;
+egg_rollingface.children[1].children[0].rotate(180);
+egg_rollingface.children[1].children[0].position.y -= 70;
 
 //face
-egg6.children[2].children[1].opacity = 0;
-egg6.children[2].children[0].style = {
+egg_rollingface.children[2].children[1].opacity = 0;
+egg_rollingface.children[2].children[0].style = {
   fillColor: '#ffd500',
   strokeColor: '#ffcc00',
   strokeWidth: 5
 };
-egg6.children[2].children[0].rotate(-70);
+egg_rollingface.children[2].children[0].rotate(-70);
 
-var egg7 = egg.clone();
-egg7.position.y -= 220;
-
+var egg_rainbowface = egg.clone();
 //legs
-egg7.children[0].children[0].rotate(20);
-egg7.children[0].children[1].rotate(-10);
-egg7.children[0].children[1].position.y -= 10;
+egg_rainbowface.children[0].children[0].rotate(20);
+egg_rainbowface.children[0].children[1].rotate(-10);
+egg_rainbowface.children[0].children[1].position.y -= 10;
 
 
-egg7.children[3].children[0].position.x -= 30;
-egg7.children[3].children[1].position.x -= 36;
-egg7.children[3].children[0].rotate(180);
-egg7.children[3].children[1].rotate(180);
-egg7.children[2].children[0].rotate(-20);
-egg7.rotate(-10);
+egg_rainbowface.children[3].children[0].position.x -= 30;
+egg_rainbowface.children[3].children[1].position.x -= 36;
+egg_rainbowface.children[3].children[0].rotate(180);
+egg_rainbowface.children[3].children[1].rotate(180);
+egg_rainbowface.children[2].children[0].rotate(-20);
+egg_rainbowface.rotate(-10);
 
-egg7.children[2].style = {
+egg_rainbowface.children[2].style = {
   fillColor: 'magenta',
   strokeColor: 'magenta',
   strokeWidth: 5
 };
 
-egg7.children[1].style = {
+egg_rainbowface.children[1].style = {
   strokeColor: 'magenta',
   strokeWidth: 35
 };
-egg7.children[0].style = {
+egg_rainbowface.children[0].style = {
   strokeColor: 'magenta',
   strokeWidth: 35
 };
-var egg8 = egg.clone();
-egg8.position.x += 220;
-egg8.position.y -= 220;
+var egg_yellowface = egg.clone();
+egg_yellowface.children[0].children[0].rotate(50);
+egg_yellowface.children[0].children[0].position.x -= 50;
+egg_yellowface.children[0].children[0].position.y -= 10;
 
+egg_yellowface.children[0].children[1].rotate(-10);
+egg_yellowface.children[0].children[1].position.x += 50;
+egg_yellowface.children[0].children[1].position.y -= 10;
 
-egg8.children[0].children[0].rotate(50);
-egg8.children[0].children[0].position.x -= 50;
-egg8.children[0].children[0].position.y -= 10;
+egg.bringToFront();
 
-egg8.children[0].children[1].rotate(-10);
-egg8.children[0].children[1].position.x += 50;
-egg8.children[0].children[1].position.y -= 10;
-function onMouseDown(event) {
-  var eggs = egg0.clone();
+var text = new PointText(new Point(100, 100));
+text.fontFamily = 'Bangers';
+text.fontSize = 40;
+text.fillColor = "#00fbcf";
+text.content = "Use wasd to move."
+
+/* 배경 */
+var background = new Shape.Rectangle({
+  point: [0, 0],
+  size: [view.size.width, view.size.height]
+});
+background.sendToBack();
+
+var egg_names = ["gloomy", "blacky", "ghost", "crazy", "roller", "rollingface", "rainbowface", "yellowface"];
+
+function onMouseDown() {
+  text.fillColor = "#00fbcf";
+  clickcount+=1;
+  if(clickcount == 1){
+    if(keycount > 0){
+      text.content = "Woooow, you are very submissive to me.";
+    }else{
+      text.content = "Oh... I was going to tell you\nabout that tiny egg.";
+    }
+  }else if(clickcount == 10) {
+    text.content = "You really like tiny eggs!";
+  }else if(clickcount == 15) {
+    text.content = "Did you know?\nActually, tiny eggs are your clone...";
+  }
+  mouse_clone = egg_mouse.clone();
 }
-/*
-[legs, arms, egg_body, eyes]
 
- egg6   egg7   egg8
-(0,0)  (0,1)  (0,2)
-
- egg2   egg    egg1
-(1,0)  (1,1)  (1,2)
-
- egg3   egg4   egg5
-(2,0)  (2,1)  (2,2)
-*/
 
 function onMouseMove(event){
 faceColor = new Color(faceR, faceG, faceB);
@@ -403,54 +414,267 @@ egg.children[3].children[0].children[1].position.x = map(event.point.x, 0, 1150,
 egg.children[3].children[0].children[2].position.x = map(event.point.x, 0, 1150, 185, 200);
 egg.children[3].children[0].children[3].position.x = map(event.point.x, 0, 1150, 185, 200);
 
-egg0.children[2].children[0].style.fillColor = faceColor;
+egg_mouse.children[2].children[0].style.fillColor = faceColor;
 
+egg_mouse.position = event.point;
+egg_gloomy.scaling = map(event.point.x, 0, 1150, 0.2, 0.5);
 
-egg0.position = event.point;
-egg1.scaling = map(event.point.x, 0, 1150, 0.2, 0.5);
-
-egg0.children[2].children[0].rotate(
+egg_mouse.children[2].children[0].rotate(
     map(event.point.x, 0, 1150, 0, 5));
 
-egg8.children[2].children[0].style.fillColor = faceColor;
+egg_yellowface.children[2].children[0].style.fillColor = faceColor;
 
-egg3.opacity = Math.random();
+egg_ghost.opacity = Math.random();
 
-egg5.rotate(2);
+egg_roller.rotate(2);
+}
+var firstconvo = false;
+
+var gloomy = 0;
+var blacky = 0;
+var ghost = 0;
+var crazy = 0;
+var roller = 0;
+var rollingface = 0;
+var rainbowface = 0;
+var yellowface = 0;
+
+function conversation(event) {
+  if (event.key =='e'){
+    if(egg.position.x<egg_gloomy.position.x+100 && egg.position.x>egg_gloomy.position.x-100 &&
+      egg.position.y<egg_gloomy.position.y+150 && egg.position.y>egg_gloomy.position.y-150){
+      gloomy += 1;
+      text.fillColor = "#51c4ff";
+      if(gloomy == 1){
+        text.content = "Just leave me alone.";
+      }
+      else if(gloomy == 2){
+        text.content = "No, I was kidding!\nDon't leave me alone! plaese!";
+      }
+      else if(gloomy > 2){
+        text.content = "Why......";
+      }
+    }
+    else if(egg.position.x<egg_blacky.position.x+100 && egg.position.x>egg_blacky.position.x-100 &&
+            egg.position.y<egg_blacky.position.y+150 && egg.position.y>egg_blacky.position.y-150){
+      blacky += 1;
+      text.fillColor = "black";
+      if(blacky == 1){
+        text.content = "Oh, my name is Blacky!";
+      }
+      else if(blacky == 2){
+        text.content = "That's why my life is so black";
+      }
+      else if(blacky > 2){
+        text.content = "Black means GREAT!";
+      }
+    }
+    else if(egg.position.x<egg_ghost.position.x+100 && egg.position.x>egg_ghost.position.x-100 &&
+            egg.position.y<egg_ghost.position.y+150 && egg.position.y>egg_ghost.position.y-150){
+      ghost += 1;
+      text.fillColor = "white";
+      text.fillColor.alpha = 0.2;
+      if(ghost == 1){
+        text.content = "Can you see me?";
+      }
+      else if(ghost == 2){
+        text.content = "When you go higher, my body gets more visibility.";
+      }
+      else if(ghost > 2){
+        text.content = "I don't want disappear, \nSo plaese more...";
+      }
+    }
+    else if(egg.position.x<egg_crazy.position.x+100 && egg.position.x>egg_crazy.position.x-100 &&
+        egg.position.y<egg_crazy.position.y+150 && egg.position.y>egg_crazy.position.y-150){
+      crazy += 1;
+      text.fillColor = randomColor;
+      text.strokeColor = black;
+      if(crazy == 1){
+      text.content = "HAHAHAHAHAHAAHHAHAHAHAHAHA";
+      }
+      else if(crazy == 2){
+      text.content = "HAHAHAHAHAH";
+      }
+      else if(crazy > 2){
+      text.content = "HA.";
+      }
+    }
+    else if(egg.position.x<egg_roller.position.x+100 && egg.position.x>egg_roller.position.x-100 &&
+            egg.position.y<egg_roller.position.y+150 && egg.position.y>egg_roller.position.y-150){
+      roller += 1;
+      text.fillColor = "#ffc0cb";
+      if(roller == 1){
+      text.content = "Move your mouse!";
+      }
+      else if(roller == 2){
+      text.content = "YAYYYYYY!!";
+      }
+      else if(roller > 2){
+      text.content = "SEE ME ROLLING";
+      }
+    }
+    else if(egg.position.x<egg_rollingface.position.x+100 && egg.position.x>egg_rollingface.position.x-100 &&
+            egg.position.y<egg_rollingface.position.y+150 && egg.position.y>egg_rollingface.position.y-150){
+      text.fillColor = "white";
+      rollingface += 1;
+      if(rollingface == 1){
+      text.content = "Why.";
+      }
+      else if(rollingface == 2){
+      text.content = "Do you want fight?";
+      }
+      else if(rollingface > 2){
+      text.content = "Go away.";
+      }
+    }
+    else if(egg.position.x<egg_rainbowface.position.x+100 && egg.position.x>egg_rainbowface.position.x-100 &&
+            egg.position.y<egg_rainbowface.position.y+150 && egg.position.y>egg_rainbowface.position.y-150){
+      rainbowface += 1;
+      text.fillColor = randomColor;
+      if(rainbowface == 1){
+      text.content = "R A I N B O W ~";
+      }
+      else if(rainbowface == 2){
+      text.content = "I think I can be more crazy~";
+      }
+      else if(rainbowface > 2){
+      text.content = "~ W O B N I A R";
+      }
+    }
+    else if(egg.position.x<egg_yellowface.position.x+100 && egg.position.x>egg_yellowface.position.x-100 &&
+            egg.position.y<egg_yellowface.position.y+150 && egg.position.y>egg_yellowface.position.y-150){
+      yellowface += 1;
+      text.fillColor = "#ffe351";
+      if(yellowface == 1){
+      text.content = "Yellow...?";
+      }
+      else if(yellowface == 2){
+      text.content = "White...?";
+      }
+      else if(yellowface > 2){
+      text.content = "Hey, Are you changing my face color?";
+      }
+    }
+    }
+    else{
+      if(egg.position.x<egg_gloomy.position.x+100 && egg.position.x>egg_gloomy.position.x-100 &&
+        egg.position.y<egg_gloomy.position.y+150 && egg.position.y>egg_gloomy.position.y-150){
+        text.fillColor = "#51c4ff";
+        text.content = "Oh... I'm so sad...";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_blacky.position.x+100 && egg.position.x>egg_blacky.position.x-100 &&
+              egg.position.y<egg_blacky.position.y+150 && egg.position.y>egg_blacky.position.y-150){
+        text.fillColor = "black";
+        text.content = "Life is so Black!";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_ghost.position.x+100 && egg.position.x>egg_ghost.position.x-100 &&
+              egg.position.y<egg_ghost.position.y+150 && egg.position.y>egg_ghost.position.y-150){
+        text.fillColor = "white";
+        text.fillColor.alpha = 0.2;
+        text.content = "...";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_crazy.position.x+100 && egg.position.x>egg_crazy.position.x-100 &&
+            egg.position.y<egg_crazy.position.y+150 && egg.position.y>egg_crazy.position.y-150){
+        text.fillColor = randomColor;
+        text.content = "I'm crazy. Call me Crazy.";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_roller.position.x+100 && egg.position.x>egg_roller.position.x-100 &&
+              egg.position.y<egg_roller.position.y+150 && egg.position.y>egg_roller.position.y-150){
+        text.fillColor = "#ffc0cb";
+        text.content = "Heh......";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_rollingface.position.x+100 && egg.position.x>egg_rollingface.position.x-100 &&
+              egg.position.y<egg_rollingface.position.y+150 && egg.position.y>egg_rollingface.position.y-150){
+        text.fillColor = "white";
+        text.content = "My face...";
+        firstconvo = true;
+      }
+      else if(egg.position.x<egg_rainbowface.position.x+100 && egg.position.x>egg_rainbowface.position.x-100 &&
+              egg.position.y<egg_rainbowface.position.y+150 && egg.position.y>egg_rainbowface.position.y-150){
+          text.fillColor = randomColor;
+          text.content = "Go Up!!!!!!!!";
+          firstconvo = true;
+      }
+      else if(egg.position.x<egg_yellowface.position.x+100 && egg.position.x>egg_yellowface.position.x-100 &&
+            egg.position.y<egg_yellowface.position.y+150 && egg.position.y>egg_yellowface.position.y-150){
+          text.fillColor = "#ffe351";
+          text.content = "White... Yellow... White...";
+          firstconvo = true;
+      }
+    }
 }
 
 function onKeyDown(event){
+  keycount += 1;
+  if(event.key =='w'||event.key =='a'||event.key =='s'||event.key =='d') {
+    text.fillColor = "#00fbcf";
+    if(keycount > 0){
+      if(clickcount > 0){
+        text.content = "Hey, why did you get tiny egg\nwithout my advise?";
+      }
+      else {
+        text.content = "Well done!\nClick somewhere to get tiny egg.";
+      }
+    }
+  }
     randomColor = new Color(Math.random(),Math.random(),Math.random());
-    console.log(event);
 
     if(event.key =='d'){
-        egg.position.x += 10;
-        egg7.rotate(5);
+      if(egg_yellowface.position.x < egg.position.x+view.viewSize.width){
+        text.content = "End of Eggs.";
+      }
+
+      for(i=0; i<egg_names.length; i++) {
+        var eggname = "egg_" + egg_names[i];
+        var eggs = eval(eggname);
+        eggs.position.x -= 10;
+      }
+        egg_rainbowface.rotate(5);
     }
 
+
     if(event.key =='a'){
-        egg.position.x -= 10;
-        egg7.rotate(-5);
+
+      if(egg_gloomy.position.x > view.viewSize.width){
+        text.content = "Oh, well...\nI think there will be nothing.";
+      }
+      if(egg_gloomy.position.x > view.viewSize.width*1.5){
+        text.content = "What are you doing?";
+      }
+      if(egg_gloomy.position.x > view.viewSize.width*2){
+        text.content = "You are wasting your time.";
+      }
+      for(i=0; i<egg_names.length; i++) {
+        var eggname = "egg_" + egg_names[i];
+        var eggs = eval(eggname);
+        eggs.position.x += 10;
+      }
+        egg_rainbowface.rotate(-5);
     }
 
     if(event.key =='w'){
         egg.position.y -= 10;
-        egg7.rotate(-5);
-        egg2.scale(1.01);
-        egg3.opacity += 0.05;
+        egg_rainbowface.rotate(-5);
+        egg_blacky.scale(1.01);
+        egg_ghost.opacity += 0.05;
 
-        egg7.children[2].style = {
+        egg_rainbowface.children[2].style = {
           fillColor: randomColor,
           strokeColor: randomColor,
           strokeWidth: 5
         };
 
-        egg7.children[1].style = {
+        egg_rainbowface.children[1].style = {
           strokeColor: randomColor,
           strokeWidth: 35
         };
 
-        egg7.children[0].style = {
+        egg_rainbowface.children[0].style = {
           strokeColor: randomColor,
           strokeWidth: 35
         };
@@ -458,17 +682,71 @@ function onKeyDown(event){
 
     if(event.key =='s'){
         egg.position.y += 10;
-        egg7.rotate(-5);
-        egg2.scale(0.99);
-        egg3.opacity -= 0.05;
+        egg_rainbowface.rotate(-5);
+        egg_blacky.scale(0.99);
+        egg_ghost.opacity -= 0.05;
     }
+    conversation(event);
 }
 
 function onFrame(event){
   randomColor = new Color(Math.random(),Math.random(),Math.random());
-  egg4.children[2].children[1].style.fillColor = randomColor;
+  egg_crazy.children[2].children[1].style.fillColor = randomColor;
 
-  egg6.children[2].children[0].rotate(1);
+  egg_rollingface.children[2].children[0].rotate(1);
+}
+
+
+function positionEggs(){
+
+  egg.position = view.center;
+  egg_gloomy.position = view.center;
+  egg_blacky.position = view.center;
+  egg_ghost.position = view.center;
+  egg_crazy.position = view.center;
+  egg_roller.position = view.center;
+  egg_rollingface.position = view.center;
+  egg_rainbowface.position = view.center;
+  egg_yellowface.position = view.center;
+
+  for(i=0; i<egg_names.length; i++) {
+    var eggname = "egg_" + egg_names[i];
+    var eggs = eval(eggname);
+    eggs.position.x += (i+1)*300;
+  }
+}
+
+var resizecount = 0;
+
+function onResize(){
+  bgColor = new Color(bgR, bgG, bgB);
+  bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
+  bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
+  bgB = map(view.viewSize.width, 0, 1800, 0.55, 0.85);
+
+  if(resizecount>1){
+  text.content = "You resized!";
+  text.fillColor = "#00fbcf";
+  }
+
+  resizecount += 1;
+
+  background.position = view.center;
+  background.size = [view.viewSize.width,view.viewSize.height];
+  console.log(view.size.width);
+  background.fillColor = bgColor;
+
+  var canvasWrapper = document.getElementsByTagName("BODY")[0];
+  var canvas = document.getElementById("myCanvas");
+  canvas.style.width = canvasWrapper.style.width;
+
+  egg.scaling = map(view.bounds.width, 0, 2000, 0.3, 0.6);
+  for(i=0; i<egg_names.length; i++) {
+    var eggname = "egg_" + egg_names[i];
+    var eggs = eval(eggname);
+    eggs.scaling = map(view.bounds.width, 0, 2000, 0.3, 0.6);
+   }
+  positionEggs();
 }
 
 function map(value, start1, stop1, start2, stop2) {
