@@ -717,6 +717,10 @@ function positionEggs(){
 }
 
 var resizecount = 0;
+bgColor = new Color(bgR, bgG, bgB);
+bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
+bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
+bgB = map(view.viewSize.width, 0, 1800, 0.55, 0.85);
 
 function onResize(){
   bgColor = new Color(bgR, bgG, bgB);
