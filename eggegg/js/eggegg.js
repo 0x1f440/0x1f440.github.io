@@ -625,7 +625,7 @@ function onKeyDown(event){
     randomColor = new Color(Math.random(),Math.random(),Math.random());
 
     if(event.key =='d'){
-      if(egg_yellowface.position.x < egg.position.x+view.viewSize.width){
+      if(egg_yellowface.position.x+view.viewSize.width/2 < egg.position.x){
         text.content = "End of Eggs.";
       }
 
@@ -717,10 +717,7 @@ function positionEggs(){
 }
 
 var resizecount = 0;
-bgColor = new Color(bgR, bgG, bgB);
-bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
-bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
-bgB = map(view.viewSize.width, 0, 1800, 0.55, 0.85);
+
 function onResize(){
   bgColor = new Color(bgR, bgG, bgB);
   bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
