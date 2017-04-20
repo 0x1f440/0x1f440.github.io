@@ -384,11 +384,12 @@ background.sendToBack();
 var egg_names = ["gloomy", "blacky", "ghost", "crazy", "roller", "rollingface", "rainbowface", "yellowface"];
 
 function onMouseDown() {
-  text.fillColor = "#00fbcf";
   clickcount+=1;
+  text.fillColor = "#00fbcf";
   if(clickcount == 1){
     if(keycount > 0){
       text.content = "Woooow, you are very submissive to me.";
+      logcount += 1;
     }else{
       text.content = "Oh... I was going to tell you\nabout that tiny egg.";
     }
@@ -445,116 +446,116 @@ function conversation(event) {
       egg.position.y<egg_gloomy.position.y+150 && egg.position.y>egg_gloomy.position.y-150){
       gloomy += 1;
       text.fillColor = "#51c4ff";
-      if(gloomy == 1){
-        text.content = "Just leave me alone.";
+        if(gloomy == 1){
+          text.content = "Just leave me alone.";
+        }
+        else if(gloomy == 2){
+          text.content = "No, I was kidding!\nDon't leave me alone! plaese!";
+        }
+        else if(gloomy > 2){
+          text.content = "Why......";
+        }
       }
-      else if(gloomy == 2){
-        text.content = "No, I was kidding!\nDon't leave me alone! plaese!";
+      else if(egg.position.x<egg_blacky.position.x+100 && egg.position.x>egg_blacky.position.x-100 &&
+              egg.position.y<egg_blacky.position.y+150 && egg.position.y>egg_blacky.position.y-150){
+        blacky += 1;
+        text.fillColor = "black";
+        if(blacky == 1){
+          text.content = "Oh, my name is Blacky!";
+        }
+        else if(blacky == 2){
+          text.content = "That's why my life is so black";
+        }
+        else if(blacky > 2){
+          text.content = "Black means GREAT!";
+        }
       }
-      else if(gloomy > 2){
-        text.content = "Why......";
+      else if(egg.position.x<egg_ghost.position.x+100 && egg.position.x>egg_ghost.position.x-100 &&
+              egg.position.y<egg_ghost.position.y+150 && egg.position.y>egg_ghost.position.y-150){
+        ghost += 1;
+        text.fillColor = "white";
+        text.fillColor.alpha = 0.2;
+        if(ghost == 1){
+          text.content = "Can you see me?";
+        }
+        else if(ghost == 2){
+          text.content = "When you go higher, my body gets more visibility.";
+        }
+        else if(ghost > 2){
+          text.content = "I don't want disappear, \nSo plaese more...";
+        }
       }
-    }
-    else if(egg.position.x<egg_blacky.position.x+100 && egg.position.x>egg_blacky.position.x-100 &&
-            egg.position.y<egg_blacky.position.y+150 && egg.position.y>egg_blacky.position.y-150){
-      blacky += 1;
-      text.fillColor = "black";
-      if(blacky == 1){
-        text.content = "Oh, my name is Blacky!";
+      else if(egg.position.x<egg_crazy.position.x+100 && egg.position.x>egg_crazy.position.x-100 &&
+          egg.position.y<egg_crazy.position.y+150 && egg.position.y>egg_crazy.position.y-150){
+        crazy += 1;
+        text.fillColor = randomColor;
+        text.strokeColor = black;
+        if(crazy == 1){
+        text.content = "HAHAHAHAHAHAAHHAHAHAHAHAHA";
+        }
+        else if(crazy == 2){
+        text.content = "HAHAHAHAHAH";
+        }
+        else if(crazy > 2){
+        text.content = "HA.";
+        }
       }
-      else if(blacky == 2){
-        text.content = "That's why my life is so black";
+      else if(egg.position.x<egg_roller.position.x+100 && egg.position.x>egg_roller.position.x-100 &&
+              egg.position.y<egg_roller.position.y+150 && egg.position.y>egg_roller.position.y-150){
+        roller += 1;
+        text.fillColor = "#ffc0cb";
+        if(roller == 1){
+        text.content = "Move your mouse!";
+        }
+        else if(roller == 2){
+        text.content = "YAYYYYYY!!";
+        }
+        else if(roller > 2){
+        text.content = "SEE ME ROLLING";
+        }
       }
-      else if(blacky > 2){
-        text.content = "Black means GREAT!";
+      else if(egg.position.x<egg_rollingface.position.x+100 && egg.position.x>egg_rollingface.position.x-100 &&
+              egg.position.y<egg_rollingface.position.y+150 && egg.position.y>egg_rollingface.position.y-150){
+        text.fillColor = "white";
+        rollingface += 1;
+        if(rollingface == 1){
+        text.content = "Why.";
+        }
+        else if(rollingface == 2){
+        text.content = "Do you want fight?";
+        }
+        else if(rollingface > 2){
+        text.content = "Go away.";
+        }
       }
-    }
-    else if(egg.position.x<egg_ghost.position.x+100 && egg.position.x>egg_ghost.position.x-100 &&
-            egg.position.y<egg_ghost.position.y+150 && egg.position.y>egg_ghost.position.y-150){
-      ghost += 1;
-      text.fillColor = "white";
-      text.fillColor.alpha = 0.2;
-      if(ghost == 1){
-        text.content = "Can you see me?";
+      else if(egg.position.x<egg_rainbowface.position.x+100 && egg.position.x>egg_rainbowface.position.x-100 &&
+              egg.position.y<egg_rainbowface.position.y+150 && egg.position.y>egg_rainbowface.position.y-150){
+        rainbowface += 1;
+        text.fillColor = randomColor;
+        if(rainbowface == 1){
+        text.content = "R A I N B O W ~";
+        }
+        else if(rainbowface == 2){
+        text.content = "I think I can be more crazy~";
+        }
+        else if(rainbowface > 2){
+        text.content = "~ W O B N I A R";
+        }
       }
-      else if(ghost == 2){
-        text.content = "When you go higher, my body gets more visibility.";
+      else if(egg.position.x<egg_yellowface.position.x+100 && egg.position.x>egg_yellowface.position.x-100 &&
+              egg.position.y<egg_yellowface.position.y+150 && egg.position.y>egg_yellowface.position.y-150){
+        yellowface += 1;
+        text.fillColor = "#ffe351";
+        if(yellowface == 1){
+        text.content = "Yellow...?";
+        }
+        else if(yellowface == 2){
+        text.content = "White...?";
+        }
+        else if(yellowface > 2){
+        text.content = "Hey, Are you changing my face color?";
+        }
       }
-      else if(ghost > 2){
-        text.content = "I don't want disappear, \nSo plaese more...";
-      }
-    }
-    else if(egg.position.x<egg_crazy.position.x+100 && egg.position.x>egg_crazy.position.x-100 &&
-        egg.position.y<egg_crazy.position.y+150 && egg.position.y>egg_crazy.position.y-150){
-      crazy += 1;
-      text.fillColor = randomColor;
-      text.strokeColor = black;
-      if(crazy == 1){
-      text.content = "HAHAHAHAHAHAAHHAHAHAHAHAHA";
-      }
-      else if(crazy == 2){
-      text.content = "HAHAHAHAHAH";
-      }
-      else if(crazy > 2){
-      text.content = "HA.";
-      }
-    }
-    else if(egg.position.x<egg_roller.position.x+100 && egg.position.x>egg_roller.position.x-100 &&
-            egg.position.y<egg_roller.position.y+150 && egg.position.y>egg_roller.position.y-150){
-      roller += 1;
-      text.fillColor = "#ffc0cb";
-      if(roller == 1){
-      text.content = "Move your mouse!";
-      }
-      else if(roller == 2){
-      text.content = "YAYYYYYY!!";
-      }
-      else if(roller > 2){
-      text.content = "SEE ME ROLLING";
-      }
-    }
-    else if(egg.position.x<egg_rollingface.position.x+100 && egg.position.x>egg_rollingface.position.x-100 &&
-            egg.position.y<egg_rollingface.position.y+150 && egg.position.y>egg_rollingface.position.y-150){
-      text.fillColor = "white";
-      rollingface += 1;
-      if(rollingface == 1){
-      text.content = "Why.";
-      }
-      else if(rollingface == 2){
-      text.content = "Do you want fight?";
-      }
-      else if(rollingface > 2){
-      text.content = "Go away.";
-      }
-    }
-    else if(egg.position.x<egg_rainbowface.position.x+100 && egg.position.x>egg_rainbowface.position.x-100 &&
-            egg.position.y<egg_rainbowface.position.y+150 && egg.position.y>egg_rainbowface.position.y-150){
-      rainbowface += 1;
-      text.fillColor = randomColor;
-      if(rainbowface == 1){
-      text.content = "R A I N B O W ~";
-      }
-      else if(rainbowface == 2){
-      text.content = "I think I can be more crazy~";
-      }
-      else if(rainbowface > 2){
-      text.content = "~ W O B N I A R";
-      }
-    }
-    else if(egg.position.x<egg_yellowface.position.x+100 && egg.position.x>egg_yellowface.position.x-100 &&
-            egg.position.y<egg_yellowface.position.y+150 && egg.position.y>egg_yellowface.position.y-150){
-      yellowface += 1;
-      text.fillColor = "#ffe351";
-      if(yellowface == 1){
-      text.content = "Yellow...?";
-      }
-      else if(yellowface == 2){
-      text.content = "White...?";
-      }
-      else if(yellowface > 2){
-      text.content = "Hey, Are you changing my face color?";
-      }
-    }
     }
     else{
       if(egg.position.x<egg_gloomy.position.x+100 && egg.position.x>egg_gloomy.position.x-100 &&
@@ -608,18 +609,28 @@ function conversation(event) {
       }
     }
 }
-
+var logcount = 0;
 function onKeyDown(event){
   keycount += 1;
+
   if(event.key =='w'||event.key =='a'||event.key =='s'||event.key =='d') {
     text.fillColor = "#00fbcf";
-    if(keycount > 0){
-      if(clickcount > 0){
-        text.content = "Hey, why did you get tiny egg\nwithout my advise?";
+    if(logcount == 0){
+      if(keycount > 0){
+        if(clickcount > 0 && logcount == 0){
+          text.content = "Hey, why did you get tiny egg\nwithout my advise?";
+          logcount += 1;
+        }
+        else {
+          text.content = "Well done!\nClick somewhere to get tiny egg.";
+          if(clickcount != 0){
+            logcount += 1;
+          }
+        }
       }
-      else {
-        text.content = "Well done!\nClick somewhere to get tiny egg.";
-      }
+    }
+    else {
+      text.content = "Meet other eggs!";
     }
   }
     randomColor = new Color(Math.random(),Math.random(),Math.random());
@@ -717,6 +728,7 @@ function positionEggs(){
 }
 
 var resizecount = 0;
+
 bgColor = new Color(bgR, bgG, bgB);
 bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
 bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
