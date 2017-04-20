@@ -11,7 +11,6 @@ var bgG;
 var bgB;
 var bgColor;
 
-/* 몸통 */
 var albumen = new Path({
     segments: [[30,40], [150,0], [220,0], [300,70], [320,120], [300,180], [280,240], [200,300], [60,290], [30,250], [-20,180], [0,130]],
     closed: true
@@ -707,6 +706,7 @@ function onFrame(){
   egg_rollingface.children[2].children[0].rotate(1);
 }
 
+var fontSize;
 
 function positionEggs(){
 
@@ -739,6 +739,10 @@ function onResize(){
   bgR = map(view.viewSize.width, 0, 1800, 0.22, 0.52);
   bgG = map(view.viewSize.width, 0, 1800, 0, 0.16);
   bgB = map(view.viewSize.width, 0, 1800, 0.55, 0.85);
+
+  fontSize = map(view.viewSize.width, 0, 1800, 20, 40);
+
+  text.fontSize = fontSize;
 
   if(resizecount>1){
   text.content = "You resized!";
