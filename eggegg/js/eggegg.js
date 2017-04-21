@@ -630,7 +630,7 @@ function onKeyDown(event){
       }
     }
     else {
-      text.content = "Meet other eggs!";
+      text.content = "Meet other eggs!\nPress E to talk";
     }
   }
     randomColor = new Color(Math.random(),Math.random(),Math.random());
