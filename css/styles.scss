@@ -1,5 +1,6 @@
 ---
 ---
+
 $grid: 800px;
 $theme-color: #7e2cff;
 
@@ -8,6 +9,7 @@ $theme-color: #7e2cff;
 @import 'about';
 @import 'youtube';
 
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 html {
@@ -18,8 +20,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-family: 'Bangers', 'cursive';
   color: #333;
   line-height: 1.6;
 }
