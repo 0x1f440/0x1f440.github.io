@@ -1,0 +1,21 @@
+---
+layout: site
+title: Site
+group: site
+---
+{% for project in site.data.sites %}
+  <div class="col-33">
+    <a href="{{ site.url }}/projects/{{ site.title }}">
+      <div class="project-list" style="background-image: url('{{ site.url }}/img/projects/{{ site.title }}/thumbnail.png')">
+        <div class="meta">
+          <div class="title">{{ site.title }}</div>
+          {% for tag in site.tags %}
+            <div class="tag">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </a>
+  </div>
+{% endfor %}
