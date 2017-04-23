@@ -3,7 +3,7 @@ layout: site
 title: Site
 group: site
 ---
-{% for project in site.data.sites %}
+{% for site in site.data.sites %}
   <div class="col-33">
     <a href="{{ site.url }}/site/{{ site.title }}">
       <div class="project-list" style="background-image: url('{{ site.url }}/img/projects/{{ site.title }}/thumbnail.png')">

@@ -3,9 +3,9 @@ layout: site
 title: Video
 group: video
 ---
-{% for project in site.data.videos %}
+{% for video in site.data.videos %}
   <div class="col-33">
-    <a href="{{ site.url }}/projects/{{ video.title }}">
+    <a href="{{ site.url }}/video/{{ video.title }}">
       <div class="project-list" style="background-image: url('{{ site.url }}/img/projects/{{ video.title }}/thumbnail.png')">
         <div class="meta">
           <div class="title">{{ video.title }}</div>
