@@ -3,8 +3,14 @@ layout: site
 title: '0x1f440'
 ---
 <div class="preload">
-  {% for project in site.data.projects %}
-    <img src="{{ site.url }}/img/projects/{{ project.title }}/thumbnail.png">
+  {% for project in site.data.artworks %}
+    <img src="{{ site.url }}/img/projects/{{ artwork.title }}/thumbnail.png">
+  {% endfor %}
+  {% for project in site.data.videos %}
+    <img src="{{ site.url }}/img/projects/{{ video.title }}/thumbnail.png">
+  {% endfor %}
+  {% for project in site.data.sites %}
+    <img src="{{ site.url }}/img/projects/{{ site.title }}/thumbnail.png">
   {% endfor %}
 </div>
 

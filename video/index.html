@@ -1,0 +1,21 @@
+---
+layout: site
+title: Video
+group: video
+---
+{% for project in site.data.videos %}
+  <div class="col-33">
+    <a href="{{ site.url }}/projects/{{ video.title }}">
+      <div class="project-list" style="background-image: url('{{ site.url }}/img/projects/{{ video.title }}/thumbnail.png')">
+        <div class="meta">
+          <div class="title">{{ video.title }}</div>
+          {% for tag in video.tags %}
+            <div class="tag">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </a>
+  </div>
+{% endfor %}
