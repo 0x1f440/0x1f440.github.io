@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include top.html %}
-  </head>
-  <body>
-    <div id="container">
-      {% include header.html %}
-      <div class="content-wrapper">
-        {{ content }}
-      </div>
-      {% include footer.html %}
-    </div>
-  </body>
+  {{ content }}
+  {% include analytics.html %}
 </html>
