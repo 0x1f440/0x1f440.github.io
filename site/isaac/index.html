@@ -29,6 +29,12 @@
   <audio id="cain">
       <source src="sound/cain.mp3" type="audio/mp3"></source>
   </audio>
+  <audio id="judas">
+      <source src="sound/judas.mp3" type="audio/mp3"></source>
+  </audio>
+  <audio id="blue_baby">
+      <source src="sound/blue_baby.mp3" type="audio/mp3"></source>
+  </audio>
   <canvas id="canvas-1" hidpi="on" resize = "true" ></canvas>
   <div id="pic"></div>
 </body>
@@ -48,7 +54,9 @@
   var isaac = new Characters("isaac", "img/isaac.png","Isaac", 3, 0, 2, 2);
   var maggy = new Characters("maggy", "img/maggy.png", "Magdalene (Maggy)", 4, 0, 1, 2);
   var cain = new Characters("cain", "img/cain.png", "Cain", 2, 0, 2, 2);
-  var characters = [isaac, maggy, cain];
+  var judas = new Characters("judas", "img/judas.png", "Judas", 1, 0, 2, 3);
+  var blue_baby = new Characters("blue_baby", "img/blue_baby.png", "??? (Blue Baby)", 0, 3, 2, 2);
+  var characters = [isaac, maggy, cain, judas, blue_baby];
   var logo = new Raster("img/logo.png", [view.center.x, view.center.y/3]);
 
   function Characters(sound, source, name, redHeart, soulHeart, speed, damage) {
