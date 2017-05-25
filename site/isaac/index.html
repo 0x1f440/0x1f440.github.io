@@ -59,6 +59,15 @@
   var characters = [isaac, maggy, cain, judas, blue_baby];
   var logo = new Raster("img/logo.png", [view.center.x, view.center.y/3]);
 
+  var text = new PointText({
+    point: [view.center.x, view.center.y + 300],
+    fontFamily: 'Courier New',
+    fontWeight: 'bold',
+    fontSize: 30,
+    content: "Use left and right arrow keys to navigate",
+    justification: 'center'
+    });
+
   function Characters(sound, source, name, redHeart, soulHeart, speed, damage) {
     var space = 40;
     this.sound = sound;
