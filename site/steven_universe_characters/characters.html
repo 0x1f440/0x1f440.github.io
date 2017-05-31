@@ -17,6 +17,21 @@
 
     #audio {
     }
+    #arrowL {
+      -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+      transform: rotate(180deg);
+      position: absolute;
+      width: 100px;
+      top: calc(50% - 50px);
+      left: 170px
+    }
+    #arrowR {
+      position: absolute;
+      width: 100px;
+      top: calc(50% - 50px);
+      right: 170px
+    }
   </style>
 
   <script type = "text/javascript" src = "http://paperjs.org/assets/js/paper.js"> </script>
@@ -26,9 +41,8 @@
   <canvas id="canvas-1" hidpi="on" resize = "true" ></canvas>
   <div id="pic"></div>
 </body>
-
-<script type= "text/javascript" canvas = "canvas-1" >
-</script>
+<img src="img/arrow.png" id="arrowL">
+<img src="img/arrow.png" id="arrowR">
 
 <script type= "text/paperscript" canvas = "canvas-1">
   var count = 0;
@@ -127,10 +141,31 @@
     }
   }
 
+
   setUI();
   document.onkeydown = checkKey;
 
-</script>
 
+  document.getElementById('arrowL').addEventListener("click", function() {
+        audio.pause();
+        if(count <= 0){
+          count = characters.length;
+        }else{
+        console.log(count);
+          count--;
+          setUI();
+        }
+      });
+  document.getElementById('arrowR').addEventListener("click", function(){
+        audio.pause();
+        count++;
+        console.log(count);
+        setUI();
+      }
+);
+</script>
+<script type= "text/javascript" canvas = "canvas-1" >
+
+</script>
 
 </html>
