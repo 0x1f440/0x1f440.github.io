@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Delius|Fredoka+One" rel="stylesheet">
+  <style type="text/css">
+  html,
+  body {
+      margin: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+    /* Scale canvas with resize attribute to full size */
+    canvas[resize] {
+        width: 100%;
+        height: 100%;
+    }
+
+    #audio {
+    }
+  </style>
+
+  <script type = "text/javascript" src = "http://paperjs.org/assets/js/paper.js"> </script>
+</head>
+<body>
+  <div id="audio"></div>
+  <canvas id="canvas-1" hidpi="on" resize = "true" ></canvas>
+  <div id="pic"></div>
+</body>
+
+<script type= "text/javascript" canvas = "canvas-1" >
+</script>
+
+<script type= "text/paperscript" canvas = "canvas-1">
+  var count = 0;
+  var characters;
+  var audioTag;
+  var audio;
+  var group;
+
+
+  var steven = new Characters("steven", "Steven Quartz Universe", "I will fight to be everything that everybody wants me to be when I'm grown!");
+  var pearl = new Characters("pearl", "Pearl", "I will fight in the name of Rose Quartz, and everything that she believed in!");
+  var garnet = new Characters("garnet", "Garnet", " I will fight for the place where I'm free to live together and exist as me!");
+  var amethyst = new Characters("amethyst", "Amethyst", " I will fight for the world I was made in! The Earth is everything I've ever known!");
+  var rose = new Characters("rose", "Rose Quartz", "Isn't it remarkable, Steven? This world is full of so many possibilities.");
+  var peridot = new Characters("peridot", "Peridot", "The point being: Earth can set you free.");
+  var lapis = new Characters("lapis", "Lapis Lazuli", "Life on Earth is really confusing. It took me a long time to get used to it.");
+
+  var characters = [steven, pearl, garnet, amethyst, rose, peridot, lapis];
+
+  function Characters(source, name, quote) {
+    this.source = source;
+    this.pic = new Raster("img/"+ source + ".png", [view.center.x, view.center.y]);
+    this.name = new PointText({
+      point: [view.center.x, view.center.y],
+      fontFamily: 'Fredoka One',
+      fontWeight: 'bold',
+      fontSize: 35,
+      fillColor: "#ee3958",
+      content: name,
+      justification: 'center'
+    });
+    this.quote = new PointText({
+      point: [view.center.x, view.center.y],
+      fontFamily: 'Delius',
+      fontSize: 20,
+      content: quote,
+      fillColor:"#37050d",
+      justification: 'center'
+    });
+    group = new Group([this.pic, this.name, this.quote]);
+    group.position.y += 20;
+  }
+
+  function setUI() {
+    for(var i = 0; i < characters.length; i++) {
+      characters[i].pic.visible = false;
+      characters[i].name.visible = false;
+      characters[i].quote.visible = false;
+    }
+    characters[count % characters.length].pic.visible = true;
+    characters[count % characters.length].name.visible = true;
+    characters[count % characters.length].quote.visible = true;
+
+    updateAudio();
+  }
+
+  function updateAudio(character) {
+    audioTag = '<audio id="' + characters[count % characters.length].source + '"><source src="sound/' + characters[count % characters.length].source + '.mp3" type="audio/mp3"></source></audio>';
+    document.getElementById('audio').innerHTML = audioTag;
+    audio = document.getElementById(characters[count % characters.length].source);
+    audio.play(); //call this to play the song right away
+  }
+
+
+  function checkKey(e){
+    e = e || window.event;
+
+    if(e.keyCode =='37') {
+      audio.pause();
+      if(count <= 0){
+        count = characters.length;
+      }else{
+      console.log(count);
+        count--;
+        setUI();
+      }
+    }
+
+    if(e.keyCode =='39') {
+      audio.pause();
+      count++;
+      console.log(count);
+      setUI();
+    }
+  }
+
+  function map(value, start1, stop1, start2, stop2) {
+      return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+  }
+
+  function onResize() {
+    for(var i = 0; i < characters.length; i++) {
+      characters[i].pic.position = [view.center.x, view.center.y];
+      characters[i].name.position = [view.center.x, view.center.y+180];
+      characters[i].quote.position = [view.center.x, view.center.y+220];
+    }
+  }
+
+  setUI();
+  document.onkeydown = checkKey;
+
+</script>
+
+
+</html>
