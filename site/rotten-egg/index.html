@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-  <script type = "text/javascript" src = "http://paperjs.org/assets/js/paper.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=RZrvWOXzFf2fbBQZF2tY"></script>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=RZrvWOXzFf2fbBQZF2tY&submodules=geocoder"></script>
@@ -21,7 +21,7 @@
 
     #map {
       width: 100%;
-      height: calc(100% - 345px);
+      height: calc(100% - 325px);
     }
 
     #nav {
@@ -29,50 +29,79 @@
       height: 45px;
       padding: 10px;
 
-      background-color: #ececec;
+      background-color: #ffd500;
 
-      font-family: 'nanumgothic';
-      font-size: 18px;
+      font-family: 'Bangers', cursive;
+      font-size: 24px;
       text-align: center;
+      color: white;
+      text-shadow:
+       -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
 
       box-sizing: border-box;
+    }
+
+    #standard {
+      position: absolute;
+      top: 340px;
+      left: 20px;
+
+      padding: 5px 10px 10px 10px;
+
+      font-size: 12px;
+      vertical-align: middle;
+
+      border: 1px solid #666;
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    #standard img {
+      width: 10px;
+
+      margin: 5px;
     }
 
     canvas {
       display: block;
       margin: 0 auto;
       width: 100%;
-      height: 300px;
+      height: 280px;
       background-color : white;
     }
   </style>
 </head>
 <body>
-  <div id="nav">[Rotten Egg Hongik :: 서교/동교/망원/신수] 우리동네 식당 신선도는 몇프로?</div>
+  <div id="nav">Rotten Egg Hongik</div>
   <canvas id="canvas-1" resize="true"></canvas>
   <div id="map"></div>
+  <div id="standard">
+    <img src="img/marker/bad.png">법 위반 음식점<br>
+    <img src="img/marker/good.png">모범 음식점
+  </div>
   <script type="text/javascript">
     var character
   </script>
   <script type="text/paperscript" canvas="canvas-1">
     var MyCharacterClass = function(){
       this.address = new PointText({
-        point:[460,100],
+        point:[460,80],
         content:"위치를 찾고 있어요",
         fontSize: 40,
-        fontFamily: 'Spoqa Han Sans'
       });
       this.score = new PointText({
         point:[460,260],
-        content:"산정중...",
-        fontSize: 120,
-        fontFamily: 'Spoqa Han Sans'
+        content:"...",
+        fontSize: 160,
+        fontWeight:500,
+        fontFamily: 'Bangers'
       });
       this.text = new PointText({
         point:[460,340],
         content:"이 동네 음식점의 신선지수 평가중입니다...",
         fontSize: 30,
-        fontFamily: 'Spoqa Han Sans'
       });
 
       this.albumen = new Path({
@@ -355,9 +384,9 @@
         this.sosobrow.visible = false;
         this.smile.visible = true;
 
-        this.address.fillColor = '#2f8e3d';
-        this.text.fillColor = '#2f8e3d';
-        this.score.fillColor = '#2f8e3d';
+        this.address.fillColor = '#3eb4a7';
+        this.text.fillColor = '#3eb4a7';
+        this.score.fillColor = '#3eb4a7';
 
         this.eyebrow_r.visible = false;
         this.eyebrow_l.visible = false;
@@ -550,7 +579,7 @@
         character.changescore(score(sangAm.length, sangAmGood.length) + '%');
       }
       else{
-        character.changescore('-');
+        character.changescore('(\'o\')/');
         character.normal();
         character.changeText('이 지역은 점수가 나오지 않았어요');
       }
@@ -568,7 +597,7 @@
       else if(score > 40){
         console.log('soso');
         character.normal();
-        character.changeText('뭐 그럭저럭 먹을만은 하네요');
+        character.changeText('뭐... 그럭저럭 먹을만은 하네요');
       }
       else {
         console.log('sad');
