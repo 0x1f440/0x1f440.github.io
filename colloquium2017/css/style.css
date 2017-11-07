@@ -3,7 +3,10 @@
 }
 
 .colloquium-title {
-  position: absolute;
+  position: fixed;
   top:0;
-
+  font-size: 3rem;
+  font-family: courier;
+  font-weight: bold;
+  color: blue;
 }
