@@ -10,6 +10,8 @@
 * 	Template Style
 *
 * ======================================================= */
+
+
 body {
   font-family: "Droid Sans", Arial, sans-serif;
   font-weight: 400;
@@ -645,6 +647,8 @@ form label {
 }
 .feature-center h3 {
   font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
   color: #000;
   position: relative;
 }
