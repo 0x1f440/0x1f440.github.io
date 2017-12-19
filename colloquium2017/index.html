@@ -1,7 +1,7 @@
 <head>
   <title>Colloquium 2017</title>
-  <link rel="icon" type="image/png" href="/img/favicon.png">
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script src="jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -168,12 +168,14 @@
       img = active[1].childNodes[1].cloneNode();
 
       gallery.appendChild(img);
-      scrollTo(document.body, document.body.offsetTop, 600);
+      scrollTo(document.body, document.body.offsetTop, 400);
     }
 
     function closeImage(){
       if(active != null) {
         gallery.removeChild(img);
+      }else{
+        gallery.style.maxHeight = "75%";
       }
     }
 
