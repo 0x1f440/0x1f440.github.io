@@ -1,17 +1,19 @@
+---
 layout: site
 group: site
-
+---
 <head>
   <title>Colloquium 2017</title>
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <link rel="stylesheet" href="/css/styles.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
   <div class="content-wrapper">
-    <div class="colloquium-title"><img src="img/logo-01.png" style="vertical-align: top; width: unset;">Design Colloquium 2017</div><br>
+    <div class="colloquium-title"><img src="img/logo-01.png" style="vertical-align: top; width: unset;">Design Colloquium 2017</div>
+    <div id="gallery-wrapper">
+      <div id="gallery"></div>
+    </div>
     <div class="wrapper">
       <div class="image-wrapper">
         <img src="img/8.gif">
@@ -126,9 +128,60 @@ group: site
         <img src="img/7.gif">
       </div>
       <div class="caption">
-        <div class="caption-name">연사 : 안주영</div>
         인풋이 명확하면 아웃풋도 명확하다.
       </div>
     </div>
   </div>
+
+  <script>
+
+  var active = null;
+  var img, caption;
+  var gallery = document.getElementById("gallery");
+  var images = document.getElementsByClassName("wrapper");
+  var oriWidth = images[1].style.width;
+  var oriMargin = images[1].style.margin;
+  var oriHeight = images[1].style.height;
+
+    function addEventListenerList(list, event, fn) {
+        for (var i = 0, len = list.length; i < len; i++) {
+            list[i].addEventListener(event, fn, false);
+        }
+    }
+
+    var ar_coins = document.getElementsByClassName('coins');
+
+
+    addEventListenerList(images, 'click', openImage);
+
+    function scrollTo(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
+
+        setTimeout(function() {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop === to) return;
+            scrollTo(element, to, duration - 10);
+        }, 10);
+    }
+
+    function openImage() {
+      closeImage();
+
+      active = this.childNodes;
+      img = active[1].childNodes[1].cloneNode();
+      console.log(active[3]);
+
+      gallery.appendChild(img);
+      scrollTo(document.body, document.body.offsetTop, 600);
+    }
+
+    function closeImage(){
+      if(active != null) {
+        gallery.removeChild(img);
+      }
+    }
+
+  </script>
 </body>

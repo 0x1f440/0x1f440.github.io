@@ -11,6 +11,7 @@ html {
 .content-wrapper{
   font-family: 'helvetica', 'Malgun Gothic';
   width: 1180px;
+  padding: 0;
 }
 
 .colloquium-title {
@@ -36,7 +37,7 @@ html {
 .wrapper {
   float: left;
 
-  padding: 50px;
+  padding: 55px;
 
   width: 33%;
   height: 65%;
@@ -44,6 +45,15 @@ html {
   box-sizing: border-box;
 }
 
+#gallery {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#gallery img {
+  width: 100%;
+}
 
 .image-wrapper {
   -webkit-box-shadow: 0px 0px 29px 1px rgba(0,0,0,0.3);
