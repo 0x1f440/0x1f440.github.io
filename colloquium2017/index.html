@@ -1,13 +1,12 @@
 <head>
   <title>Colloquium 2017</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <script src="jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
   <div class="content-wrapper">
     <div class="colloquium-title"><img src="img/logo-01.png" style="vertical-align: top; width: unset;">Design Colloquium 2017</div>
-    <div id="gallery-wrapper">
+    <div id="gallery-wrapper" onclick="closeGallery()">
       <div id="gallery"></div>
     </div>
     <div class="wrapper">
@@ -130,8 +129,8 @@
   </div>
 
   <script>
-
-  var active = null;
+  var active = false;
+  var activeImg = null;
   var img, caption;
   var gallery = document.getElementById("gallery");
   var images = document.getElementsByClassName("wrapper");
@@ -139,7 +138,7 @@
   var oriMargin = images[1].style.margin;
   var oriHeight = images[1].style.height;
 
-  $(document).ready(function() {
+  document.addEventListener("DOMContentLoaded", function(event) {
     addEventListenerList(images, 'click', openImage);
   });
 
@@ -164,18 +163,29 @@
     function openImage() {
       closeImage();
 
-      active = this.childNodes;
-      img = active[1].childNodes[1].cloneNode();
+      activeImg = this.childNodes;
+      img = activeImg[1].childNodes[1].cloneNode();
 
       gallery.appendChild(img);
       scrollTo(document.body, document.body.offsetTop, 400);
     }
 
     function closeImage(){
-      if(active != null) {
+      if(active) {
         gallery.removeChild(img);
       }else{
         gallery.style.maxHeight = "75%";
+        active = true;
+      }
+    }
+
+    function closeGallery() {
+      if(active) {
+        gallery.style.maxHeight = "0%";
+        setTimeout(function(){
+          closeImage();
+          active = false;
+        }, 300);
       }
     }
 
