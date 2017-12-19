@@ -139,27 +139,26 @@
   var oriMargin = images[1].style.margin;
   var oriHeight = images[1].style.height;
 
-    function addEventListenerList(list, event, fn) {
-        for (var i = 0, len = list.length; i < len; i++) {
-            list[i].addEventListener(event, fn, false);
-        }
+  $(document).ready(function() {
+    addEventListenerList(images, 'click', openImage);
+  });
+
+  function addEventListenerList(list, event, fn) {
+      for (var i = 0, len = list.length; i < len; i++) {
+        list[i].addEventListener(event, fn, false);
+      }
     }
 
-    var ar_coins = document.getElementsByClassName('coins');
+  function scrollTo(element, to, duration) {
+      if (duration <= 0) return;
+      var difference = to - element.scrollTop;
+      var perTick = difference / duration * 10;
 
-
-    addEventListenerList(images, 'click', openImage);
-
-    function scrollTo(element, to, duration) {
-        if (duration <= 0) return;
-        var difference = to - element.scrollTop;
-        var perTick = difference / duration * 10;
-
-        setTimeout(function() {
-            element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop === to) return;
-            scrollTo(element, to, duration - 10);
-        }, 10);
+      setTimeout(function() {
+          element.scrollTop = element.scrollTop + perTick;
+          if (element.scrollTop === to) return;
+          scrollTo(element, to, duration - 10);
+      }, 10);
     }
 
     function openImage() {
