@@ -30,14 +30,14 @@ html {
 
 .caption {
   padding: 4% 3% 25% 3%;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.8em;
 }
 
 .wrapper {
   float: left;
 
-  padding: 55px;
+  padding: 70px;
 
   width: 33%;
   height: 65%;
