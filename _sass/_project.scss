@@ -1,43 +1,45 @@
-.project-list {
-  margin: 2%;
-  width: 96%;
-  height: 250px;
+.thumbnail-wrapper {
+    display: inline-block;
+    max-width: 33%;
+    padding: 30px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
 
-  background-size: cover;
+.titles {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+
+    span { padding: 10px 25px; }
+}
+
+.project-list {
+  margin: 5%;
 
   vertical-align: top;
   box-sizing: border-box;
 
-  .meta {
-    padding: 30px;
-    height: 250px;
+  .title {
+    margin-bottom: 10px;
 
-    background-color: rgba(126,44,255,.7);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
 
-    box-sizing: border-box;
+  .tag {
+    display: inline-block;
+    padding: 2px 5px;
+    margin-right: 3px;
+    margin-bottom: 4px;
 
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    border: 1px solid #ccc;
 
-    .title {
-      margin-bottom: 10px;
-
-      color: white;
-      font-size: 30px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 8px;
-      margin-bottom: 4px;
-
-      font-family: 'Spoqa Han Sans', 'Sans-serif';
-      font-size: .8em;
-      color: $theme-color;
-
-      background-color: rgba(255,255,255,.8);
-    }
+    font-size: .8em;
+    font-weight: bold;
+    color: #666;
+  }
+  .caption {
+    font-size: 0.8rem;
   }
 }
 
@@ -47,20 +49,20 @@
 }
 
 .project-title {
-  margin: 80px 0 10px 0;
+  margin: 20px 0 10px 0;
 
   color: $theme-color;
+  font-weight: bold;
   font-size: 2em;
 }
 
 .project-caption {
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
   margin-bottom: 50px;
 
   font-size: 1.1em;
   color: #666;
 }
 
-.active {
-  border-bottom: 2px solid $theme-color;
+.active a {
+  color: $theme-color;
 }

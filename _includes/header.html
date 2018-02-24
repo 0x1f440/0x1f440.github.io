@@ -1,9 +1,9 @@
 <div class="header-wrapper">
-  <a href="{{ site.url }}"><img src="{{ site.baseurl }}/img/Eyes_Emoji.png" alt="http://shapecatcher.com/unicode_info/128064.html"></a>
+  <img class="preload" src="{{ site.baseurl }}/img/workinprogress-hover.svg">
+  <a href="{{ site.url }}"><div class="header-logo"></div></a>
   <ul>
-    <li {% if page.group == 'site' %}class="active"{% endif %} ><a href="/site">Site</a></li>
-    <li {% if page.group == 'video' %}class="active"{% endif %} ><a href="/video">Video</a></li>
-    <li {% if page.group == 'artwork' %}class="active"{% endif %} ><a href="/artwork">Artwork</a></li>
+    <li {% if page.group == 'archive' %}class="active"{% endif %} ><a href="/archive">Archive</a></li>
+    <li {% if page.group == 'blog' %}class="active"{% endif %} ><a href="/blog">Blog</a></li>
     <li {% if page.group == 'about' %}class="active"{% endif %} ><a href="/about">About</a></li>
   </ul>
 </div>

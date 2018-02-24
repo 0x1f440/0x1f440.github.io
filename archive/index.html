@@ -1,0 +1,28 @@
+---
+layout: basic
+title: archive
+group: archive
+---
+
+<div class="titles">
+{% for project in site.data.projects %}
+<a href="{{ site.url }}/projects/{{ project.title }}"><span class="titles"> {{ project.title }} </span></a>
+
+{% endfor %}
+
+{% for project in site.data.projects %}
+</div><div class="thumbnail-wrapper">
+    <a href="{{ site.url }}/projects/{{ project.title }}">
+      <div class="project-list">
+        <img src="{{ site.url }}/projects/{{ project.title }}/thumbnail.png" alt="{{ project.title }}">
+
+        {% for tag in project.tags %}
+        <div class="tag"> {{ tag }} </div>
+        {% endfor %}
+        <div class="title">{{ project.title }}</div>
+
+        <div class="caption"> {{ project.caption }} </div>
+      </div>
+    </a>
+{% endfor %}
+</div>

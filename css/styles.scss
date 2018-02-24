@@ -1,16 +1,13 @@
 ---
 ---
 
-$grid: 800px;
+$grid: 960px;
 $theme-color: #7e2cff;
 
 @import 'grid';
-@import 'project';
 @import 'about';
 @import 'youtube';
-
-@import url('https://fonts.googleapis.com/css?family=Bangers');
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import 'project';
 
 html {
   height: 100%;
@@ -20,7 +17,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Bangers', 'cursive';
+  font-family: 'Lekton', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: #333;
   line-height: 1.5;
 }
@@ -35,12 +34,13 @@ img {
 }
 
 .header-wrapper {
-  width: $grid;
-  margin: 0 auto;
+  width: 1200px;
+  margin: 20px auto;
+  font-weight: bold;
 
   img {
-    width: 50px;
-    margin-top: 5px;
+    width: 200px;
+    margin-top: 30px;
     }
 
   ul {
@@ -55,19 +55,31 @@ img {
     display: block;
     float: left;
 
-    padding: 16px 30px 11px 30px;
+    padding: 6px 22px;
     margin: 0;
 
     color: #333;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     :hover {
       color: $theme-color;
     }
   }
 
-  a {
-    color: #333;
+  .header-logo {
+    display: inline-block;
+    width: 210px;
+    height: 25px;
+
+    color: #444;
+
+    background-image: url("{{ site.baseurl }}/img/workinprogress.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header-logo:hover {
+    background-image: url("{{ site.baseurl }}/img/workinprogress-hover.svg");
   }
 }
 
@@ -105,7 +117,7 @@ footer {
   width: 100%;
   height: 150px;
 
-  background-color: #f1f1f1;
+  text-align: center;
 
   box-sizing: border-box;
 
@@ -115,11 +127,7 @@ footer {
   }
 }
 
-.preload {
-  display: none;
-
-  img {
+.preload img, img.preload{
     width: 1px;
     height: 1px;
-  }
 }
