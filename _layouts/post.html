@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include top.html %}
+  </head>
+  <body>
+    <div id="container">
+      {% include header.html %}
+      <div class="page-wrapper">
+        <span class="page-date">{{ page.date  | date: "%d %b %Y"}}</span>
+        <div class="page-title">{{ page.title }}</div>
+        <span class="page-tag">
+          {% for tag in page.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </span>
+        <div class="page-content">{{ content }}</div>
+
+        <div class="fb-comments" data-href="{{ page.url | absolute_url }}" data-numposts="5" data-width="100%"></div>
+
+        {% if page.previous %}
+        <div class="post-navi previous-post">
+          <a href="{{ page.previous.url }}"><i class="fas fa-angle-left"></i> {{ page.previous.title }}</a>
+        </div>
+        {% endif %}
+        {% if page.next %}
+        <div class="post-navi next-post">
+          <a href="{{ page.next.url }}">{{ page.next.title }} <i class="fas fa-angle-right"></i></a>
+        </div>
+        {% endif %}
+      </div>
+
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      {% include footer.html %}
+      {% include analytics.html %}
+    </div>
+  </body>
+</html>
