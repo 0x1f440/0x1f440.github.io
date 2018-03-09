@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include top.html %}
+    <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/blog/index.html">
+  </head>
+  <body>
+    <div id="container">
+      {% include header.html %}
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+      {% include analytics.html %}
+    </div>
+  </body>
+</html>
