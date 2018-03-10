@@ -1,8 +1,17 @@
+- title: catcat
+  tags:
+    - site
+  caption: I gave an order to a cat, and the cat gave it to its tail.
+
 - title: ways to die
   tags:
-    - fabric
     - doll
   caption: Cause if I have to die tonight, I'd rather be with you.
+
+- title: design colloquium 2017
+  tags:
+    - site
+  caption: archive posters of design colloquium 2017.
 
 - title: euphoria
   tags:
@@ -14,13 +23,3 @@
     - motion graphic
     - video
   caption: Short motion graphic film for ad.
-
-- title: catcat
-  tags:
-    - site
-  caption: I gave an order to a cat, and the cat gave it to its tail.
-
-- title: design colloquium 2017
-  tags:
-    - site
-  caption: archive posters of design colloquium 2017.
