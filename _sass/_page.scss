@@ -40,6 +40,10 @@
   margin: 0 auto;
   padding: 50px 50px 250px 50px;
   max-width: 600px;
+
+  a {
+    color: $theme-color;
+  }
 }
 .page-title {
   font-size: 2.2rem;
