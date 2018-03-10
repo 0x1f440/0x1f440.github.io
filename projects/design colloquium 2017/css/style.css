@@ -1,0 +1,86 @@
+html {
+  background-color: #eaeaea;
+}
+
+.image img {
+  width: 94%;
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+.content-wrapper{
+  font-family: 'helvetica', 'Malgun Gothic';
+  width: 1180px;
+  padding: 0;
+}
+
+.colloquium-title {
+  font-family: 'Courier';
+  position: fixed;
+  top: 10px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: black;
+}
+
+.caption-name {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.caption {
+  padding: 4% 3% 25% 3%;
+  font-size: 10px;
+  line-height: 1.8em;
+}
+
+.wrapper {
+  float: left;
+
+  padding: 70px;
+
+  width: 33%;
+  height: 65%;
+
+  box-sizing: border-box;
+}
+
+#gallery {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  transition: all 300ms linear;
+  max-height: 0%;
+  overflow: hidden;
+}
+
+#gallery img {
+  width: 100%;
+}
+
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+
+
+.content-wrapper {
+    padding-top: 70px;
+    padding-bottom: 220px;
+    margin: 0 auto;
+
+}
+
+.col-33 {
+    width: 33%;
+}
+
+[class*='col-'] {
+    display: inline-block;
+    padding: 5px;
+    min-height: 1px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
