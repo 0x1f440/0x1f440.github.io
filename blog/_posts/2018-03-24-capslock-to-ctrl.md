@@ -11,9 +11,12 @@ tags: ["Misc"]
 ctrl+R등의 단축키는 캡스락 자리에 컨트롤 키가 있어야 편하기 때문이다.
 <br><br>
 방법은 매우 간단하다.
-<br>
+<br><br>
+```
 1.regedit을 연다.<br>
 2.HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout로 이동한다.<br>
 3.Scancode Map이라는 이름으로 new binary value를 만든다.<br>
-4.값을 00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 으로 채운 뒤 재부팅한다.<br><br>
-![screenshot]({{ "img/180324.png"}})
+4.값을 00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 으로 채운 뒤 재부팅한다.
+```
+<br><br>
+![screenshot]({{"/blog/_posts/img/180324.png" | absolute_url }})
