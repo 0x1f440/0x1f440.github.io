@@ -3,7 +3,10 @@
 // console.clear();
 
 var APP = {};
-var seed = "";
+var seed = "random";
+var points = [];
+var count = 0;
+
 var started = false;
 // There's a bug that happens occasionally. Intercept it.
 // a seed that triggers it: d12d21ddd
@@ -16,34 +19,66 @@ window.ABCJS.parse.each = function(a, d, c) {
   }
 }
 
-document.getElementById("play").addEventListener("click", function(e) {
-  started = true;
+document.getElementById("load").addEventListener("click", function(e) {
+
   if(seed) {
     // if(seed.match(/^[A-Za-z0-9]+$/g)) {
+      started = true;
+      document.getElementById("myCanvas").style.backgroundColor = '#000000';
+      document.getElementById("title-select").style.display = "none";
+      document.getElementById("play").style.display = "block";
+
       APP.MusicGenerator.init(seed);
+
+      document.getElementById("play").setAttribute("data-playing", "true");
       APP.MusicGenerator.play();
-      document.getElementById("play").focus();
       document.getElementById("play").addEventListener("click", function(e) {
         var $el = e.target;
         if($el.getAttribute("data-playing") === "true") {
           APP.MusicGenerator.pause();
           $el.setAttribute("data-playing", "false");
-          $el.innerHTML = "Play";
+          $el.innerHTML = "<i class='fas fa-play'></i>";
           //APP.MusicGenerator.report();
         } else {
           APP.MusicGenerator.play();
-          $el.innerHTML = "Pause";
+          $el.innerHTML = "<i class='fas fa-pause'></i>";
           $el.setAttribute("data-playing", "true");
         }
       });
+
+      countdown();
+      document.getElementById("play").focus();
+
     // } else {
     //   alert("Letters and numbers only");
     // }
   } else {
-    alert("Please enter a seed into the input");
+    alert("화면을 클릭해주세요.");
   }
+
+  document.getElementById("load").style.display = "none";
 });
 
+function countdown() {
+    var seconds = 60;
+    var width = 0;
+    function tick() {
+        //This script expects an element with an ID = "counter". You can change that to what ever you want.
+        var counter = document.getElementById("counter");
+        seconds--;
+        //counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            width = 100 - (1.66 * seconds);
+            document.getElementById("progress-bar").style.width = width + "%";
+            setTimeout(tick, 1000);
+
+        } else {
+            //counter.innerHTML = "끝~"
+            document.getElementById("progress-bar").style.width = "100%";
+        }
+    }
+    tick();
+}
 
 (function() {
 
@@ -375,12 +410,12 @@ document.getElementById("play").addEventListener("click", function(e) {
   function _renderABC(el, abc) {
     console.log(abc);
     ABCJS.renderAbc(el, abc, {}, { //악보 그려줌
-      staffwidth: 800,
       paddingright: 0,
       paddingleft: 0,
       scale: 1,
-      add_classes: true
-    }, {});
+      add_classes: true,
+      responsive: "resize"
+    });
   }
 
   // take a measure and generate the abc output

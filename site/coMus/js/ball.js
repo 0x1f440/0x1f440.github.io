@@ -129,26 +129,47 @@ clickSynth.set({ //클릭할 때 소리가 나옴
     release: 1
   }
 });
+
 var scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+var rasters = [];
+
+
 
 function onMouseDown(event){
-	if(!started){
-		var octave = scale[Math.floor(Math.random() * scale.length)]+'3';
-		seed = seed + event.point.x.toString() + event.point.y.toString();
-		seed = seed.replace(".","");
-		console.log(seed);
-		clickSynth.triggerAttackRelease(octave, undefined, 0.2);
+	rasters[rasters.length] = new Raster({
+	    source: 'img/note.svg',
+	    position: event.point
+	});
 
-		var position = event.point;
-		var vector = new Point({
-			angle: 360 * Math.random(),
-			length: Math.random() * 10
-		});
-		var radius = Math.random() * 60 + 60;
+	count = points.length;
+	points[count] = new Point(event.point);
 
-		balls.push(new Ball(radius, position, vector));
-	}
+	var octave = scale[Math.floor(Math.random() * scale.length)]+'3';
+
+	seed = seed + event.point.x.toString() + event.point.y.toString();
+	seed = seed.replace(".","");
+	console.log(seed);
+	clickSynth.triggerAttackRelease(octave, undefined, 0.2);
+
 }
+
+
+document.getElementById("load").addEventListener("click", function(e) {
+		for(i = 0; i < points.length; i++){
+			console.log(points[i]);
+			var position = points[i];
+			var vector = new Point({
+				angle: 360 * Math.random(),
+				length: Math.random() * 10
+			});
+			var radius = Math.random() * 60 + 60;
+
+			balls.push(new Ball(radius, position, vector));
+  	}
+});
+
+
+
 
 function onFrame() {
 	for (var i = 0; i < balls.length - 1; i++) {
