@@ -72,9 +72,14 @@ document.getElementById("load").addEventListener("click", function(e) {
     // if(seed.match(/^[A-Za-z0-9]+$/g)) {
       started = true;
       document.getElementById("myCanvas").style.backgroundColor = '#000000';
-      document.getElementById("title-select").style.display = "none";
-
-
+      document.getElementById("title").style.display = "none";
+      document.getElementById("factor").style.margin = 0;
+      document.getElementById("factor").style.float = "right";
+      document.getElementById("title-select").style.right = 0;
+      document.getElementById("factor").style.color = "white";
+      document.getElementById("factor").style.fontSize = "12px";
+      document.getElementById("factor").style.width = "100px";
+      document.getElementById("factor").style.textAlign ="right";
     //  document.getElementById("play").style.display = "block";
 
       APP.MusicGenerator.init(seed);

@@ -89,10 +89,9 @@ body {
 }
 
 input, button {
-  border-radius: 2px;
   line-height: 1.4;
   margin: 0;
-  padding: 0.25em 0.5em;
+  padding: 0.35em 0.9em;
 }
 
 input {
@@ -109,21 +108,27 @@ button:focus, input:focus{
 }
 
 button {
+  cursor: url('/img/pointer.png'), pointer;
   background: #444;
   color: white;
-  font-size: 20pt;
-  border: 1px solid black;
+  font-size: 18pt;
+  border: none;
   font-family: 'Nanum Myeongjo', serif;
 }
+button:disabled {
+  cursor:not-allowed;
+}
+
 
 #factor {
   display: none;
   margin: auto;
   text-align: center;
+  font-size: 45px;
 }
 #factor div{
   margin: 18%;
-  font-size: 45px;
+
 }
 #counter {
   color: white;
@@ -155,7 +160,8 @@ svg {
   pointer-events: none;
 }
 #staff {
-  width: 100%;
+  width: 1000px;
+  margin: 30px
 }
 
 #staff > div {

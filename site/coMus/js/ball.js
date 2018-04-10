@@ -18,7 +18,7 @@ function Ball(r, p, v) {
 			saturation: 0,
 			brightness: 1
 		},
-		blendMode: 'normal'
+		blendMode: 'color-dodge'
 	});
 
 	for (var i = 0; i < this.numSegment; i ++) {
@@ -165,7 +165,7 @@ function onMouseDown(event){
 					bpmMade = map(event.point.x+event.point.y, 0, width+height, 60, 200);
 					bpmMade = Math.round(bpmMade);
 					console.log(bpmMade);
-					document.getElementById("factor").innerHTML += "<div>" + bpmMade + "BPM</div>"
+					document.getElementById("factor").innerHTML += "<div>" + bpmMade + " bpm</div>"
 					break;
 
 				case 2:
@@ -178,7 +178,7 @@ function onMouseDown(event){
 					else {
 						_mode = _modes[1];
 					}
-					document.getElementById("factor").innerHTML += "<div>" + _root.replace(/b$/g, "♭") + " " + _mode + "</div>"
+					document.getElementById("factor").innerHTML += "<div>" + _root.replace(/b$/g, "♭") +" "+ _mode + "</div>"
 					console.log(_mode);
 					break;
 
