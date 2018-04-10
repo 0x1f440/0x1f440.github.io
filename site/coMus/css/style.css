@@ -1,0 +1,98 @@
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#myCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+input, button {
+  border-radius: 2px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.25em 0.5em;
+}
+
+input {
+  border: 1px solid #e6e6e6;
+  width: 280px;
+}
+
+button {
+  background: #444;
+  color: white;
+  font-size: 30pt;
+  border: 1px solid #2b2b2b;
+}
+
+#play, #midi {
+  position: absolute;
+  top: 1rem;
+  z-index: 8;
+}
+
+#play {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#midi {
+  right: 1rem;
+  text-align: right;
+  margin: 0;
+}
+#midi embed {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+  pointer-events: none;
+}
+#midi a {
+  color: #444;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.0125em;
+}
+
+#staff {
+}
+#staff > div {
+  box-sizing: border-box;
+  height: 220px;
+  display: flex;
+  opacity: 1;
+  transition: opacity 250ms ease-out;
+}
+#staff > div:not(:nth-child(2)) path.symbol.l0 {
+  opacity: 0;
+}
+#staff > div:not(:nth-child(2)) {
+  transition-delay: 250ms;
+}
+#staff > div.hide {
+  opacity: 0;
+}
+#staff > div:first-child {
+  border-bottom: 1px solid #F0F0F0;
+}
+#staff > div:first-child > div {
+  align-self: flex-end;
+}
+
+#intro{
+  position: absolute;
+  top: 0;
+}

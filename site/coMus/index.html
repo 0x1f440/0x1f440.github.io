@@ -1,0 +1,24 @@
+<head>
+  <title>우연작곡</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+</head>
+
+<div id="intro">
+  <button id="play"><i class="fas fa-play"></i></button><br>
+  <p id="midi"></p>
+  <section id="staff-container">
+    <div id="staff"></div>
+  </section>
+</div>
+
+<canvas id="myCanvas"></canvas>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
+<script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/Tone.min.js"></script>
+<script src="http://cdn.rawgit.com/paulrosen/abcjs/master/bin/abcjs_basic_2.0-min.js"></script>
+<script src="js/generator.js"></script>
+
+<script type="text/javascript" src="js/paper-full.min.js"></script>
+<script type="text/paperscript" src="js/ball.js" canvas="myCanvas"></script>
