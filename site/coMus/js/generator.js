@@ -1,13 +1,46 @@
 
+var _v_key      = "WeAddaBabyEetsABoy"; // change this to refresh the seed
+var _roots      = "C Db D Eb E F F# G Ab A Bb".split(" ");
+var _modes      = "maj min".split(" ");
+var _hold       = "HOLD";
+var _container  = document.getElementById("staff-container");
+var _staff      = document.getElementById("staff");
+var _midi       = document.getElementById("midi");
+var _min_oct    = 2;
+var _max_oct    = 5;
+var _playing    = false;
+var _res        = 8;
+var _curr_meas  = 0;
+var _curr_note  = 0;
+var _scale      = [];
+var _measures   = [];
+var _abc        = "";
+var _total_abc  = "";
+var _treb_abc   = "";
+var _bass_abc   = "";
+var _gen_meas   = 0;
+var _meas_gen   = 4;
+var _first_one  = true;
+
+var _bpm        = null;
+var _generator  = null;
+var _len_seqs   = null;
+var _mode       = null;
+var _output     = null;
+var _root       = null;
+var _seed       = null;
+var _synth      = null;
+
 
 // console.clear();
 
 var APP = {};
-var seed = "random";
+var seed = "";
 var points = [];
 var count = 0;
 var typecounter;
 var types = ['sine', 'square', 'triangle','sawtooth'];
+var bpmMade = 60;
 
 var width = window.innerWidth
 || document.documentElement.clientWidth
@@ -29,8 +62,12 @@ window.ABCJS.parse.each = function(a, d, c) {
   }
 }
 
+//작곡
+
 document.getElementById("load").addEventListener("click", function(e) {
 
+  document.getElementById("song-title").style.display="inline-block";
+  document.getElementById("play").style.display="block";
   if(seed) {
     // if(seed.match(/^[A-Za-z0-9]+$/g)) {
       started = true;
@@ -97,43 +134,13 @@ function countdown() {
 
   APP.MusicGenerator = {};
 
-  var _v_key      = "WeAddaBabyEetsABoy"; // change this to refresh the seed
-  var _roots      = "C Db D Eb E F F# G Ab A Bb".split(" ");
-  var _modes      = "maj min".split(" ");
-  var _hold       = "HOLD";
-  var _container  = document.getElementById("staff-container");
-  var _staff      = document.getElementById("staff");
-  var _midi       = document.getElementById("midi");
-  var _min_oct    = 2;
-  var _max_oct    = 5;
-  var _playing    = false;
-  var _res        = 8;
-  var _curr_meas  = 0;
-  var _curr_note  = 0;
-  var _scale      = [];
-  var _measures   = [];
-  var _abc        = "";
-  var _total_abc  = "";
-  var _treb_abc   = "";
-  var _bass_abc   = "";
-  var _gen_meas   = 0;
-  var _meas_gen   = 4;
-  var _first_one  = true;
 
-  var _bpm        = null;
-  var _generator  = null;
-  var _len_seqs   = null;
-  var _mode       = null;
-  var _output     = null;
-  var _root       = null;
-  var _seed       = null;
-  var _synth      = null;
 
   APP.MusicGenerator.init = function(seed) {
     _staff.innerHTML = "";
     _seed = seed + _v_key;
     _setGenerator(_seed);
-    _setKey();
+    //_setKey();
     if(!_synth) _setSynth();
     _setTransport();
     _genStaff();
@@ -186,14 +193,6 @@ function countdown() {
   // get a unique random number generator based on the seed
   function _setGenerator(seed) {
     _generator = new Math.seedrandom(seed);
-  }
-
-  // get randomly generated key and mode
-  function _setKey() {
-    _root = _roots[Math.floor(_generator.quick() * _roots.length)];
-
-    var mode_index = Math.floor(_generator.quick() * _modes.length);
-    _mode = _modes[mode_index];
   }
 
   // play the bass and treble notes
@@ -482,6 +481,7 @@ function countdown() {
   // abc notation
   function _ABCNotation(note, length) {
     // note = note.replace(/([A-G])b/,"_$1");
+
     // TODO: know if this is needed based on mode.
     note = note.replace(/([A-G])b/,"$1");
     note = note
@@ -608,15 +608,13 @@ function countdown() {
 
 
 
-
-
   //////////////
   // TONE.js
   //////////////
 
   // set the tone js transport
   function _setTransport() {
-    _bpm = Math.round(_generator.quick() * 60) + 60;
+    _bpm = bpmMade;
     Tone.Transport.bpm.value = _bpm;
     Tone.Transport.scheduleRepeat(function(time) {
       _playSong();

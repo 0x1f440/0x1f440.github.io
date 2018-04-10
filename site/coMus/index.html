@@ -6,9 +6,12 @@
 </head>
 
 <body>
+
   <button id="load" disabled >4번 클릭해서 작곡</button>
   <div id="title-select">
     <input id="title" type="text" placeholder="곡의 제목을 정해주세요">
+    <div id="factor">
+    </div>
     <button id="title-finish">결정</button>
   </div>
 
@@ -23,6 +26,9 @@
   <canvas id="myCanvas"></canvas>
 
   <div id="bottom-bar">
+    <button id="play" onClick="window.location.reload()">
+      <i class="fas fa-redo"></i>
+    </button>
     <div id="progress-bar"></div>
   </div>
 </body>

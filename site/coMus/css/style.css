@@ -54,9 +54,10 @@ body {
 }
 
 #song-title {
+
   position: absolute;
   top: 0;
-  display: inline-block;
+  display: none;
   border-bottom: 4px solid white;
   font-size: 90px;
   color: white;
@@ -115,6 +116,15 @@ button {
   font-family: 'Nanum Myeongjo', serif;
 }
 
+#factor {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+#factor div{
+  margin: 18%;
+  font-size: 45px;
+}
 #counter {
   color: white;
 }

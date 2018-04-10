@@ -113,6 +113,7 @@ Ball.prototype = {
 	}
 };
 
+
 //--------------------- main ---------------------
 
 var balls = [];
@@ -137,6 +138,11 @@ function setType(){
 	}
 }
 
+function map(value, low1, high1, low2, high2) {
+		return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+//클릭 팩터
 function onMouseDown(event){
 		if(!started){
 			rasters[rasters.length] = new Raster({
@@ -152,19 +158,35 @@ function onMouseDown(event){
 			switch (count) {
 				case 0:
 					setType();
+					document.getElementById("factor").innerHTML += "<div>" + types[typecounter] + "</div>"
 					break;
 
 				case 1:
-
+					bpmMade = map(event.point.x+event.point.y, 0, width+height, 60, 200);
+					bpmMade = Math.round(bpmMade);
+					console.log(bpmMade);
+					document.getElementById("factor").innerHTML += "<div>" + bpmMade + "BPM</div>"
 					break;
 
 				case 2:
+				// get randomly generated key and mode
+					_root = _roots[Math.floor(Math.random() * _roots.length)];
+
+					if(event.point.x < width/2){
+						_mode = _modes[0];//major
+					}
+					else {
+						_mode = _modes[1];
+					}
+					document.getElementById("factor").innerHTML += "<div>" + _root.replace(/b$/g, "♭") + " " + _mode + "</div>"
+					console.log(_mode);
 					break;
 
 				case 3:
 					seed = seed + event.point.x.toString() + event.point.y.toString();
 					seed = seed.replace(".","");
 					started = true;
+					document.getElementById("factor").innerHTML += "<div>" + seed + "</div>"
 					break;
 
 				default:
@@ -188,7 +210,7 @@ function onMouseDown(event){
 			}
 
 			var clickSynth = new Tone.PolySynth(6, Tone.SimpleSynth).toMaster();
-			console.log(types[typecounter]);
+
 			clickSynth.set({ //클릭할 때 소리가 나옴
 			  oscillator: {
 			    type: types[typecounter]

@@ -13,6 +13,7 @@ document.getElementById("title-finish").addEventListener("click", function(e) {
   }
   unsetTitleStyle();
   document.getElementById("load").style.display = "block";
+  document.getElementById("factor").style.display = "block";
 });
 
 
