@@ -142,7 +142,7 @@ p {
 #end {
   display: none;
   position: fixed;
-  left: calc(50% - 250px);
+  left: calc(50% - 270px);
   width: 600px;
   top: calc(50% - 300px);
   transition: 1s;
