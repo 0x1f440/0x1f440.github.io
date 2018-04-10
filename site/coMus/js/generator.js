@@ -114,7 +114,7 @@ document.getElementById("load").addEventListener("click", function(e) {
 });
 
 function countdown() {
-    var seconds = 10;
+    var seconds = 60;
     var width = 0;
     function tick() {
         //This script expects an element with an ID = "counter". You can change that to what ever you want.
