@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="favicon.png" type="image/png"/>
 </head>
 
 <body>
@@ -17,7 +17,6 @@
   </div>
 
   <div id="contents">
-    <p id="midi"></p>
     <section id="staff-container">
       <div id="staff"></div>
     </section>
@@ -32,6 +31,15 @@
     </button>
     <div id="progress-bar"></div>
   </div>
+
+<div id="end">
+  <p id="re" onClick="window.location.reload()">
+    <i class="fas fa-redo"></i>
+  </p>
+  <p id="midi">저장하기</p>
+</div>
+
+
 </body>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
 <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/Tone.min.js"></script>

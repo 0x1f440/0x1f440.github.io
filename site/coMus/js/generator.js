@@ -114,7 +114,7 @@ document.getElementById("load").addEventListener("click", function(e) {
 });
 
 function countdown() {
-    var seconds = 60;
+    var seconds = 10;
     var width = 0;
     function tick() {
         //This script expects an element with an ID = "counter". You can change that to what ever you want.
@@ -129,7 +129,13 @@ function countdown() {
         } else {
             //counter.innerHTML = "끝~"
             document.getElementById("progress-bar").style.width = "100%";
+            document.getElementById("myCanvas").style.backgroundColor = '#ffffff';
             APP.MusicGenerator.pause();
+            document.getElementById("end").style.display = "block";
+            document.getElementById("staff").style.display = "none";
+            document.getElementById("bottom-bar").style.display = "none";
+            APP.MusicGenerator.report();
+
         }
     }
     tick();
@@ -185,6 +191,8 @@ function countdown() {
     ABCJS.renderMidi(_midi, _total_abc , {}, {}, {});
     console.log(_total_abc);
     console.log(_output);
+
+    document.getElementById("midi").childNodes[1].innerHTML = "<i class='fas fa-cloud-download-alt'></i>";
   }
 
 

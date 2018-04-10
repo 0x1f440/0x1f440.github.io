@@ -11,7 +11,7 @@
 
 #play{
   display: none;
-  background-color: black;
+  background-color: transparent;
 }
 
 #progress-bar {
@@ -130,17 +130,35 @@ button:disabled {
   margin: 18%;
 
 }
+
+p {
+  font-size: 170px;
+  color: #444;
+  display: inline-block;
+  width: 200px;
+  cursor: pointer;
+}
+
+#end {
+  display: none;
+  position: fixed;
+  left: calc(50% - 250px);
+  width: 600px;
+  top: calc(50% - 300px);
+  transition: 1s;
+}
+
 #counter {
   color: white;
 }
 
+#re {
+}
+
 #midi {
-  position: absolute;
-  top: 1rem;
-  z-index: 8;
-  right: 1rem;
   text-align: right;
   margin: 0;
+  margin-left: 190px;
 }
 
 #midi embed {
@@ -153,7 +171,6 @@ button:disabled {
 #midi a {
   color: #444;
   text-transform: uppercase;
-  font-size: 0.8em;
   letter-spacing: 0.0125em;
 }
 svg {
