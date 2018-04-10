@@ -1,5 +1,4 @@
-
-
+var clickCount = 4;
 
 // kynd.info 2014
 
@@ -117,39 +116,95 @@ Ball.prototype = {
 //--------------------- main ---------------------
 
 var balls = [];
-var clickSynth = new Tone.PolySynth(6, Tone.SimpleSynth).toMaster();
-clickSynth.set({ //클릭할 때 소리가 나옴
-  oscillator: {
-    type: "triangle"
-  },
-  envelope: {
-    attack: 0.05,
-    decay: 0.1,
-    sustain: 0.3,
-    release: 1
-  }
-});
+
 
 var scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
 var rasters = [];
 
-
+function setType(){
+	if(points[0].x > (width/2)){
+		if(points[0].y > (height/2)){
+			typecounter = 0;
+		}else{
+			typecounter = 1;
+		}
+	}else{
+		if(points[0].y > (height/2)){
+			typecounter = 2;
+		}else{
+			typecounter = 3;
+		}
+	}
+}
 
 function onMouseDown(event){
-	rasters[rasters.length] = new Raster({
-	    source: 'img/note.svg',
-	    position: event.point
-	});
+		if(!started){
+			rasters[rasters.length] = new Raster({
+					source: 'img/note.svg',
+					position: event.point
+			});
 
-	count = points.length;
-	points[count] = new Point(event.point);
+			count = points.length;
 
-	var octave = scale[Math.floor(Math.random() * scale.length)]+'3';
 
-	seed = seed + event.point.x.toString() + event.point.y.toString();
-	seed = seed.replace(".","");
-	console.log(seed);
-	clickSynth.triggerAttackRelease(octave, undefined, 0.2);
+			points[count] = new Point(event.point);
+
+			switch (count) {
+				case 0:
+					setType();
+					break;
+
+				case 1:
+
+					break;
+
+				case 2:
+					break;
+
+				case 3:
+					seed = seed + event.point.x.toString() + event.point.y.toString();
+					seed = seed.replace(".","");
+					started = true;
+					break;
+
+				default:
+					break;
+			}
+
+			var octave = scale[Math.floor(Math.random() * scale.length)]+'3';
+
+
+
+			var end = clickCount - count - 1;
+
+
+			if(end > 0){
+				document.getElementById("load").innerHTML = end +"번 클릭해서 작곡";
+			}
+			else {
+				document.getElementById("load").innerHTML ="작곡하기";
+				document.getElementById("load").disabled = false;
+				document.getElementById("load").style.backgroundColor = '#444';
+			}
+
+			var clickSynth = new Tone.PolySynth(6, Tone.SimpleSynth).toMaster();
+			console.log(types[typecounter]);
+			clickSynth.set({ //클릭할 때 소리가 나옴
+			  oscillator: {
+			    type: types[typecounter]
+			  },
+			  envelope: {
+			    attack: 0.05,
+			    decay: 0.1,
+			    sustain: 0.3,
+			    release: 1
+			  }
+			});
+
+			clickSynth.triggerAttackRelease(octave, undefined, 0.2);
+	}
+
+
 
 }
 

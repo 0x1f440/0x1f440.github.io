@@ -6,6 +6,16 @@ var APP = {};
 var seed = "random";
 var points = [];
 var count = 0;
+var typecounter;
+var types = ['sine', 'square', 'triangle','sawtooth'];
+
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var height = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
 
 var started = false;
 // There's a bug that happens occasionally. Intercept it.
@@ -26,28 +36,30 @@ document.getElementById("load").addEventListener("click", function(e) {
       started = true;
       document.getElementById("myCanvas").style.backgroundColor = '#000000';
       document.getElementById("title-select").style.display = "none";
-      document.getElementById("play").style.display = "block";
+
+
+    //  document.getElementById("play").style.display = "block";
 
       APP.MusicGenerator.init(seed);
 
-      document.getElementById("play").setAttribute("data-playing", "true");
+    //document.getElementById("play").setAttribute("data-playing", "true");
       APP.MusicGenerator.play();
-      document.getElementById("play").addEventListener("click", function(e) {
-        var $el = e.target;
-        if($el.getAttribute("data-playing") === "true") {
-          APP.MusicGenerator.pause();
-          $el.setAttribute("data-playing", "false");
-          $el.innerHTML = "<i class='fas fa-play'></i>";
-          //APP.MusicGenerator.report();
-        } else {
-          APP.MusicGenerator.play();
-          $el.innerHTML = "<i class='fas fa-pause'></i>";
-          $el.setAttribute("data-playing", "true");
-        }
-      });
+      // document.getElementById("play").addEventListener("click", function(e) {
+      //   var $el = e.target;
+      //   if($el.getAttribute("data-playing") === "true") {
+      //     APP.MusicGenerator.pause();
+      //     $el.setAttribute("data-playing", "false");
+      //     $el.innerHTML = "<i class='fas fa-play'></i>";
+      //     //APP.MusicGenerator.report();
+      //   } else {
+      //     APP.MusicGenerator.play();
+      //     $el.innerHTML = "<i class='fas fa-pause'></i>";
+      //     $el.setAttribute("data-playing", "true");
+      //   }
+      // });
 
       countdown();
-      document.getElementById("play").focus();
+      //document.getElementById("play").focus();
 
     // } else {
     //   alert("Letters and numbers only");
@@ -75,6 +87,7 @@ function countdown() {
         } else {
             //counter.innerHTML = "끝~"
             document.getElementById("progress-bar").style.width = "100%";
+            APP.MusicGenerator.pause();
         }
     }
     tick();
@@ -613,6 +626,7 @@ function countdown() {
   // set the synthesizer
   function _setSynth() {
 
+
     // master compression
     var multiband = new Tone.MultibandCompressor({
       lowFrequency: 200,
@@ -630,7 +644,7 @@ function countdown() {
     _synth = new Tone.PolySynth(6, Tone.SimpleSynth).toMaster();
     _synth.set({
       oscillator: {
-        type: "triangle"
+        type: types[typecounter]
       },
       envelope: {
         attack: 0.05,

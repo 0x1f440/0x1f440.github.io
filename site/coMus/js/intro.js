@@ -9,7 +9,7 @@ document.getElementById("title-finish").addEventListener("click", function(e) {
     document.getElementById("song-title").innerHTML = title;
   }
   else {
-    document.getElementById("song-title").innerHTML = '아무제목';
+    document.getElementById("song-title").innerHTML = '무제';
   }
   unsetTitleStyle();
   document.getElementById("load").style.display = "block";

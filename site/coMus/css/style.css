@@ -1,4 +1,6 @@
 #load {
+  background-color: #999;
+  border: none;
   display: none;
   width: 300px;
   margin: 0 auto;
@@ -33,6 +35,7 @@ html {
   margin: 0;
   font-family: 'Nanum Myeongjo', serif;
   font-weight: 900;
+  overflow: hidden;
 }
 
 body {
@@ -68,7 +71,7 @@ body {
 
 #title {
   display: block;
-  margin: 24% auto 0 auto;
+  margin: 22% auto 0 auto;
   text-align: center;
   width: 550px;
   padding: 10px 25px;
