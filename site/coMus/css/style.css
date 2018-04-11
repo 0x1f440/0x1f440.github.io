@@ -2,11 +2,11 @@
   background-color: #999;
   border: none;
   display: none;
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
   bottom: 20px;
   position: absolute;
-  left: calc(50% - 150px);
+  left: calc(50% - 200px);
 }
 
 #play{
