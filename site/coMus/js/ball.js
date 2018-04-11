@@ -201,7 +201,7 @@ function onMouseDown(event){
 
 
 			if(end > 0){
-				document.getElementById("load").innerHTML = end +"번 클릭해서 작곡";
+				document.getElementById("load").innerHTML = "아무 곳이나 "+end +"번 클릭해서 작곡";
 			}
 			else {
 				document.getElementById("load").innerHTML ="작곡하기";
