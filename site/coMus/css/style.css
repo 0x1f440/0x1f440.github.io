@@ -108,7 +108,7 @@ button:focus, input:focus{
 }
 
 button {
-  cursor: url('img/pointer.png'), pointer;
+  cursor: url('../img/pointer.png'), pointer;
   background: #444;
   color: white;
   font-size: 18pt;
