@@ -12,15 +12,23 @@ group: archive
 
 {% for project in site.data.projects %}
 </div><div class="thumbnail-wrapper">
+  {% if project.link %}
+    <a href="{{ project.link }}">
+  {% else %}
     <a href="{{ site.url }}/projects/{{ project.title }}">
+  {% endif %}
       <div class="project-list">
         <img src="{{ site.url }}/projects/{{ project.title }}/thumbnail" alt="{{ project.title }}">
 
         {% for tag in project.tags %}
         <div class="tag"> {{ tag }} </div>
         {% endfor %}
-        <div class="title">{{ project.title }}</div>
-
+        <div class="title">
+          {{ project.title }}
+          {% if project.link %}
+              <i style="font-size:0.7rem; color:#999;" class="fas fa-external-link-alt"></i>
+          {% endif %}
+        </div>
         <div class="caption"> {{ project.caption }} </div>
       </div>
     </a>
