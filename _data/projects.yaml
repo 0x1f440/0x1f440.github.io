@@ -1,14 +1,26 @@
+- title: Hotel Sowls
+  tags:
+    - site
+  caption: Hotel Sowls Official Site.
+  link: http://hotelsowls.com/
+
+- title: Coincidence Pattern
+  tags:
+    - site
+  caption: Coincidence Pattern.
+  link: http://workinprogress.kr/coPattern/
+
+- title: Coincidence MV
+  tags:
+    - site
+  caption: Coincidence Music Video.
+  link: https://workinprogress.kr/coMov/
+
 - title: Coincidence Composition
   tags:
     - site
   caption: Coincidence Composition.
   link: http://workinprogress.kr/site/coMus/
-
-- title: Coincidence Publish
-  tags:
-    - site
-  caption: Coincidence Publish.
-  link: http://unconscious-publish.workinprogress.kr
 
 - title: PyCon KR 2017 teaser site
   tags:
