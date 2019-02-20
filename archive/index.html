@@ -15,10 +15,10 @@ group: archive
   {% if project.link %}
     <a href="{{ project.link }}">
   {% else %}
-    <a href="{{ site.url }}/projects/{{ project.title }}">
+    <a href="{{ project.title }}">
   {% endif %}
       <div class="project-list">
-        <img src="{{ site.url }}/projects/{{ project.title }}/thumbnail" alt="{{ project.title }}">
+        <img src="{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
 
         {% for tag in project.tags %}
         <div class="tag"> {{ tag }} </div>
