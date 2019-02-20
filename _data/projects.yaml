@@ -1,26 +1,26 @@
 - title: Hotel Sowls Website
   tags:
-    - site
+    - website
   caption: Hotel Sowls Official Website.
   link: http://hotelsowls.com/
 
 - title: Coincidence Pattern
   tags:
-    - site
+    - website
   caption: Coincidence Pattern.
-  link: http://workinprogress.kr/coPattern/
+  link: http://workinprogress.kr/Coincidence-Pattern/
 
 - title: Coincidence MV
   tags:
-    - site
+    - website
   caption: Coincidence Music Video.
-  link: https://workinprogress.kr/coMov/
+  link: http://workinprogress.kr/Coincidence-MV/
 
 - title: Coincidence Composition
   tags:
-    - site
+    - website
   caption: Coincidence Composition.
-  link: http://workinprogress.kr/site/coMus/
+  link: http://workinprogress.kr/Coincidence-Composition/
 
 - title: PyCon KR 2017 teaser site
   tags:
@@ -29,6 +29,6 @@
 
 - title: catcat
   tags:
-    - site
+    - website
   caption: I gave an order to a cat, and the cat gave it to its tail.
   link: http://workinprogress.kr/projects/catcat/
