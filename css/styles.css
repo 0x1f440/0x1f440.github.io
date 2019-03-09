@@ -72,9 +72,9 @@
 .thumbnail-wrapper {
   display: inline-block;
   max-width: 33%;
-  padding: 30px;
+  padding: 22px;
   box-sizing: border-box;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 .titles {
   margin-bottom: 30px;
@@ -88,6 +88,8 @@
   vertical-align: top;
   box-sizing: border-box;
   font-family: 'Lekton', 'Noto Sans KR', sans-serif; }
+  .project-list img {
+    margin: 8px 0; }
   .project-list .title {
     margin-bottom: 10px;
     font-weight: bold;
@@ -129,12 +131,13 @@
 
 .blog-tag-item {
   display: inline-block;
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  font-size: 1rem; }
   .blog-tag-item a {
     margin-right: 5px;
     padding: 4px 20px;
-    border: 1px solid #e3e3e3;
-    color: #555; }
+    color: #555;
+    font-size: 0.9rem; }
 
 .blog-tag-item.active a {
   border: 1px solid #7e2cff;
@@ -162,8 +165,10 @@
     color: #7e2cff; }
 
 .page-title {
-  font-size: 2.2rem;
-  font-weight: bold; }
+  margin: 5px 0 12px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  word-break: keep-all; }
 
 .page-date {
   margin-bottom: 5px;
@@ -180,23 +185,26 @@
   margin: 50px 0 130px 0;
   font-weight: 300;
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 2;
   letter-spacing: -0.1px; }
 
 .post-navi {
   display: inline-block;
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: 50%;
+  word-break: keep-all; }
 
 .next-post {
-  float: right; }
+  float: right;
+  text-align: right; }
 
 .hidden {
   display: none;
   visibility: hidden; }
 
 .blog-item-list {
-  margin-bottom: 15px;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 28px; }
 
 a.blog-item-title {
   font-size: 1.2rem;

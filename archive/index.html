@@ -5,10 +5,6 @@ group: archive
 ---
 
 <div class="titles">
-{% for project in site.data.projects %}
-<a href="{{ site.url }}/projects/{{ project.title }}"><span class="titles"> {{ project.title }} </span></a>
-
-{% endfor %}
 
 {% for project in site.data.projects %}
 </div><div class="thumbnail-wrapper">
@@ -19,7 +15,6 @@ group: archive
   {% endif %}
       <div class="project-list">
         <img src="{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
-
         {% for tag in project.tags %}
         <div class="tag"> {{ tag }} </div>
         {% endfor %}

@@ -1,9 +1,9 @@
 .thumbnail-wrapper {
     display: inline-block;
     max-width: 33%;
-    padding: 30px;
+    padding: 22px;
     box-sizing: border-box;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .titles {
@@ -21,6 +21,10 @@
   box-sizing: border-box;
 
   font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+
+  img{
+    margin: 8px 0;
+  }
 
   .title {
     margin-bottom: 10px;
