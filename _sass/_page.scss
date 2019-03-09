@@ -68,7 +68,7 @@
   }
 }
 .page-content {
-  margin: 50px 0 130px 0;
+  margin: 50px 0;
   font-weight: 300;
   font-size: 1.1rem;
   line-height: 2;
@@ -79,6 +79,8 @@
   display: inline-block;
   margin-top: 20px;
   width: 50%;
+
+  font-weight: 300;
   word-break: keep-all;
 }
 
