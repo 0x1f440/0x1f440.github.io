@@ -224,6 +224,9 @@ body {
   color: #333;
   line-height: 1.5; }
 
+h3 {
+  margin-top: 4rem; }
+
 a {
   text-decoration: none;
   color: #333; }
