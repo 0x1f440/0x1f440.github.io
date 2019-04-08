@@ -1,9 +1,23 @@
+- title: Hotel Sowls
+  tags:
+    - indie game
+    - steam
+  caption: A mysterious adventure game with unique and appealing 2D graphics.(link to steam page)
+  link: https://store.steampowered.com/app/968350/
+
 - title: Hotel Sowls Website
   tags:
     - website
   caption: Hotel Sowls Official Website.
   link: http://hotelsowls.com/
 
+- title: Domi-no
+  tags :
+    - VR
+    - indie game
+    - HTC VIVE
+  caption: VR game project Domi-no(working title)
+    
 - title: Coincidence Pattern
   tags:
     - website
