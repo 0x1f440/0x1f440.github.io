@@ -4,10 +4,8 @@ title: archive
 group: archive
 ---
 
-<div class="titles">
-
 {% for project in site.data.projects %}
-</div><div class="thumbnail-wrapper">
+<div class="thumbnail-wrapper">
   {% if project.link %}
     <a href="{{ project.link }}">
   {% else %}
@@ -27,5 +25,5 @@ group: archive
         <div class="caption"> {{ project.caption }} </div>
       </div>
     </a>
+  </div>
 {% endfor %}
-</div>

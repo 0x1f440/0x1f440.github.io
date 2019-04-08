@@ -19,3 +19,9 @@
 .col-100 {
   width: 100%;
 }
+
+@media screen and (min-device-width : 768px) {
+  .header-wrapper {
+    width: 100%;
+  }
+}
