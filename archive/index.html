@@ -7,7 +7,7 @@ group: archive
 {% for project in site.data.projects %}
 <div class="thumbnail-wrapper">
   {% if project.link %}
-    <a href="{{ project.link }}">
+    <a href="{{ project.link }}" target="_blank">
   {% else %}
     <a href="{{ project.title }}">
   {% endif %}
@@ -19,7 +19,7 @@ group: archive
         <div class="title">
           {{ project.title }}
           {% if project.link %}
-              <i style="font-size:0.7rem; color:#999;" class="fas fa-external-link-alt"></i>
+              <i style="font-size:0.9rem; color:#999;" class="fas fa-external-link-alt"></i>
           {% endif %}
         </div>
         <div class="caption"> {{ project.caption }} </div>
