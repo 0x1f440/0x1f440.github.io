@@ -1,7 +1,7 @@
-title: 0x1f440
+title: work in progress
 email: 0x1f440@gmail.com
 description: >
-  portfolio site by Yura Lee
+  work in progress
 baseurl: ""
 url: "https://0x1f440.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -9,6 +9,8 @@ url: "https://0x1f440.github.io" # the base hostname & protocol for your site, e
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jemoji
+  
 exclude:
   - Gemfile
   - Gemfile.lock

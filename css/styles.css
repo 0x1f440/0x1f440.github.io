@@ -45,7 +45,7 @@ a {
 a:hover {
   color: #7e2cff; }
 
-img {
+img:not(.emoji) {
   width: 100%; }
 
 ul {

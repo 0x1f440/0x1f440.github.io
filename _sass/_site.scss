@@ -33,7 +33,7 @@ a:hover {
   color: $theme-color;
 }
 
-img {
+img:not(.emoji) {
   width: 100%;
 }
 
