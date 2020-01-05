@@ -1,0 +1,67 @@
+.resume {
+    margin: 0 auto;
+    padding: 50px 50px 250px 50px;
+    max-width: 900px;
+
+    section:not(:first-child) {
+        margin-top: 6rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        color: $theme-color;
+    }
+    
+    ul {
+        margin: 2.3rem 0 0 1.2rem; 
+        list-style-type: square;
+    }
+
+    li {
+        margin-bottom: 0.9rem;
+    }
+    
+    .intro {
+        margin-bottom: 6rem;
+        font-size: 2rem;
+        font-weight: 900;
+        color: $theme-color;
+    }
+
+    .resume-category {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .contents {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+
+    .date {
+        margin-top: 0.3rem;
+        
+        font-weight: 300;
+        color: #777;
+    }
+
+    .group {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    
+    .row-left {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 30%;
+
+        margin-right: 2rem;
+    }
+
+    .emoji {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem -0.3rem 0;
+    }
+
+}

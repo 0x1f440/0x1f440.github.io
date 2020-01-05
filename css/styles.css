@@ -30,19 +30,23 @@ body {
   padding: 0;
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 300;
   color: #333;
+  word-break: keep-all;
   line-height: 1.5; }
 
 h3 {
   margin-top: 4rem; }
 
+hr {
+  border-top: 1px solid #eee; }
+
 a {
   text-decoration: none;
-  color: #333; }
+  color: #7e2cff; }
 
 a:hover {
+  text-decoration: underline;
   color: #7e2cff; }
 
 img:not(.emoji) {
@@ -61,6 +65,8 @@ ul {
   .header-wrapper img {
     width: 200px;
     margin-top: 30px; }
+  .header-wrapper a {
+    color: #333; }
   .header-wrapper ul {
     float: right; }
   .header-wrapper li {
@@ -69,7 +75,7 @@ ul {
     padding: 6px 22px;
     margin: 0;
     color: #333;
-    font-size: 1rem; }
+    font-size: 1.1rem; }
     .header-wrapper li :hover {
       color: #7e2cff; }
   .header-wrapper .header-logo {
@@ -117,11 +123,13 @@ footer {
   height: 1px; }
 
 code {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #eee;
-  background-color: #fcfcfc; }
+  padding: .3rem .5rem;
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+  border-radius: 5px; }
+
+.hidden {
+  display: none; }
 
 .about {
   text-align: center;
@@ -183,6 +191,11 @@ code {
   padding: 22px;
   box-sizing: border-box;
   vertical-align: middle; }
+  .thumbnail-wrapper a {
+    color: #333; }
+  .thumbnail-wrapper a:hover {
+    color: #7e2cff;
+    text-decoration-line: none; }
 
 .titles {
   margin-bottom: 30px;
@@ -212,7 +225,7 @@ code {
     font-weight: bold;
     color: #666; }
   .project-list .caption {
-    font-size: 0.9rem; }
+    font-size: 0.8rem; }
 
 .project-list:hover > .meta {
   visibility: visible;
@@ -234,18 +247,52 @@ code {
 .active a {
   color: #7e2cff; }
 
+.left-sidebar {
+  position: fixed;
+  overflow-y: auto;
+  padding: 1rem;
+  padding-left: 2rem;
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid #eee; }
+  .left-sidebar a {
+    display: block; }
+  .left-sidebar :hover {
+    text-decoration-line: none; }
+  .left-sidebar li {
+    list-style-type: none; }
+
+.refer {
+  margin: 2rem 0 0 0;
+  padding: 2px 0;
+  display: inline-block;
+  border-top: 2px solid #aaa; }
+
+.refer-content {
+  margin: .3rem; }
+
+.blog-tag-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem; }
+
+.inactive {
+  color: #aaa; }
+
+.active {
+  color: #333; }
+
 .blog-tags-list {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: bold; }
+  .blog-tags-list li {
+    padding: .4rem 1rem; }
 
 .blog-tag-item {
-  display: inline-block;
-  margin-bottom: 17px;
-  font-size: 1rem; }
+  margin: 0.7rem 0rem 0.7rem 1.5rem; }
   .blog-tag-item a {
-    margin-right: 5px;
-    padding: 4px 20px;
-    color: #555;
-    font-size: 0.9rem; }
+    color: #555; }
 
 .blog-tag-item.active a {
   border: 1px solid #7e2cff;
@@ -268,7 +315,7 @@ code {
   display: block;
   margin: 0 auto;
   padding: 50px 50px 250px 50px;
-  max-width: 600px; }
+  max-width: 800px; }
   .page-wrapper a {
     color: #7e2cff; }
 
@@ -317,6 +364,7 @@ code {
 
 a.blog-item-title {
   font-size: 1.2rem;
+  font-weight: 500;
   color: #555; }
 
 @media screen and (max-width: 1500px) {
@@ -357,5 +405,46 @@ a.blog-item-title {
       display: inline-block;
       padding: 6px 30px;
       font-size: 1.1rem; } }
+.resume {
+  margin: 0 auto;
+  padding: 50px 50px 250px 50px;
+  max-width: 900px; }
+  .resume section:not(:first-child) {
+    margin-top: 6rem; }
+  .resume h1 {
+    font-size: 1.8rem;
+    color: #7e2cff; }
+  .resume ul {
+    margin: 2.3rem 0 0 1.2rem;
+    list-style-type: square; }
+  .resume li {
+    margin-bottom: 0.9rem; }
+  .resume .intro {
+    margin-bottom: 6rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #7e2cff; }
+  .resume .resume-category {
+    font-family: 'Montserrat', sans-serif; }
+  .resume .contents {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 4rem; }
+  .resume .date {
+    margin-top: 0.3rem;
+    font-weight: 300;
+    color: #777; }
+  .resume .group {
+    font-size: 1.4rem;
+    font-weight: bold; }
+  .resume .row-left {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%;
+    margin-right: 2rem; }
+  .resume .emoji {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 1rem -0.3rem 0; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,8 +6,24 @@
   <body>
     <div id="container">
       {% include header.html %}
+      {% include blog_navbar.html %}
       <div class="page-wrapper">
-        {{ content }}
+        
+        <div class="blog-list-container" id="all-container">
+          <ul class="blog-list">
+            {% for post in site.posts %}
+              <li class="blog-item-list">
+                <a class="blog-item-title" href="{{ post.url }}">
+                  <span class="blog-item-date">{{ post.date | date: "%b %Y" }}</span>
+                  {% for t in post.tags %}
+                    <span class="blog-item-tags">{{ t }}</span>
+                  {% endfor %}
+                  <div class="blog-item-title">{{ post.title }}</div>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       {% include footer.html %}
       {% include analytics.html %}

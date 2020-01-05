@@ -4,6 +4,14 @@
     padding: 22px;
     box-sizing: border-box;
     vertical-align: middle;
+
+    a{
+      color: #333;
+    }
+    a:hover{
+      color: $theme-color;
+      text-decoration-line: none;
+    }
 }
 
 .titles {
@@ -19,13 +27,13 @@
 
   vertical-align: top;
   box-sizing: border-box;
-
+  
   font-family: 'Lekton', 'Noto Sans KR', sans-serif;
 
   img{
     margin: 8px 0;
   }
-
+  
   .title {
     margin-bottom: 10px;
 
@@ -46,7 +54,7 @@
     color: #666;
   }
   .caption {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 

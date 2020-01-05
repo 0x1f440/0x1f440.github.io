@@ -1,0 +1,49 @@
+<div class="left-sidebar">
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <a class="blog-tag-name inactive" id="{{ t }}-name" href="#" onclick="filter('{{ t }}'); return false;">{{ t }}</a>
+    <div class="blog-tag-list hidden" id="{{ t }}-list">
+     {% for post in posts %}
+       {% if post.tags contains t %}
+         <li class="blog-tag-item" id="{{ t }}-item">
+           <a href="{{ post.url }}">{{ post.title }}</a>
+         </li>
+       {% endif %}
+     {% endfor %} 
+    </div>
+   {% endfor %}
+</div>
+
+<script>
+  function filter(tag) {
+    toggleTag(tag);
+  }
+  
+  function toggleTag(tag) {
+    var item = document.getElementById(tag + '-list');
+    if(item.classList.contains('hidden')) {
+      document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name active');
+      item.setAttribute('class', 'blog-tag-list active');
+    }
+    else{
+      document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name inactive');
+      item.setAttribute('class', 'blog-tag-list hidden');
+    }
+
+    var lists = document.getElementsByClassName('blog-tag-list');
+    for(var i=0; i < lists.length; i++) {
+      if(lists[i].id != tag + "-list"){
+        lists[i].setAttribute('class', 'blog-tag-list hidden');
+      }
+    }
+
+    var titles = document.getElementsByClassName('blog-tag-name');
+    for(var i=0; i < titles.length; i++) {
+      if(titles[i].id != tag + "-name"){
+        titles[i].setAttribute('class', 'blog-tag-name inactive');
+      }
+    }
+  }
+</script>

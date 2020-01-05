@@ -14,3 +14,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+plugins:
+  - jemoji
