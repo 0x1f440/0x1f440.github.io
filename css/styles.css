@@ -187,8 +187,8 @@ code {
 
 .thumbnail-wrapper {
   display: inline-block;
-  max-width: 33%;
-  padding: 22px;
+  max-width: 49%;
+  padding: 30px;
   box-sizing: border-box;
   vertical-align: middle; }
   .thumbnail-wrapper a {
@@ -224,8 +224,6 @@ code {
     font-size: .8em;
     font-weight: bold;
     color: #666; }
-  .project-list .caption {
-    font-size: 0.8rem; }
 
 .project-list:hover > .meta {
   visibility: visible;
