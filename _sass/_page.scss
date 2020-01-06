@@ -64,6 +64,11 @@
   a {
     color: #555;
   }
+
+  a.active-post {
+    font-weight: bold;
+    color: $theme-color;
+  }
 }
 
 .blog-tag-item.active {

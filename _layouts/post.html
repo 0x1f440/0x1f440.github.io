@@ -15,7 +15,7 @@
         <span class="page-date">Last edit : {{ page.date  | date: "%b %Y"}}</span>
         <div class="page-title">{{ page.title }}</div>
         <div class="page-content">{{ content }}</div>
-
+        
         {% if page.references_link %}
           <div class="refer">참고 링크</div><br>
           {% for link in page.references_link %}
@@ -54,6 +54,8 @@
       </div>
       <script>
         hljs.initHighlightingOnLoad();
+
+    
       </script>
       {% include footer.html %}
       {% include analytics.html %}

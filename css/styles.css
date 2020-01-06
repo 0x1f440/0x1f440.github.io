@@ -291,6 +291,9 @@ code {
   margin: 0.7rem 0rem 0.7rem 1.5rem; }
   .blog-tag-item a {
     color: #555; }
+  .blog-tag-item a.active-post {
+    font-weight: bold;
+    color: #7e2cff; }
 
 .blog-tag-item.active a {
   border: 1px solid #7e2cff;
