@@ -1,6 +1,6 @@
 - title: Hotel Sowls
   tags:
-    - indie game
+    - game
     - steam
   caption: A mysterious adventure game with unique and appealing 2D graphics.(link to steam page)
   link: https://store.steampowered.com/app/968350/
@@ -8,15 +8,22 @@
 - title: Hotel Sowls Website
   tags:
     - website
+    - jekyll
   caption: Hotel Sowls Official Website.
   link: http://hotelsowls.com/
 
 - title: Domi-no
   tags :
     - VR
-    - indie game
+    - game
     - HTC VIVE
   caption: VR game project Domi-no(working title)
+
+- title: Octopus
+  tags:
+    - C#
+    - WPF
+  caption: Octopus IRC Client
     
 - title: Coincidence Pattern
   tags:
@@ -47,11 +54,6 @@
   caption: I gave an order to a cat, and the cat gave it to its tail.
   link: Catcat
 
-- title: Euphoria
-  tags:
-    - 3d animation
-  caption: The future's not- the future's not- the future's not...
-
 - title: Kidsrest
   tags:
     - motion graphic
@@ -73,6 +75,11 @@
 - title: Withpang
   tags:
     - mobile
-    - game
+    - game design
     - graphic
   caption: Mobile game Withpang.
+
+- title: Euphoria
+  tags:
+    - 3d animation
+  caption: The future's not- the future's not- the future's not...
