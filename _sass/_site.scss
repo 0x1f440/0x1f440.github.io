@@ -13,7 +13,7 @@ body {
   height: 100%;
 
   font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   color: #333;
   word-break: keep-all;
 
@@ -31,6 +31,7 @@ hr {
 a {
   text-decoration: none;
   color: $theme-color;
+  font-weight: 600;
 }
 
 a:hover {

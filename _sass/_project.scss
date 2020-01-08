@@ -41,6 +41,10 @@
     font-size: 1.1rem;
   }
 
+  .caption{
+    font-weight: 300;
+  }
+  
   .tag {
     display: inline-block;
     padding: 2px 5px;
@@ -73,6 +77,7 @@
   margin-bottom: 50px;
 
   font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-weight: 300;
   font-size: 1.1em;
   color: #666;
 }
