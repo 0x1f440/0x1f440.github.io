@@ -7,7 +7,7 @@
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
     {% assign result = t | split: "." | last %}
-    <a class="blog-tag-name inactive" id="{{ t }}-name" href="#" onclick="filter('{{ t }}'); return false;">{{ result | upcase }}</a>
+    <a class="blog-tag-name inactive" id="{{ t }}-name" href="#" onclick="toggleTag('{{ t }}'); return false;">{{ result | upcase }}</a>
     <div class="blog-tag-list hidden" id="{{ t }}-list">
      {% for post in posts %}
        {% if post.tags contains t %}
@@ -20,25 +20,31 @@
    {% endfor %}
    {% for t in page.tags %}
     <script>
-      window.onload = function(){
+      docReady(function() {
         var tag = '{{ t }}';
-        toggleTag(tag);
         var l = document.getElementsByClassName("{{ t }}-post-title");
+        
+        toggleTag(tag);
+
         for(var i=0; i < l.length; i++) {
           if(l[i].innerHTML == "{{ page.title }}"){
             l[i].setAttribute('class', "{{ t }}-post-title active-post");
           }
         }
+      });
+      function docReady(fn) {
+          // see if DOM is already available
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+              // call on next available tick
+              setTimeout(fn, 1);
+          } else {
+              document.addEventListener("DOMContentLoaded", fn);
+          } 
       }
       </script>
    {% endfor %}
 </div>
-
 <script>
-function filter(tag) {
-  toggleTag(tag);
-}
-
 function toggleSidebar(btn){
   var sidebar = document.getElementById("sidebar");
   var btn = document.getElementById("left-sidebar-btn");
@@ -57,7 +63,7 @@ function toggleSidebar(btn){
 
 function toggleTag(tag) {
   var item = document.getElementById(tag + '-list');
-
+  console.log(tag);
   if(item.classList.contains('hidden')) {
     document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name active');
     item.setAttribute('class', 'blog-tag-list active');
