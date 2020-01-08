@@ -7,9 +7,9 @@
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
   </head>
   <body>
+    {% include blog_navbar.html %}
     <div id="container">
       {% include header.html %}
-      {% include blog_navbar.html %}
       <div class="page-wrapper">
         <span class="page-date">Last edit : {{ page.date  | date: "%b %Y"}}</span>
         <div class="page-title">{{ page.title }}</div>
@@ -18,7 +18,7 @@
         {% if page.references_link %}
           <div class="refer">참고 링크</div><br>
           {% for link in page.references_link %}
-            <a class="refer-content" href="{{ link }}">{{ link }}</a><br>
+            <a class="refer-content" href="{{ link }}">{{ link }}</a>
           {% endfor %}
         {% endif %}
 
@@ -47,15 +47,12 @@
           <a href="{{ page.next.url }}">{{ page.next.title }} <i class="fas fa-angle-right"></i></a>
         </div>
         {% endif %}
-
-
-
       </div>
-      <script>
-        hljs.initHighlightingOnLoad();
 
-    
+      <script>
+        hljs.initHighlightingOnLoad();  
       </script>
+
       {% include footer.html %}
       {% include analytics.html %}
     </div>
