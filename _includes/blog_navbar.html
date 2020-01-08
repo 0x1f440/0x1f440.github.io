@@ -21,17 +21,23 @@
    {% for t in page.tags %}
     <script>
       docReady(function() {
+        if(window.innerWidth < 1200){
+          sidebar.setAttribute('class', "left-sidebar invisible");
+          btn.innerHTML = "<i class='fas fa-angle-right'>";
+          btn.setAttribute('class', 'inactive');
+        }
+
         var tag = '{{ t }}';
-        var l = document.getElementsByClassName("{{ t }}-post-title");
-        
         toggleTag(tag);
 
+        var l = document.getElementsByClassName("{{ t }}-post-title");
         for(var i=0; i < l.length; i++) {
           if(l[i].innerHTML == "{{ page.title }}"){
             l[i].setAttribute('class', "{{ t }}-post-title active-post");
           }
         }
       });
+      
       function docReady(fn) {
           // see if DOM is already available
           if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -45,46 +51,46 @@
    {% endfor %}
 </div>
 <script>
-function toggleSidebar(btn){
-  var sidebar = document.getElementById("sidebar");
-  var btn = document.getElementById("left-sidebar-btn");
+  function toggleSidebar(btn){
+    var sidebar = document.getElementById("sidebar");
+    var btn = document.getElementById("left-sidebar-btn");
 
-  if(btn.classList.contains("active")){
-    sidebar.setAttribute('class', "left-sidebar invisible");
-    btn.innerHTML = "<i class='fas fa-angle-right'>";
-    btn.setAttribute('class', 'inactive');
-  }
-  else{
-    sidebar.setAttribute('class', "left-sidebar visible");
-    btn.innerHTML = "<i class='fas fa-angle-left'>";
-    btn.setAttribute('class', 'active');
-  }
-}
-
-function toggleTag(tag) {
-  var item = document.getElementById(tag + '-list');
-  console.log(tag);
-  if(item.classList.contains('hidden')) {
-    document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name active');
-    item.setAttribute('class', 'blog-tag-list active');
-  }
-  else{
-    document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name inactive');
-    item.setAttribute('class', 'blog-tag-list hidden');
-  }
-
-  var lists = document.getElementsByClassName('blog-tag-list');
-  for(var i=0; i < lists.length; i++) {
-    if(lists[i].id != tag + "-list"){
-      lists[i].setAttribute('class', 'blog-tag-list hidden');
+    if(btn.classList.contains("active")){
+      sidebar.setAttribute('class', "left-sidebar invisible");
+      btn.innerHTML = "<i class='fas fa-angle-right'>";
+      btn.setAttribute('class', 'inactive');
+    }
+    else{
+      sidebar.setAttribute('class', "left-sidebar visible");
+      btn.innerHTML = "<i class='fas fa-angle-left'>";
+      btn.setAttribute('class', 'active');
     }
   }
 
-  var titles = document.getElementsByClassName('blog-tag-name');
-  for(var i=0; i < titles.length; i++) {
-    if(titles[i].id != tag + "-name"){
-      titles[i].setAttribute('class', 'blog-tag-name inactive');
+  function toggleTag(tag) {
+    var item = document.getElementById(tag + '-list');
+    console.log(tag);
+    if(item.classList.contains('hidden')) {
+      document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name active');
+      item.setAttribute('class', 'blog-tag-list active');
+    }
+    else{
+      document.getElementById(tag + '-name').setAttribute('class', 'blog-tag-name inactive');
+      item.setAttribute('class', 'blog-tag-list hidden');
+    }
+
+    var lists = document.getElementsByClassName('blog-tag-list');
+    for(var i=0; i < lists.length; i++) {
+      if(lists[i].id != tag + "-list"){
+        lists[i].setAttribute('class', 'blog-tag-list hidden');
+      }
+    }
+
+    var titles = document.getElementsByClassName('blog-tag-name');
+    for(var i=0; i < titles.length; i++) {
+      if(titles[i].id != tag + "-name"){
+        titles[i].setAttribute('class', 'blog-tag-name inactive');
+      }
     }
   }
-}
 </script>
