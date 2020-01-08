@@ -4,6 +4,7 @@ description: >
   work in progress
 baseurl: ""
 url: "https://0x1f440.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
