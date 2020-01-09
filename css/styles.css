@@ -55,7 +55,6 @@ hr {
 a {
   text-decoration: none;
   color: #7e2cff;
-  font-weight: 600;
 }
 
 a:hover {
@@ -546,6 +545,9 @@ a.blog-item-title:hover {
     margin: 3rem auto 0 auto;
     text-align: center;
   }
+  .navbar a {
+    font-weight: bold;
+  }
   .navbar li {
     float: none;
     display: inline-block;
@@ -573,10 +575,14 @@ a.blog-item-title:hover {
   margin-bottom: 0.9rem;
 }
 .resume .intro {
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 900;
   color: #7e2cff;
+}
+.resume .introduce {
+  margin-bottom: 5rem;
+  font-size: 1.1rem;
 }
 .resume .resume-category {
   font-family: "Montserrat", sans-serif;

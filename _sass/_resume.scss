@@ -22,10 +22,16 @@
     }
     
     .intro {
-        margin-bottom: 6rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
         font-weight: 900;
         color: $theme-color;
+    }
+
+    .introduce {
+        margin-bottom: 5rem;
+
+        font-size: 1.1rem;
     }
 
     .resume-category {
