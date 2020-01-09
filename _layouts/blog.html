@@ -15,7 +15,7 @@
                 <a class="blog-item-title" href="{{ post.url }}">
                   <span class="blog-item-date">{{ post.date | date: "%b %Y" }}</span>
                   {% for t in post.tags %}
-                    <span class="blog-item-tags">{{ t }}</span>
+                    <span class="blog-item-tags">{{ t  | split: "." | last }}</span>
                   {% endfor %}
                   <div class="blog-item-title">{{ post.title }}</div>
                 </a>
