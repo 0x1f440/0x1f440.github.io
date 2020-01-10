@@ -138,11 +138,6 @@
   padding: 50px 50px 250px 50px;
   max-width: 700px;
 
-  a {
-    color: $theme-color;
-    font-weight: 300;
-  }
-
   ul ul {
     margin-left: 2rem;
     list-style-type: disc;
@@ -150,6 +145,17 @@
   ul ul:last-child {
     margin-bottom: 1.4rem;
   }
+
+  a:hover {
+    font-weight: bold;
+    color: $theme-color;
+  }
+  
+  a {
+    color: $theme-color;
+    font-weight: 300;
+  }
+
 }
 .page-title {
   margin: 5px 0 12px 0;

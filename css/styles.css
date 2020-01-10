@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  font-weight: bold;
   color: #7e2cff;
 }
 
@@ -432,16 +432,20 @@ code {
   padding: 50px 50px 250px 50px;
   max-width: 700px;
 }
-.page-wrapper a {
-  color: #7e2cff;
-  font-weight: 300;
-}
 .page-wrapper ul ul {
   margin-left: 2rem;
   list-style-type: disc;
 }
 .page-wrapper ul ul:last-child {
   margin-bottom: 1.4rem;
+}
+.page-wrapper a:hover {
+  font-weight: bold;
+  color: #7e2cff;
+}
+.page-wrapper a {
+  color: #7e2cff;
+  font-weight: 300;
 }
 
 .page-title {
