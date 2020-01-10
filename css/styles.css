@@ -161,8 +161,8 @@ footer .footer {
 
 code {
   padding: 0.3rem 0.5rem;
-  border: 1px solid #ddd;
-  background-color: #fcfcfc;
+  margin: 0 0.2rem;
+  background-color: #efefef;
   border-radius: 5px;
 }
 
