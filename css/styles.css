@@ -605,6 +605,7 @@ a.blog-item-title:hover {
 }
 .resume .date {
   margin-top: 0.3rem;
+  margin-bottom: 2rem;
   font-weight: 300;
   color: #777;
 }
@@ -622,6 +623,12 @@ a.blog-item-title:hover {
   height: 2rem;
   width: 2rem;
   margin: 0 1rem -0.3rem 0;
+}
+
+@media (max-width: 800px) {
+  .resume .contents {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

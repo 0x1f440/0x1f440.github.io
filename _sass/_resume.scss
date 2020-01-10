@@ -46,7 +46,7 @@
 
     .date {
         margin-top: 0.3rem;
-        
+        margin-bottom: 2rem;
         font-weight: 300;
         color: #777;
     }
@@ -70,4 +70,12 @@
         margin: 0 1rem -0.3rem 0;
     }
 
+}
+
+@media (max-width:800px){
+    .resume{
+        .contents {
+            display: block;
+        }
+    }
 }
