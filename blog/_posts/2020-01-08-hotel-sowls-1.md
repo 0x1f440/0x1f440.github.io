@@ -4,6 +4,7 @@ title:  "호텔 소울즈 회고(1) 시작"
 date:   2020-01-08
 group: blog
 tags: ["00.diary"]
+recommend_tags: ["hotelsowls-postmortem"]
 ---
 
 ### 그럼 만들면 되지!
