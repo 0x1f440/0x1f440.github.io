@@ -1,5 +1,5 @@
 <div class="left-sidebar visible" id="sidebar">
-  <a id="left-sidebar-btn" class="active" onclick="toggleSidebar(); return false;">
+  <a id="left-sidebar-btn" class="active-btn" onclick="toggleSidebar(); return false;">
     <i class="fas fa-angle-left"></i>
   </a>
   {% assign sorted_tags = site.tags | sort %}
@@ -21,13 +21,6 @@
    {% for t in page.tags %}
     <script>
       docReady(function() {
-        if(window.innerWidth < 1200){
-          var btn = document.getElementById("left-sidebar-btn");
-          sidebar.setAttribute('class', "left-sidebar invisible");
-          btn.innerHTML = "<i class='fas fa-angle-right'>";
-          btn.setAttribute('class', 'inactive');
-        }
-
         var tag = '{{ t }}';
         toggleTag(tag);
 
@@ -52,19 +45,25 @@
    {% endfor %}
 </div>
 <script>
+  if(window.innerWidth < 1200){
+    var btn = document.getElementById("left-sidebar-btn");
+    sidebar.setAttribute('class', "left-sidebar invisible");
+    btn.innerHTML = "<i class='fas fa-angle-right'>";
+    btn.setAttribute('class', 'inactive-btn');
+  }
   function toggleSidebar(btn){
     var sidebar = document.getElementById("sidebar");
     var btn = document.getElementById("left-sidebar-btn");
 
-    if(btn.classList.contains("active")){
+    if(btn.classList.contains("active-btn")){
       sidebar.setAttribute('class', "left-sidebar invisible");
       btn.innerHTML = "<i class='fas fa-angle-right'>";
-      btn.setAttribute('class', 'inactive');
+      btn.setAttribute('class', 'inactive-btn');
     }
     else{
       sidebar.setAttribute('class', "left-sidebar visible");
       btn.innerHTML = "<i class='fas fa-angle-left'>";
-      btn.setAttribute('class', 'active');
+      btn.setAttribute('class', 'active-btn');
     }
   }
 
