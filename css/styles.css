@@ -341,7 +341,7 @@ code {
 
 #left-sidebar-btn {
   position: fixed;
-  z-index: 20;
+  z-index: 100;
   top: 1rem;
   left: 1rem;
   width: 30px;
