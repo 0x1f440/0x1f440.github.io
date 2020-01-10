@@ -22,6 +22,7 @@
     <script>
       docReady(function() {
         if(window.innerWidth < 1200){
+          var btn = document.getElementById("left-sidebar-btn");
           sidebar.setAttribute('class', "left-sidebar invisible");
           btn.innerHTML = "<i class='fas fa-angle-right'>";
           btn.setAttribute('class', 'inactive');

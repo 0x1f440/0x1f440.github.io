@@ -436,6 +436,13 @@ code {
   color: #7e2cff;
   font-weight: 300;
 }
+.page-wrapper ul ul {
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+.page-wrapper ul ul:last-child {
+  margin-bottom: 1.4rem;
+}
 
 .page-title {
   margin: 5px 0 12px 0;
