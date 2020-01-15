@@ -273,6 +273,7 @@ code {
 }
 .project-list .caption {
   font-weight: 300;
+  letter-spacing: -0.02rem;
 }
 .project-list .tag {
   display: inline-block;
