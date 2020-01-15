@@ -575,6 +575,9 @@ a.blog-item-title:hover {
 .resume section:not(:first-child) {
   margin-top: 6rem;
 }
+.resume a {
+  border-bottom: 1px solid #7e2cff;
+}
 .resume h1 {
   font-size: 1.8rem;
   color: #7e2cff;
@@ -587,14 +590,20 @@ a.blog-item-title:hover {
   margin-bottom: 0.9rem;
 }
 .resume .intro {
-  margin-bottom: 2rem;
+  display: inline-block;
+  margin-right: 2rem;
   font-size: 2rem;
   font-weight: 900;
   color: #7e2cff;
 }
 .resume .introduce {
+  margin-top: 1rem;
   margin-bottom: 5rem;
   font-size: 1.1rem;
+}
+.resume .contacts {
+  margin: 0.5rem 0 1.4rem 0;
+  display: inline-block;
 }
 .resume .resume-category {
   font-family: "Montserrat", sans-serif;
