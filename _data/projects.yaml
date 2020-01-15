@@ -14,73 +14,75 @@
   link: http://hotelsowls.com/
 
 - title: Domi-no
-  tags :
+  tags:
     - VR
     - game
     - HTC VIVE
-  caption: VR game project Domi-no(working title)
+  caption: 도미노를 배치하여 목표에 도달하는 VR게임.
 
 - title: Octopus
   tags:
     - C#
     - WPF
   caption: Octopus IRC Client
-    
-- title: Coincidence Pattern
+      
+- title: Coincidence Publication
   tags:
     - website
-  caption: Coincidence Pattern.
-  link: http://workinprogress.kr/Coincidence-Pattern/
-
-- title: Coincidence MV
-  tags:
-    - website
-  caption: Coincidence Music Video.
-  link: http://workinprogress.kr/Coincidence-MV/
+  caption: 우연이 만들어내는 한 장의 책.
 
 - title: Coincidence Composition
   tags:
     - website
-  caption: Coincidence Composition.
-  link: http://workinprogress.kr/Coincidence-Composition/
-
-- title: PyCon KR 2017 teaser site
-  tags:
-    - web design
-  caption: PyCon KR 2017 teaser site design.
-
-- title: Catcat
+  caption: 우연이 만들어내는 1분의 곡.
+  
+- title: Coincidence Pattern
   tags:
     - website
-  caption: I gave an order to a cat, and the cat gave it to its tail.
-  link: Catcat
+  caption: 우연이 만들어내는 하나의 패턴.
 
-- title: Kidsrest
+- title: Coincidence Consumption Pattern
   tags:
-    - motion graphic
-    - after effect
-  caption: Short motion graphic ad for 'Kidsrest'.
+    - website
+  caption: 소비패턴의 우연패턴화.
+
+- title: Coincidence MV
+  tags:
+    - website
+  caption: 우연이 만들어내는 뮤직비디오.  
+
+- title: PyCon KR 2018 teaser site
+  tags:
+    - web design
+  caption: PyCon KR 2018 티저 사이트 디자인.
 
 - title: Insucream
   tags:
     - motion graphic
     - after effect
-  caption: Short motion graphic ad for 'Insucream'.
+  caption: Insucream 홍보를 위한 모션 그래픽 영상.
 
-- title: Insucream Website
+- title: Kidsrest
+  tags:
+    - motion graphic
+    - after effect
+  caption: Kidsrest 홍보를 위한 모션 그래픽 영상.
+
+- title: Catcat
   tags:
     - website
-  caption: Official website for Insucream app.
-  link: Insucream Website
+  caption: 고양이가 마구 나와요.
+  link: Catcat
 
 - title: Withpang
   tags:
     - mobile
     - game design
     - graphic
-  caption: Mobile game Withpang.
+  caption: 위드팡 - 함께 하는 쉬운 게임.
 
 - title: Euphoria
   tags:
     - 3d animation
   caption: The future's not- the future's not- the future's not...
+
