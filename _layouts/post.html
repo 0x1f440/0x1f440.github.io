@@ -30,12 +30,12 @@
         {% endif %} 
         
         {% if page.recommend_tags %}
-        <div class="refer">추천 포스트</div><br>
-          {% for post in site.posts %}
-            {% if post.recommend_tags == page.recommend_tags %}
-                <div class="refer-content"><a href="{{ post.link }}">{{ post.title }}</a></div>
-              {% endif %}
-            {% endfor %} 
+          <div class="refer">추천 포스트</div><br>
+          {% for p in site.posts %}
+            {% if p.recommend_tags == page.recommend_tags %}
+              <div class="refer-content"><a href="{{ p.url }}">{{ p.title }}</a></div>
+            {% endif %}
+          {% endfor %} 
         {% endif %}
         <script src="https://utteranc.es/client.js"
                 repo="0x1f440/blog-comments"
