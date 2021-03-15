@@ -51,11 +51,10 @@ ul {
 
 .header-wrapper {
   width: 1200px;
-  height: 5rem;
   padding-top: 20px;
   margin: auto;
   font-weight: bold;
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   
   img {
     width: 200px;
@@ -87,7 +86,6 @@ ul {
 
   .header-logo {
     display: inline-block;
-    position: fixed;
     z-index: 5;
 
     width: 210px;
@@ -120,8 +118,7 @@ blockquote {
 }
 
 .content-wrapper {
-  padding-top: 150px;
-  padding-bottom: 220px;
+  padding: 0 5%;
 
   margin: 0 auto;
 
@@ -140,9 +137,7 @@ blockquote {
 }
 
 footer {
-  padding: 40px 0;
   width: 100%;
-  height: 150px;
 
   font-family: 'Lekton', 'Noto Sans KR', sans-serif;
   text-align: center;
@@ -150,7 +145,7 @@ footer {
   box-sizing: border-box;
 
   .footer {
-    margin: 0 auto;
+    margin: 15% auto 0 auto;
   }
 }
 

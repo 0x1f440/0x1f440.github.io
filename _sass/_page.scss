@@ -62,9 +62,10 @@
 
 .refer {
   margin: 2rem 0 1rem 0;
-  padding: 1px 0;
+  padding: 5px 20px;
   display: inline-block;
-  border-top: 2px solid #aaa;
+  border: 1px solid #aaa;
+  border-radius: 20px;
 }
 
 .refer-content {
@@ -87,10 +88,10 @@
 }
 
 .blog-tags-list {
-  margin-top: 30px;
-  margin-bottom: 100px;
+  text-align: center;
+  margin-bottom: 1rem;
 
-  padding: 10px 0;
+  padding: 2rem 0;
 
   font-size: 1rem;
   font-weight: bold;
@@ -98,6 +99,10 @@
   li {
     padding: .4rem 1rem; 
   } 
+}
+
+.blog-list-container {
+  margin-top: 10%;
 }
 
 .page-wrapper .blog-tag-item {
@@ -145,7 +150,7 @@
 .page-wrapper {
   display: block;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 0 1.5rem;
   max-width: 700px;
 
   ul ul {
@@ -180,7 +185,6 @@
 }
 .page-content {
   margin: 5rem 0;
-  font-weight: 300;
   font-size: 1.1rem;
   line-height: 2;
   letter-spacing: -0.1px;
@@ -190,8 +194,6 @@
   display: inline-block;
   margin-top: 20px;
   width: 50%;
-
-  font-weight: 300;
   word-break: keep-all;
 }
 
@@ -209,7 +211,7 @@ a.blog-item-list {
   display: block;
 
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 6%;
   border-radius: 25px;
   background-color: white;
 

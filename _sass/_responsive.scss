@@ -2,7 +2,6 @@
   .header-wrapper {
     width: 100%;
     padding: 1.5rem 3rem;
-    margin-bottom: 4rem;    
   }
 }
 
@@ -12,7 +11,7 @@
   }
   
   .page-wrapper{
-    padding: 5rem;
+    padding: 0 5rem;
     max-width: 100%;
   }
   
@@ -34,13 +33,12 @@
   }
   
   .page-wrapper{
-    padding: 3rem;
+    padding: 0 3rem;
     max-width: 100%;
   }
   
   .header-wrapper {
     padding: 1.5rem 0;
-    height: 250px;
 
     ul {
       float: none;
@@ -52,13 +50,6 @@
       margin: auto;
     }
   }
-
-      
-  .project-list {
-    padding: 30px;
-    padding-top: 25%;
-  }
-
 
   .navbar{
     display: block;
@@ -78,5 +69,25 @@
     }
   }
 
+  .thumbnail-wrapper .tag {
+    font-size: .9rem;
+  }
 
+  .project-list .title {
+    font-size: 1.4rem;
+  }
+
+  .project-list .caption {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width : 450px) {
+  .navbar li {
+    display: block;
+  }
+
+  .project-list {
+    padding: 19% 8% 7% 8%;
+  }
 }

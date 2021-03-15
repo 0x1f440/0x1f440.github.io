@@ -1,22 +1,17 @@
 .thumbnail-wrapper {
     display: block;
-    width: 80%;
+    width: 92%;
     margin: 12% auto;
     box-sizing: border-box;
     font-family: 'Lekton', 'Noto Sans KR', sans-serif;
     
-    a{
+    a {
       color: #333;
     }
-    a:hover{
+    a:hover {
       color: $theme-color;
       text-decoration-line: none;
     }
-  }
-  
-  .project-thumbnail img {
-    position: relative;
-    top: -10px;
   }
   
 .thumbnail-wrapper .tag {
@@ -36,7 +31,7 @@
 
 .thumbnail-wrapper .tag-container {
   position: relative;
-  top: -40px;
+  top: -1.8rem;
   left: 8%;
 }
 

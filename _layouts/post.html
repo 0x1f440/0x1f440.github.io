@@ -15,21 +15,21 @@
         <div class="page-content">{{ content }}</div>
         
         {% if page.references_link %}
-          <div class="refer">참고 링크</div><br>
+          <div class="refer">🔗 참고 링크</div><br>
           {% for link in page.references_link %}
             <a class="refer-content" href="{{ link }}">{{ link }}</a>
           {% endfor %}
         {% endif %}
 
         {% if page.references_book %}
-          <div class="refer">참고 문헌</div><br>
+          <div class="refer">📚 참고 문헌</div><br>
           {% for book in page.references_book %}
             <div class="refer-content">{{ book }}</div>
           {% endfor %}
         {% endif %} 
         
         {% if page.recommend_tags %}
-          <div class="refer">추천 포스트</div><br>
+          <div class="refer">👍 관련 포스트</div><br>
           {% for p in site.posts %}
             {% if p.recommend_tags == page.recommend_tags %}
               <div class="refer-content"><a href="{{ p.url }}">{{ p.title }}</a></div>
