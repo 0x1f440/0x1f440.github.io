@@ -15,11 +15,22 @@
     padding: 5rem;
     max-width: 100%;
   }
+
+  .typography {
+    text-align: center;
+  }
 }
 
 @media (max-width : 768px) {
+  .typography {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 140px;
+  }
+
+
   .thumbnail-wrapper {
-    max-width: 49%;
+    max-width: 100%;
   }
 
   .page-wrapper{
@@ -28,7 +39,6 @@
   }
 
   .header-wrapper {
-    border-bottom: 1px solid #eee;
     padding: 1.5rem 0;
 
     ul {
@@ -36,11 +46,18 @@
     }
 
     .header-logo {
+      position: static;
       display: block;
       margin: auto;
     }
-
   }
+
+      
+  .project-list {
+    padding: 30px;
+    padding-top: 25%;
+  }
+
 
   .navbar{
     display: block;

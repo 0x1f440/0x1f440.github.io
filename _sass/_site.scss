@@ -17,7 +17,7 @@ body {
   color: #333;
   word-break: keep-all;
 
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 h3 {
@@ -31,11 +31,11 @@ hr {
 a {
   text-decoration: none;
   color: $theme-color;
+  transition: background-color 0.3s;
 }
 
 a:hover {
-  font-weight: bold;
-  color: $theme-color;
+  text-decoration-style: none;
 }
 
 img:not(.emoji) {
@@ -51,7 +51,9 @@ ul {
 
 .header-wrapper {
   width: 1200px;
-  margin: 20px auto;
+  height: 5rem;
+  padding-top: 20px;
+  margin: auto;
   font-weight: bold;
   font-family: 'Lekton', 'Noto Sans KR', sans-serif;
   
@@ -66,17 +68,17 @@ ul {
 
   ul {
     float: right;
+    margin: 37px 0;
   }
 
   li {
-    display: block;
-    float: left;
+    display: inline-block;
 
     padding: 6px 22px;
     margin: 0;
 
     color: #333;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 
     :hover {
       color: $theme-color;
@@ -85,18 +87,21 @@ ul {
 
   .header-logo {
     display: inline-block;
+    position: fixed;
+    z-index: 5;
+
     width: 210px;
-    height: 25px;
+    height: 210px;
 
     color: #444;
 
-    background-image: url("/img/workinprogress.svg");
+    background-image: url("/img/logo-circle.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .header-logo:hover {
-    background-image: url("/img/workinprogress-hover.svg");
+    background-image: url("/img/logo-circle-hover.svg");
   }
 }
 
@@ -115,7 +120,7 @@ blockquote {
 }
 
 .content-wrapper {
-  padding-top: 50px;
+  padding-top: 150px;
   padding-bottom: 220px;
 
   margin: 0 auto;
@@ -163,4 +168,22 @@ code {
 
 .hidden {
   display: none;
+}
+
+.bg {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  -webkit-box-shadow: 13px 14px 49px -17px rgba(0,0,0,0.37);
+  -moz-box-shadow: 13px 14px 49px -17px rgba(0,0,0,0.37);
+  box-shadow: 13px 14px 49px -17px rgba(0,0,0,0.37);
+  border-bottom-right-radius: 10%
+}
+
+.typography {
+  font-family: 'lemieszregular';
+  font-size: 5rem;
+  padding: 60px 0;
+  color: #222;
 }

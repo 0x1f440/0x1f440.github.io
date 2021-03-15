@@ -4,6 +4,7 @@
     - steam
   caption: A mysterious adventure game with unique and appealing 2D graphics.(link to steam page)
   link: https://store.steampowered.com/app/968350/
+  featured: true
 
 - title: Hotel Sowls Website
   tags:
@@ -19,6 +20,7 @@
     - game
     - HTC VIVE
   caption: 도미노를 배치하여 목표에 도달하는 VR게임.
+  featured: true
 
 - title: Octopus
   tags:
@@ -30,6 +32,7 @@
   tags:
     - website
   caption: 우연이 만들어내는 한 장의 책.
+  featured: true
 
 - title: Coincidence Composition
   tags:

@@ -5,21 +5,25 @@ group: archive
 ---
 
 {% for project in site.data.projects %}
-<div class="thumbnail-wrapper">
+<div class="thumbnail-wrapper" data-aos="zoom-in-up">
   {% if project.link %}
     <a href="{{ project.link }}" target="_blank">
   {% else %}
     <a href="{{ project.title }}">
   {% endif %}
-      <div class="project-list">
-        <img src="{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
-        {% for tag in project.tags %}
-        <div class="tag"> {{ tag }} </div>
-        {% endfor %}
+    <div class="project-thumbnail">
+      <img src="{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
+    </div>
+    <div class="tag-container">
+      {% for tag in project.tags %}
+      <div class="tag"> {{ tag }} </div>
+      {% endfor %}
+    </div>
+    <div class="project-list">
         <div class="title">
           {{ project.title }}
           {% if project.link %}
-              <i style="font-size:0.9rem; color:#999;" class="fas fa-external-link-alt"></i>
+              <i style="font-size: 1.4rem; color:#bbb;" class="fas fa-external-link-alt"></i>
           {% endif %}
         </div>
         <div class="caption"> {{ project.caption }} </div>

@@ -1,5 +1,13 @@
-$grid: 800px;
+$grid: 720px;
 $theme-color: #7e2cff;
+
+@font-face {
+  font-family: 'lemieszregular';
+  src: url('../assets/fonts/lemiesz_regular_macroman/Lemiesz-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 @import 'grid';
 @import 'site';
