@@ -2,7 +2,7 @@
   .header-wrapper {
     width: 100%;
     padding: 1.5rem 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;    
   }
 }
 
@@ -10,12 +10,12 @@
   .content-wrapper {
     width: 100%;
   }
-
+  
   .page-wrapper{
     padding: 5rem;
     max-width: 100%;
   }
-
+  
   .typography {
     text-align: center;
   }
@@ -27,19 +27,20 @@
     font-size: 4rem;
     margin-top: 140px;
   }
-
-
+  
+  
   .thumbnail-wrapper {
     max-width: 100%;
   }
-
+  
   .page-wrapper{
     padding: 3rem;
     max-width: 100%;
   }
-
+  
   .header-wrapper {
     padding: 1.5rem 0;
+    height: 250px;
 
     ul {
       float: none;
