@@ -23,8 +23,7 @@
 @media (max-width : 768px) {
   .typography {
     text-align: center;
-    font-size: 4rem;
-    margin-top: 140px;
+    font-size: 3.5rem;
   }
   
   
@@ -83,6 +82,11 @@
 }
 
 @media (max-width : 450px) {
+  .typography {
+    text-align: center;
+    font-size: 3rem;
+  }
+
   .navbar li {
     display: block;
   }

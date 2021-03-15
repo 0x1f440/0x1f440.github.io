@@ -180,5 +180,9 @@ code {
   font-family: 'lemieszregular';
   font-size: 5rem;
   padding: 60px 0;
-  color: #222;
+  background: -webkit-linear-gradient(#7e2cff, #333);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
