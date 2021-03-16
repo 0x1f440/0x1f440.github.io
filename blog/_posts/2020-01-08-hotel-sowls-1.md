@@ -3,7 +3,7 @@ layout: post
 title:  "호텔 소울즈 회고(1) 시작"
 date:   2020-01-08
 group: blog
-tags: ["00.diary"]
+tags: ["think"]
 recommend_tags: ["hotelsowls-postmortem"]
 ---
 

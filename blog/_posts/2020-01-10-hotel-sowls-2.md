@@ -3,7 +3,7 @@ layout: post
 title:  "호텔 소울즈 회고(2) 인디게임 개발은 험난해"
 date:   2020-01-10
 group: blog
-tags: ["00.diary"]
+tags: ["think"]
 recommend_tags: ["hotelsowls-postmortem"]
 ---
 ### 사실 이 얘기가 하고 싶었어요

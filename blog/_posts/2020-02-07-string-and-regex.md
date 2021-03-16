@@ -3,7 +3,7 @@ layout: post
 title:  "[A Tour of C++] 문자열과 정규 표현식"
 date:   2020-02-07
 group: blog
-tags: ["50.C++"]
+tags: ["programming"]
 references_book: "A tour of C++ (Bjarne Stroustrup)"
 recommend_tags: ["A tour of C++"]
 ---

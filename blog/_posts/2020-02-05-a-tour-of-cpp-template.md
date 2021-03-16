@@ -3,9 +3,9 @@ layout: post
 title:  "[A Tour of C++] Template"
 date:   2020-02-05
 group: blog
-tags: ["50.C++"]
+tags: ["programming"]
 references_book: "A tour of C++ (Bjarne Stroustrup)"
-recommend_tags: ["A tour of C++"]
+recommend_tags: ["programming"]
 ---
 
 ## 템플릿(Template)
