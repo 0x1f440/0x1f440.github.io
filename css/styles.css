@@ -574,6 +574,12 @@ a.blog-item-list:hover {
       font-weight: bold;
       display: inline-block;
       color: #777; }
+  .resume .last-edited {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #bbb;
+    text-align: right; }
   .resume .resume-category {
     font-family: 'Montserrat', sans-serif; }
   .resume .resume-category::before {
