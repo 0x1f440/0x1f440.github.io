@@ -1,185 +1,198 @@
 ---
-layout: basic
+layout: resume
 title: resume
 ---
 <div class="resume">
     <section>
-        <div class="intro">이유라</div>
+        <div class="intro">안녕하세요!<br><b>소프트웨어 엔지니어 이유라</b>입니다.</div>
+
+
         <div class="contacts">
-            <a href="mailto:0x1f440@gmail.com"><i class="fab fa-google"></i></i> 0x1f440@gmail.com</a> &nbsp;&nbsp;
-            <a href="https://github.com/0x1f440"><i class="fab fa-github"></i></i> github.com/0x1f440</a>
+            <div class="contact-item">
+                <div class="contact-title">Contact</div><a href="mailto:0x1f440@gmail.com">0x1f440@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-title">Github</div><a href="https://github.com/0x1f440">github.com/0x1f440</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-title">Blog</div><a href="http:/workinprogress.kr">workinprogress.kr</a>
+            </div>
         </div>
-        <div class="introduce">     
-            주로 게임을 개발하고 있지만 다양한 분야에 관심이 많습니다.<br>
-            항상 새로운 것에 도전하며 함께 성장하는 개발자를 지향하고 있습니다.<br>
 
-        </div>
+       
+        
+        <h1 class="resume-category">EXPERIENCE</h1>
+        
+        <div class="contents">
+            <div class="date">킹스레이드 라이브팀 | 2020.06 ~ current</div>
+            <div class="group">베스파</div>
+            <div class="desc">약 150여개국에서 글로벌 서비스 중인 캐릭터 수집형 모바일 RPG게임 '킹스레이드'의 라이브팀에서 근무했습니다.</div>
             
-            🙇‍♀️더 많은 프로젝트는 <a href="http://workinprogress.kr/archive">workinprogress.kr</a>에서 보실 수 있습니다.
-        <h1 class="resume-category">:computer:EXPERIENCE</h1>
-        
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">호텔 소울즈</div>
-                <div class="date">2017.08 ~ 현재</div>
+            <div class="work-container">
+                <div class="tag">Unity 2018.4</div>
+                <div class="tag">C#</div>
+                <div class="work-title">라이브 컨텐츠 개발</div>       
+                <ul class="works">
+                    <li>다양한 인게임 컨텐츠 개선 및 신규 개발
+                        <ul>
+                            <li>마도장비 인챈트 시스템, 가챠 천장 시스템 등 신규 개발</li>
+                            <li>Unity Animator Controller를 사용한 UI 애니메이션 적용</li>
+                            <li>자발적인 유저 동향 확인 및 이슈레이징을 통한 작업으로 게임 UX 개선</li>
+                        </ul>
+                    </li>
+                    <li>클라이언트 내장 프로파일러 개선
+                        <ul>
+                            <li>웹 요청에 대해 RTT 관련 로그를 수집하도록 추가</li>
+                            <li>성능 지표 수집 후 유저 경험을 해치지 않는 시점에 batch로 전송하여 지표를 적재</li>
+                        </ul>
+                    </li>
+                    <li>HeapExplorer를 사용한 클라이언트 크래시 및 메모리 누수 원인 분석</li>
+                    <li>개발에 필요한 다양한 툴 제작 및 수정
+                        <ul>
+                            <li>유니티 에디터에 기획자/아티스트가 테이블 값을 편리하게 변경 및 테스트 할 수 있는 툴 추가</li>
+                            <li>인게임 개발자 도구에 디버그용 기능 다수 추가</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="row-right">
-                2D 어드벤처 게임 &lt;호텔 소울즈&gt; 기획, 개발 전반 및 스팀 출시<a href="https://store.steampowered.com/app/968350/Hotel_Sowls/" target="_blank">(link)</a>
-                <ul>
-                    <li>2018년 5월 <a href="https://tumblbug.com/hotelsowls" target="_blank">텀블벅 펀딩</a>을 통해 총 2085명에게 21,496,324원을 후원받아 본래 목표 금액의 1433%를 달성</li>
-                    <li>2018년 12월, 얼리억세스로 출시 후 현재까지 약 1만 장 판매, 스팀 리뷰 Very positive 획득</li>
-                    <li>2019년 12월, 새로운 맵/엔딩/퀘스트 등의 컨텐츠들과 일본어 지원을 추가하여 스팀 스토어에 정식 출시</li>
-                    <li>Unity Analytics를 이용한 유저 동향 수집 및 리텐션 추적 경험</li>
+
+            <div class="work-container">
+                <div class="tag">Gulp</div>
+                <div class="tag">jQuery</div>
+                <div class="tag">Jenkins</div>
+                <div class="tag">Python</div>
+                <div class="tag">OpenCV</div>
+
+                <div class="work-title">'통계' 웹 사이트 프론트엔드 및 인게임 뷰어 개발</div>       
+                <ul class="works">
+                    <li>Gulp, jQuery를 사용하여 컨텐츠별 파티 조합, 캐릭터별 착용 장비 등의 다양한 통계정보를 제공하는 웹 사이트 개발</li>
+                    <li>UniWebView 플러그인을 사용한 인게임 뷰어 개발</li>
+                    <li>업데이트 배포 프로세스 자동화
+                        <ul>
+                            <li>젠킨스 잡을 수정하여 매주 개발 사이트 자동 빌드</li>
+                        </ul>
+                    </li>
+                    <li>정적 리소스 파일 생성 자동화 시스템 구축
+                        <ul>
+                            <li>Python으로 인게임에 사용되는 테이블, 이미지, 번역 파일 등을 가공하여 웹사이트에 필요한 정적 리소스 자동 생성</li>
+                            <li>OpenCV를 활용, 킹스레이드 일러스트로 Cascade Classifier를 학습시켜 전신 일러스트에서 얼굴의 위치를 감지하고 크롭하여 배너를 자동생성</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="work-container">
+                <div class="tag">Python</div>
+
+                <div class="work-title">데이터 크롤링/마이그레이션 작업</div>       
+                <ul class="works">
+                    <li>Redmine에서 Jira로 이슈 마이그레이션
+                        <ul>
+                            <li>셸 스크립트를 사용하여 약 17,000여건의 기존 Redmine 이슈를 json으로 스크래핑</li>
+                            <li>Redmine 이슈 및 유저 목록을 Jira에 임포트 가능한 형식으로 매핑 및 가공 후 마이그레이션 시행</li>
+                        </ul>
+                    </li>
+                    <li>커뮤니티 플랫폼 변경 대응
+                        <ul>
+                            <li>PLUG SDK 사용을 중단하게 되어 게임 클라이언트에서 플러그인 제거</li>
+                            <li>Selenium WebDriver를 사용하여 커뮤니티 내 약 41,000여건의 게시글 백업</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="contents">
+            <div class="date">인디개발팀 | 2017.08 ~ current</div>
+            <div class="group">스튜디오 소트</div>
+            <div class="desc">2인 인디팀을 결성, 미스터리 어드벤처 게임 '호텔 소울즈'를 Steam 및 닌텐도 e숍에 출시했습니다.</div>
+            
+            <div class="work-container">
+                <div class="tag">Unity 2019.3</div>
+                <div class="tag">C#</div>
+                <div class="tag">Steam SDK</div>
+                <div class="tag">Python</div>
+                <div class="tag">Jekyll</div>
+
+                <div class="work-title">포인트 앤 클릭 어드벤처 게임 '호텔 소울즈' 개발</div>  
+
+                <ul class="works">
+                    <li>기획, 개발, 퍼블리싱, 홍보, CS등 게임 개발과정의 전체 과정을 경험</li>
                     <li>Steam SDK를 사용하여 도전 과제와 스팀 클라우드 기능 연동</li>
-                    <li>편리한 다국어 대응을 위하여 Python과 Pandas 라이브러리를 사용, 엑셀 → JSON 변환 툴 개발<a href="https://github.com/0x1f440/xlsx-to-json" target="_blank">(repository)</a></li>
-                    <li>python을 사용하여 일본어 대사 자동 기계번역<a href="https://github.com/0x1f440/xlsx-translator" target="_blank">(repository)</a></li>
-                    <li>유니티 프로파일러를 사용한 게임 최적화 경험</li>
-                    <li>Jekyll을 이용해 <a href="http://hotelsowls.com" target="_blank">호텔 소울즈 공식 사이트</a> 개발 및 진행상황 포스팅</li>
-                    <li>디스코드를 통해 일어 검수, QA 등 호텔 소울즈 제작에 도움을 주시는 약 10명의 분들과 팀을 꾸려 원만하게 협업 진행</li>
-                    <li>효율적인 QA 상황 재현을 위한 Git 기반의 세이브 파일 관리</li>
+                    <li>Jekyll을 이용해 <a href="http://hotelsowls.com/">호텔 소울즈 공식 사이트</a> 개발 및 관리</li>
+                    <li>개발 효율을 위한 툴 제작
+                        <ul>
+                            <li>효율적인 번역작업을 위해 Pandas를 사용하여 <a href="https://github.com/0x1f440/xlsx-to-json">엑셀 → JSON 변환 툴</a> 개발</li> 
+                            <li>글로벌 출시를 위해 <a href="https://github.com/0x1f440/xlsx-translator">한국어 → 일본어 자동 기계번역 스크립트</a> 개발</li>
+                        </ul>
+                    </li>
+                    <li>2018년 5월, <a href="https://tumblbug.com/hotelsowls">텀블벅 크라우드 펀딩</a>을 통해 총 2085분께 21,496,324원을 후원받아 목표 금액의 1433% 달성</li>
+                    <li>2019년 12월, 자체 퍼블리싱으로 스팀 스토어 출시 및 2020년 7월, 퍼블리셔 CFK와 협업하여 닌텐도 e숍 출시</li>
                 </ul>
             </div>
         </div>
-    
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">캣스케이프 : 야옹이 탈출 대작전!</div>
-                <div class="date">2020.04 ~ 2020.05</div>
-            </div>
-            <div class="row-right">
-                수집 요소가 있는 퍼즐 게임인 &lt;캣스케이프 : 야옹이 탈출 대작전!&gt; 1인 개발 및 플레이스토어 출시<a href="https://play.google.com/store/apps/details?id=com.studioafternoon.catscape" target="_blank">(link)</a>
-                <ul>
-                    <li>Unity, C#을 이용한 퍼즐게임 1인 개발</li>
-                    <li>Python으로 레벨 제너레이터를 개발하여 자동으로 레벨 생성<a href="https://github.com/0x1f440/RushhourLevelGenerator" target="_blank">(repository)</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">VR 게임 개인 프로젝트 DOMI-NO</div>
-                <div class="date">2018.05 ~ 2018.06</div>
-            </div>
-            <div class="row-right">
-                직접 도미노를 배열하여 목표물에 도달하는 VR 퍼즐게임 개발 및 교내 전시<a href="http://workinprogress.kr/archive/Domi-no/">(link)</a>
-                <ul>
-                    <li>Unity, C#과 VR Essentials Pack을 이용한 VR 퍼즐게임 개발</li> 
-                    <li>HTC VIVE 를 이용한 베타 버전 교내 전시 및 테스팅</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">우연서적</div>
-                <div class="date">2018.06 ~ 2018.06</div>
-            </div>
-            <div class="row-right">
-            단어 선택을 통해 새로운 문장을 이어가며 자신만의 이야기를 만들어 나갈 수 있는 웹사이트 개발<a href="http://coincidence-publication.workinprogress.kr/" target="_blank">(link)</a>
-                <ul>
-                    <li>AWS Lightsail을 이용한 서버 인프라 구축</li>
-                    <li>KoNLPy를 이용한 형태소 분석으로 문장에서 명사형 키워드를 추출</li>
-                    <li>Python과 Flask를 이용, 클릭한 키워드로 도서 검색 뒤, 결과로 얻은 도서에서 새 문장을 크롤링</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">OCTOPUS<br>IRC CLIENT</div>
-                <div class="date">2019.03 ~ 2019.03</div>
-            </div>
-            <div class="row-right">
-                C#과 WPF로 만든 간단한 IRC 클라이언트 개발<a href="https://github.com/0x1f440/Octopus" target="_blank">(link)</a>
-                <ul>
-                    <li>WPF로 UI 개발</li>
-                    <li>TCP통신을 통해 IRC 네트워크에 접속, 닉네임 설정, 채널 입장, 대화 주고받기 등의 기능 구현</li>
-                </ul>
-            </div>
-        </div>
-
-        <br><br>
     </section>
 
-    <section>
-        <h1 class="resume-category">:raising_hand:COMMUNITY EXPERIENCE</h1>
 
+
+
+
+    <section>
+        <h1 class="resume-category">OTHER EXPERIENCE</h1>
         <div class="contents">
-            <div class="row-left">
-                <div class="group">홍익대학교 프로토타이핑 소모임 '프로토' 대상 유니티 기초 세미나</div>
-                <div class="date">2019.04.11</div>
-            </div>
-            <div class="row-right">
-                시각디자인 전공 학생들 30여명을 대상으로 유니티 기초에 대한 약 2시간의 세미나 진행 <a href="https://github.com/0x1f440/PROTO-Unity-Seminar" target="_blank">(발표자료)</a>
-                <ul>
-                    <li>UGUI를 활용한 간단한 옷입히기 게임 개발</li>
-                    <li>유니티 초보자를 대상으로 한 적절한 난이도의 설명과 상세한 자료 준비로 게임을 완성하지 못하는 참여자 없이 성공적으로 세미나 종료</li> 
+            
+            <div class="work-container">
+                <div class="date">2019.04</div>
+                <div class="work-title">홍익대학교 프로토타이핑 소모임 '프로토' 대상 유니티 기초 워크숍</div>       
+                <ul class="works">
+                    <li>프로토타이핑 소모임 학생들 30여명을 대상으로 UGUI를 활용한 간단한 옷입히기 게임 개발 워크숍 진행 <a href="https://github.com/0x1f440/PROTO-Unity-Seminar">(워크숍 자료)</a></li>
                 </ul>
             </div>
-        </div>
-        
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">파이콘 한국 준비위원회</div>
+            
+            <div class="work-container">
                 <div class="date">2016.11 ~ 2018.11</div>
-            </div>
-            <div class="row-right">
-                운영위원회 활동 / 웹 퍼블리싱 / 브랜딩 작업 및 프로그램 북 제작 등 다수
-                <ul>
-                    <li>파이콘 2017, 2018의 티저 사이트 퍼블리싱 작업을 하며 Github을 이용한 협업</li> 
-                    <li>2년간 활동하며 Slack을 이용한 커뮤니케이션 경험</li>
+                <div class="work-title">2017, 2018 파이콘 한국 준비위원회</div>       
+                <ul class="works">
+                    <li>2017, 2018 파이콘 운영위원회의 일원으로 행사를 조직</li>
+                    <li>공식 사이트 디자인 및 퍼블리싱, 굿즈 제작, 프로그램 북 제작 등 다수의 활동을 함</li>
                 </ul>
             </div>
-        </div>
 
-    </section>
-
-    <section>
-        <h1 class="resume-category">:art:EXTRA EXPERIENCE</h1>
-
-            <div class="contents">
-                <div class="row-left">
-                    <div class="group">goorm corp.</div>
-                <div class="date">2016.02 ~ 2016.08</div>
-            </div>
-            <div class="row-right">
-                안드로이드 모바일 게임 그래픽 외주 UI / 캐릭터 / 홍보배너 등 그래픽 리소스 전반 제작<a href="http://workinprogress.kr/archive/Withpang/" target="_blank">(link)</a>
-                <ul>
-                    <li>"위드팡 함께하는 쉬운게임" 플레이스토어 출시 (2016.8)</li>
-                    <li>"AEROGUN FIELD" 플레이스토어 출시 (2016.4)</li>
+            <div class="work-container">
+                <div class="work-title">개발 관련 인터뷰 진행</div>       
+                <ul class="works">
+                    <li>
+                        <a href="https://post.naver.com/viewer/postView.nhn?volumeNo=15056764&memberNo=23995853">
+                            [텀블벅 크리에이터 인터뷰] 미대생은 게임으로 재미있고 이상한 세계를 만든다 - 창작자 STUDIO SOTT 인터뷰
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://monthly-jiandson.tistory.com/51?category=985130">
+                            [월간 지앤선][2020릴레이인터뷰] 두 번째 주자, 스튜디오 SOTT 프로그래머 "눈눈", 아티스트 "토트"
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </div>
-        
-        <div class="contents">
-            <div class="row-left">
-                <div class="group">홍익대학교 게임동아리 ExP 활동</div>
-                <div class="date">2015.12 ~ 2016.06</div>
-            </div>
-            <div class="row-right">
-                "찬란한 대학생활" 그래픽 담당
-                <ul>
-                    <li>캐주얼풍 도트 그래픽 캐릭터, UI. 맵 리소스 일부 제작</li>
-                </ul>
-            </div>
+
         </div>
     </section>
 
+
+
     <section>
-        <h1 class="resume-category">:pencil2:EDUCATION</h1>
+        <h1 class="resume-category">EDUCATION</h1>
         
         <div class="contents">
-            <div class="row-left">
-                <div class="group">홍익대학교</div>
-                <div class="date">2014.03 ~ 2019.02</div>
-            </div>
-            <div class="row-right">
+            <div class="group">홍익대학교</div>
+            <div class="date">2014.03 ~ 2019.02</div>
+            <div class="work-container">
                 시각디자인과 전공 / 컴퓨터공학과 부전공
-                <ul>
-                    <li>졸업평점 3.92 / 4.5</li>
-                </ul>
             </div>
         </div>
     </section>
+    
+    🙇‍♀️더 많은 프로젝트는 <a href="http://workinprogress.kr/archive">workinprogress.kr</a>에서 보실 수 있습니다.
 </div>
 
 <style>
