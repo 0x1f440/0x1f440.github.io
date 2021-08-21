@@ -43,7 +43,7 @@
       float: none;
     }
 
-    .header-logo {
+    .header-logo-container {
       position: static;
       display: block;
       margin: auto;
@@ -59,30 +59,11 @@
       float: none;
       display: inline-block;
       padding: 6px 30px;
-
-      font-size: 1.3rem;
     }
-  }
-
-  .thumbnail-wrapper .tag {
-    font-size: .9rem;
-  }
-
-  .project-list .title {
-    font-size: 1.8rem;
-  }
-
-  .project-list .caption {
-    font-size: 1.1rem;
   }
 }
 
 @media (max-width : 450px) {
-  .typography {
-    text-align: center;
-    font-size: 3rem;
-  }
-
   .navbar li {
     display: block;
   }

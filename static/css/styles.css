@@ -115,11 +115,13 @@ ul {
     padding: 6px 22px;
     margin: 0;
     color: #333;
-    font-size: 1.3rem; }
-    .header-wrapper li :hover {
-      color: #7e2cff; }
-  .header-wrapper .header-logo {
-    display: inline-block;
+    font-size: 1.1rem; }
+
+.header-logo-container {
+  width: 125px;
+  display: inline-block;
+  margin-bottom: 1.5rem; }
+  .header-logo-container .header-logo-img {
     z-index: 5;
     width: 170px;
     height: 170px;
@@ -127,8 +129,13 @@ ul {
     background-image: url("/static/img/logo-main.svg");
     background-size: contain;
     background-repeat: no-repeat; }
-  .header-wrapper .header-logo:hover {
+  .header-logo-container .header-logo-img:hover {
     background-image: url("/static/img/logo-main-hover.svg"); }
+  .header-logo-container .header-logo-title {
+    margin: auto;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive; }
 
 blockquote {
   border-left: 5px solid #7e2cff;
@@ -199,7 +206,7 @@ code {
   margin-bottom: 1rem;
   padding: 0.4rem 4rem 0.4rem 3rem;
   background-color: #ffdd00;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
   font-family: 'Fredoka One', cursive; }
@@ -253,12 +260,31 @@ code {
   transform: rotate(5deg);
   background-color: white; }
 
+a.rainbow_text_hovered:hover {
+  background: linear-gradient(to right, #fa0951, #f0b000, #3cff00, #00e1ff, #2600ff, #590de6, #e60da5, #fa0951);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 2s infinite;
+  animation-timing-function: ease-in-out;
+  background-size: 1400% 100%; }
+
+@keyframes rainbow_animation {
+  0% {
+    background-position: 2% 0; }
+  100% {
+    background-position: 100% 0; } }
+.show-more-link {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem; }
+
 .thumbnail-wrapper {
   display: block;
   width: 92%;
   margin: 12% auto;
   box-sizing: border-box;
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif; }
+  font-family: 'Noto Sans KR', sans-serif; }
   .thumbnail-wrapper a {
     color: #333; }
   .thumbnail-wrapper a:hover {
@@ -268,20 +294,21 @@ code {
 .thumbnail-wrapper .tag {
   display: inline-block;
   position: relative;
-  padding: 4px 20px;
+  padding: 2px 20px;
   margin-right: 3px;
   margin-bottom: 4px;
   background-color: #7e2cff;
   border-radius: 20px;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 300;
   color: #fff; }
 
 .thumbnail-wrapper .tag-container {
   position: relative;
-  top: -1.8rem;
+  top: -27px;
   left: 8%;
-  font-size: .9rem; }
+  font-weight: 300;
+  font-size: .8rem; }
 
 .titles {
   margin-bottom: 30px;
@@ -303,14 +330,18 @@ code {
   margin-top: -30%;
   vertical-align: top;
   box-sizing: border-box;
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif; }
+  font-family: 'Noto Sans KR', sans-serif; }
   .project-list .title {
     margin-top: 10px;
     font-family: 'Fredoka One', cursive;
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
   .project-list .caption {
     font-weight: 300;
+    font-size: .9rem;
     letter-spacing: -0.02rem; }
+  .project-list .fas {
+    font-size: 1rem;
+    color: #aaaaaa; }
 
 .project-list:hover > .meta {
   visibility: visible;
@@ -318,14 +349,14 @@ code {
 
 .project-title {
   margin: 20px 0 10px 0;
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #7e2cff;
   font-weight: bold;
   font-size: 2em; }
 
 .project-caption {
   margin-bottom: 50px;
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   font-size: 1.1em;
   color: #666; }
@@ -648,7 +679,7 @@ code {
     padding: 1.5rem 0; }
     .header-wrapper ul {
       float: none; }
-    .header-wrapper .header-logo {
+    .header-wrapper .header-logo-container {
       position: static;
       display: block;
       margin: auto; }
@@ -660,22 +691,8 @@ code {
     .navbar li {
       float: none;
       display: inline-block;
-      padding: 6px 30px;
-      font-size: 1.3rem; }
-
-  .thumbnail-wrapper .tag {
-    font-size: .9rem; }
-
-  .project-list .title {
-    font-size: 1.8rem; }
-
-  .project-list .caption {
-    font-size: 1.1rem; } }
+      padding: 6px 30px; } }
 @media (max-width: 450px) {
-  .typography {
-    text-align: center;
-    font-size: 3rem; }
-
   .navbar li {
     display: block; }
 

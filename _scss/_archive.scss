@@ -3,7 +3,7 @@
     width: 92%;
     margin: 12% auto;
     box-sizing: border-box;
-    font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     
     a {
       color: #333;
@@ -17,26 +17,26 @@
 .thumbnail-wrapper .tag {
   display: inline-block;
   position: relative;
-  padding: 4px 20px;
+  padding: 2px 20px;
   margin-right: 3px;
   margin-bottom: 4px;
   
   background-color: $theme-color;
   border-radius: 20px;
   
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .thumbnail-wrapper .tag-container {
   position: relative;
-  top: -1.8rem;
+  top: -27px;
   left: 8%;
 
-  font-size: .9rem;
+  font-weight: 300;
+  font-size: .8rem;
 }
-
 
 .titles {
   margin-bottom: 30px;
@@ -64,18 +64,24 @@
   vertical-align: top;
   box-sizing: border-box;
   
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   
   .title {
     margin-top: 10px;
 
     font-family: 'Fredoka One', cursive;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .caption{
     font-weight: 300;
+    font-size: .9rem;
     letter-spacing: -0.02rem;
+  }
+
+  .fas {
+    font-size: 1rem; 
+    color: #aaaaaa;
   }
 }
 
@@ -87,7 +93,7 @@
 .project-title {
   margin: 20px 0 10px 0;
 
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family:'Noto Sans KR', sans-serif;
   color: $theme-color;
   font-weight: bold;
   font-size: 2em;
@@ -96,7 +102,7 @@
 .project-caption {
   margin-bottom: 50px;
 
-  font-family: 'Lekton', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   font-size: 1.1em;
   color: #666;

@@ -62,32 +62,33 @@ ul {
     width: 200px;
     margin-top: 30px;
   }
-
+  
   a {
     color: #333;
   }
-
+  
   ul {
     float: right;
     margin: 37px 0;
   }
-
+  
   li {
     display: inline-block;
-
+    
     padding: 6px 22px;
     margin: 0;
-
+    
     color: #333;
-    font-size: 1.3rem;
-
-    :hover {
-      color: $theme-color;
-    }
+    font-size: 1.1rem;
   }
+}
 
-  .header-logo {
-    display: inline-block;
+.header-logo-container {
+  width: 125px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  
+  .header-logo-img {
     z-index: 5;
 
     width: 170px;
@@ -100,9 +101,18 @@ ul {
     background-repeat: no-repeat;
   }
 
-  .header-logo:hover {
+  .header-logo-img:hover {
     background-image: url("/static/img/logo-main-hover.svg");
   }
+
+  .header-logo-title {
+    margin: auto;
+    
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+  }
+  
 }
 
 blockquote {
@@ -211,7 +221,7 @@ code {
 
   background-color: #ffdd00;
 
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
   font-family: 'Fredoka One', cursive;
@@ -282,4 +292,31 @@ code {
 .search-result-container a:hover {
   transform: rotate(5deg);
   background-color: white;
+}
+
+a.rainbow_text_hovered:hover {
+  background: linear-gradient(to right, #fa0951, #f0b000, #3cff00 , #00e1ff, #2600ff, #590de6, #e60da5, #fa0951);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 2s infinite;
+  animation-timing-function: ease-in-out;
+  background-size: 1400% 100%;
+
+}
+
+@keyframes rainbow_animation {
+  0%{
+      background-position: 2% 0;
+  }
+
+  100% {
+      background-position: 100% 0;
+  } 
+}
+
+.show-more-link {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
 }

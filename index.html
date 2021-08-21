@@ -2,6 +2,7 @@
 layout: index
 title: Home
 ---
+
 <section>
   <div class="index-section-title">💖 Recently Changed</div>
   <div>
@@ -15,9 +16,7 @@ title: Home
         </a>
     {% endfor %}
     
-    <div style="text-align: right">
-        <a href="/wiki">👀 Show More!</a>
-      </div>
+    <a class="show-more-link" href="/wiki">👀 Show More!</a>
   </div>
 </section>
 
@@ -46,7 +45,7 @@ title: Home
                 <div class="title">
                   {{ project.title }}
                   {% if project.link %}
-                      <i style="font-size: 1.4rem; color:#ddd;" class="fas fa-external-link-alt"></i>
+                      <i class="fas fa-external-link-alt"></i>
                   {% endif %}
                 </div>
                 <div class="caption"> {{ project.caption }} </div>
@@ -56,7 +55,5 @@ title: Home
       {% endif %}
     {% endfor %}
   </div>
-  <div style="text-align: right">
-    <a href="/archive">👀 Show More!</a>
-  </div>
+  <a class="show-more-link" href="/archive">👀 Show More!</a>
 </section>
