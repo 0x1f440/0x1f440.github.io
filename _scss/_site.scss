@@ -184,7 +184,26 @@ code {
   }
 }
 
+@mixin saw-tooth-horizontal($width: 18px, $bg: #fff) {
+  background-image:
+    /* Left jagged */
+    linear-gradient(135deg, $bg 50%, transparent 50%),
+    linear-gradient(45deg, $bg 50%, transparent 50%),
+    /* Right jagged */
+    linear-gradient(-135deg, $bg 50%, transparent 50%),
+    linear-gradient(-45deg, $bg 50%, transparent 50%);
+  background-position:
+    /* Left jagged */
+    top left, top left,
+    /* Right jagged */
+    top right, top right;
+  background-size: $width $width;
+  background-repeat: repeat-y;
+}
+
 .index-section-title {
+  @include saw-tooth-horizontal();
+
   display: inline-block;
   margin-bottom: 1rem;
   padding: 0.4rem 4rem 0.4rem 3rem;
