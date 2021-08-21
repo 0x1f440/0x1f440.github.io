@@ -7,11 +7,22 @@
     <li {% if page.group == 'archive' %}class="active"{% endif %} ><a href="/archive">Archive</a></li>
     <li {% if page.group == 'about' %}class="active"{% endif %} ><a href="/about">About</a></li>
     <li {% if page.group == 'wiki' %}class="active"{% endif %} ><a href="/wiki">Wiki</a></li>
-    <li><a class="rainbow_text_hovered" href="getRandomDocument();">Random</a></li>
+    <li><a class="rainbow_text_hovered" onclick="getRandomDocument();">Random</a></li>
+
   </ul>
 </div>
 
 <script>
   function getRandomDocument(){
-  } 
+    let url = '/static/json/all-docs-url.json';
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => redirectToRandomUrl(data));
+  }
+
+  function redirectToRandomUrl(json){
+    var chosen = json[Math.floor(Math.random() * json.length)];
+    location.href = chosen.url;
+  }
 </script>
