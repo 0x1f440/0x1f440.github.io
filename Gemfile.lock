@@ -81,6 +81,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
+    wdm (0.1.1)
     zeitwerk (2.1.10)
 
 PLATFORMS
@@ -93,6 +94,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jemoji (= 0.11.1)
   tzinfo-data
+  wdm (>= 0.1.0)
 
 RUBY VERSION
    ruby 2.5.1p57

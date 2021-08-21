@@ -1,8 +1,8 @@
 <div class="header-wrapper">
   <a class="header-logo" href="{{ site.url }}"></a>
   <ul class="navbar">
+    <li {% if page.group == 'wiki' %}class="active"{% endif %} ><a href="/wiki">Wiki</a></li>
     <li {% if page.group == 'archive' %}class="active"{% endif %} ><a href="/archive">Archive</a></li>
-    <li {% if page.group == 'blog' %}class="active"{% endif %} ><a href="/blog">Blog</a></li>
     <li {% if page.group == 'about' %}class="active"{% endif %} ><a href="/about">About</a></li>
   </ul>
 </div>

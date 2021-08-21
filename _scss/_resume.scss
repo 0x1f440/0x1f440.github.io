@@ -1,0 +1,172 @@
+.resume {
+    margin: 0 auto;
+    padding: 50px 50px 250px 50px;
+    width: 900px;
+
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    section:not(:first-child) {
+        margin-top: 7rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        color: $theme-color;
+    }
+    
+    ul {
+        margin: 1rem 0 0 0; 
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 0.9rem;
+    }
+
+    li::before { 
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 4px;
+        height: 4px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background-color: $theme-color;
+        margin-right: 12px;
+    }
+    
+    .intro {
+        margin-right: 2rem;
+        font-size: 2.3rem;
+        font-weight: 300;
+        color: $theme-color;
+        line-height: 1.4;
+    }
+    
+    .introduce {
+        .introduce-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 0;
+        }
+    }
+
+    .contacts {
+        margin: 2.5rem 0 10rem 0;
+        font-size: 0.9rem;
+        font-weight: 300;
+
+        .contact-title {
+            width: 90px;
+            font-weight: bold;
+            display: inline-block;
+            color: #777;
+        }
+    }
+
+    .last-edited {
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: #bbb;
+        text-align: right;
+    }
+
+    .resume-category {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .resume-category::before { 
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 18px;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        border-radius: 9px;
+        background-color: $theme-color;
+        margin-right: 18px;
+    }
+
+    .contents {
+        margin-bottom: 4.5rem;
+
+        .date {
+            margin-top: 0.3rem;
+            color: #777;
+            font-size: 0.9rem;
+            font-weight: 300;
+
+            vertical-align: bottom;
+        }
+    
+        .group {
+            margin-right: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+
+        .work-container {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            padding: 0 30px;
+            border-left: 1px solid $theme-color;
+        }
+        
+        .works li {
+            font-weight: 500;
+        }
+
+        .works ul {
+            margin: 0.3rem 0 2rem 2rem;
+        }
+
+        .works ul li {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .tag {
+            display: inline-block;
+            
+            padding: 2px 10px;
+            margin-right: 8px;
+            
+            color: $theme-color;
+            font-size: 0.8rem;
+            border-radius: 3px;
+            background-color:  #f3ebff;
+        }
+        
+        .work-title {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+
+
+
+    .emoji {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem -0.3rem 0;
+    }
+
+}
+
+@media (max-width:800px){
+    .resume{
+        .contents {
+            display: block;
+        }
+    }
+}

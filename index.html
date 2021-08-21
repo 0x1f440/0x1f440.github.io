@@ -2,33 +2,61 @@
 layout: index
 title: Home
 ---
-{% for project in site.data.projects %}
-  {% if project.featured %}
-    <div class="thumbnail-wrapper" data-aos="fade-up">
-      {% if project.link %}
-        <a href="{{ project.link }}" target="_blank">
-      {% else %}
-        <a href="archive/{{ project.title }}">
-      {% endif %}
-        <div class="project-thumbnail">
-          <img src="archive/{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
-        </div>
-        <div class="tag-container">
-          {% for tag in project.tags %}
-          <div class="tag"> {{ tag }} </div>
-          {% endfor %}
-        </div>
-        <div class="project-list">
-            <div class="title">
-              {{ project.title }}
-              {% if project.link %}
-                  <i style="font-size: 1.4rem; color:#bbb;" class="fas fa-external-link-alt"></i>
-              {% endif %}
-            </div>
-            <div class="caption"> {{ project.caption }} </div>
-          </div>
+<section>
+  <div class="index-section-title">💖 Recently Changed</div>
+  <div>
+    {% assign public_posts = site.posts | where: "public", true  %}
+    {% assign posts = public_posts | sort: 'updated' | reverse %}
+    {% for post in posts limit: 5 %}
+      <a class="blog-item-list" href="{{ post.url }}">
+          <div class="blog-item-title">{{ post.title }}</div>
+          <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
+          <div class="blog-item-excerpt">{{ post.excerpt }}</div>
         </a>
+    {% endfor %}
+    
+    <div style="text-align: right">
+        <a href="/wiki">👀 Show More!</a>
       </div>
-  {% endif %}
-{% endfor %}
-<a href="/archive" style="float: right">👀 Show More!-></a>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="index-section-title">👀 Featured Projects</div>
+  <div>
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        <div class="thumbnail-wrapper" data-aos="fade-up">
+          {% if project.link %}
+            <a href="{{ project.link }}" target="_blank">
+          {% else %}
+            <a href="archive/{{ project.title }}">
+          {% endif %}
+            <div class="project-thumbnail">
+              <img src="archive/{{ project.title }}/thumbnail" alt="Thumbnail of {{ project.title }}">
+            </div>
+            <div class="tag-container">
+              {% for tag in project.tags %}
+              <div class="tag"> {{ tag }} </div>
+              {% endfor %}
+            </div>
+            <div class="project-list">
+                <div class="title">
+                  {{ project.title }}
+                  {% if project.link %}
+                      <i style="font-size: 1.4rem; color:#ddd;" class="fas fa-external-link-alt"></i>
+                  {% endif %}
+                </div>
+                <div class="caption"> {{ project.caption }} </div>
+              </div>
+            </a>
+          </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div style="text-align: right">
+    <a href="/archive">👀 Show More!</a>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<div id="search-input-wrapper">
+    <i class="fas fa-search"></i>
+    <input type="text" id="search-input">
+</div>
+<ul id="search-result"></ul>
+
+<script>
+  const pointColor = '#7e2cff';
+  var placeHolderTexts = ["Search anything you want...", "What do you wanna search for?", "Search here!", "Search wiki...", "What can I find for you?"]; 
+  var inputElement = document.getElementById('search-input');
+  inputElement.placeholder = placeHolderTexts[Math.floor(Math.random() * placeHolderTexts.length)];
+
+  var simpleJekyllSearch = SimpleJekyllSearch({
+    searchInput: inputElement,
+    resultsContainer: document.getElementById('search-result'),
+    json: '/static/json/search.json',
+    searchResultTemplate: 
+    `
+      <li class="search-result-container">
+        <a href="{url}">
+          <div class="tags">{tags}</div>
+          <div class="title">{title}</div>
+          <div class="date">Last edited: {updated}</div>
+        </a>
+      </li>
+      `,
+    noResultsText: 'No results found :(',
+    limit: 10,
+    fuzzy: false,
+  })
+
+</script>
