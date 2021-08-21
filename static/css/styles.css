@@ -106,7 +106,8 @@ ul {
     width: 200px;
     margin-top: 30px; }
   .header-wrapper a {
-    color: #333; }
+    color: #333;
+    cursor: pointer; }
   .header-wrapper ul {
     float: right;
     margin: 37px 0; }
