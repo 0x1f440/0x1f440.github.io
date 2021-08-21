@@ -100,7 +100,7 @@ ul {
   width: 1200px;
   padding-top: 20px;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-family: 'Fredoka One', cursive; }
   .header-wrapper img {
     width: 200px;
@@ -123,8 +123,8 @@ ul {
   margin-bottom: 1.5rem; }
   .header-logo-container .header-logo-img {
     z-index: 5;
-    width: 170px;
-    height: 170px;
+    width: 125px;
+    height: 150px;
     color: #444;
     background-image: url("/static/img/logo-main.svg");
     background-size: contain;
@@ -136,6 +136,9 @@ ul {
     font-size: 0.9rem;
     text-align: center;
     font-family: 'Fredoka One', cursive; }
+
+.navbar a:hover {
+  color: #7e2cff; }
 
 blockquote {
   border-left: 5px solid #7e2cff;
