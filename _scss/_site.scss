@@ -166,10 +166,12 @@ footer {
 }
 
 code {
-  padding: .3rem .5rem;
+  padding: .2rem .5rem;
   margin: 0 .2rem;
-  background-color: #efefef;
+  background: linear-gradient(150deg, #fffcff, #FFEFFE, #FFEFff);
+  color: $theme-color;
   border-radius: 5px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .hidden {
