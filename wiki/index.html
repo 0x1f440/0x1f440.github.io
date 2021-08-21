@@ -5,69 +5,69 @@ group: wiki
 ---
 
 <div class="blog-tags-list">
-    <div class="blog-tag-item active" id="all-item">
-      <a href onclick="filter('all'); return false;">
-        all
-      </a>
-    </div>
+  <div class="blog-tag-item active" id="all-item">
+    <a href onclick="filter('all'); return false;">
+      all
+    </a>
+  </div>
+  {% assign sorted_category = site.categories | sort %}
+  {% for category in sorted_category %}
+    {% assign c = category | first %}
+    {% assign posts = category | last %}
+    {% if c != 'wiki' %}
+      <div class="blog-tag-item" id="{{ c }}-item">
+        <a href onclick="filter('{{ c }}'); return false;">{{ c  | split: "." | last }}</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="blog-list-container" id="all-container">
+  <div class="blog-tags-list">
     {% assign sorted_category = site.categories | sort %}
+
     {% for category in sorted_category %}
       {% assign c = category | first %}
       {% assign posts = category | last %}
+
       {% if c != 'wiki' %}
-        <div class="blog-tag-item" id="{{ c }}-item">
-          <a href onclick="filter('{{ c }}'); return false;">{{ c  | split: "." | last }}</a>
-        </div>
-      {% endif %}
-    {% endfor %}
+        <div class="category-documents-container">
+          <div class="blog-tag-item" id="{{ c }}-item">
+            <a href onclick="filter('{{ c }}'); return false;">{{ c  | split: "." | last }}</a>
+          </div>
+          {% for post in site.posts %}
+            {% if post.category contains c and post.public == true %}
+            <a class="blog-item-list" href="{{ post.url }}">
+              <div class="blog-item-title">{{ post.title }}</div>
+              <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
+              <div class="blog-item-excerpt">{{ post.excerpt }}</div>
+            </a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+  {% endfor %}
   </div>
-
-  <div class="blog-list-container" id="all-container">
-    <div class="blog-tags-list">
-      {% assign sorted_category = site.categories | sort %}
-
-      {% for category in sorted_category %}
-        {% assign c = category | first %}
-        {% assign posts = category | last %}
-
-        {% if c != 'wiki' %}
-          <div class="category-documents-container">
-            <div class="blog-tag-item" id="{{ c }}-item">
-              <a href onclick="filter('{{ c }}'); return false;">{{ c  | split: "." | last }}</a>
-            </div>
-            {% for post in site.posts %}
-              {% if post.category contains c and post.public == true %}
-              <a class="blog-item-list" href="{{ post.url }}">
-                <div class="blog-item-title">{{ post.title }}</div>
-                <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
-                <div class="blog-item-excerpt">{{ post.excerpt }}</div>
-              </a>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        </div>
-    {% endfor %}
-    </div>
-  </div>
-
-<!--Hidden at first-->
-{% for category in site.categories %}
+  
+  <!--Hidden at first-->
+  {% for category in site.categories %}
   {% assign c = category | first %}
   {% assign posts = category | last %}
   <div class="blog-list-container hidden" id="{{ c }}-container">
     <ul class="blog-list">
       {% for post in posts %}
-        {% if post.category contains c and post.public == true %}
-        <a class="blog-item-list" href="{{ post.url }}">
-            <div class="blog-item-title">{{ post.title }}</div>
-            <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
-            <div class="blog-item-excerpt">{{ post.excerpt }}</div>
-          </a>
-        {% endif %}
+      {% if post.category contains c and post.public == true %}
+      <a class="blog-item-list" href="{{ post.url }}">
+        <div class="blog-item-title">{{ post.title }}</div>
+        <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
+        <div class="blog-item-excerpt">{{ post.excerpt }}</div>
+      </a>
+      {% endif %}
       {% endfor %}
     </ul>
   </div>
-{% endfor %}
+  {% endfor %}
+</div>
 
 
 

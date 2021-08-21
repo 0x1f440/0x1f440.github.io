@@ -55,6 +55,7 @@ ul {
   width: 1200px;
   padding-top: 20px;
   margin: auto;
+  margin-bottom: 3rem;
   font-family: 'Fredoka One', cursive;
   
   img {
@@ -184,7 +185,7 @@ code {
   }
 }
 
-@mixin saw-tooth-horizontal($width: 18px, $bg: #fff) {
+@mixin saw-tooth-horizontal($width: 13px, $bg: #fff) {
   background-image:
     /* Left jagged */
     linear-gradient(135deg, $bg 50%, transparent 50%),

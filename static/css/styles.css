@@ -100,6 +100,7 @@ ul {
   width: 1200px;
   padding-top: 20px;
   margin: auto;
+  margin-bottom: 3rem;
   font-family: 'Fredoka One', cursive; }
   .header-wrapper img {
     width: 200px;
@@ -192,7 +193,7 @@ code {
 .index-section-title {
   background-image: linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(45deg, #fff 50%, transparent 50%), linear-gradient(-135deg, #fff 50%, transparent 50%), linear-gradient(-45deg, #fff 50%, transparent 50%);
   background-position: top left, top left, top right, top right;
-  background-size: 18px 18px;
+  background-size: 13px 13px;
   background-repeat: repeat-y;
   display: inline-block;
   margin-bottom: 1rem;
@@ -279,7 +280,8 @@ code {
 .thumbnail-wrapper .tag-container {
   position: relative;
   top: -1.8rem;
-  left: 8%; }
+  left: 8%;
+  font-size: .9rem; }
 
 .titles {
   margin-bottom: 30px;
@@ -305,10 +307,9 @@ code {
   .project-list .title {
     margin-top: 10px;
     font-family: 'Fredoka One', cursive;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .project-list .caption {
     font-weight: 300;
-    font-size: 1.2rem;
     letter-spacing: -0.02rem; }
 
 .project-list:hover > .meta {
