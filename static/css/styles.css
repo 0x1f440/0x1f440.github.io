@@ -75,7 +75,7 @@ section {
   margin: 2rem 0 7rem 0; }
 
 h3 {
-  margin-top: 4rem; }
+  margin-top: 5.5rem; }
 
 hr {
   border-top: 1px solid #eee; }
@@ -142,8 +142,12 @@ ul {
   color: #7e2cff; }
 
 blockquote {
-  border-left: 5px solid #7e2cff;
-  padding: 0.3rem 1.2rem; }
+  padding: 1.2rem;
+  margin-inline-start: .7rem;
+  margin-inline-end: .7rem;
+  border-left: 4px solid #7e2cff;
+  background: linear-gradient(150deg, #fffdf4, #ffeafd, #f9e7ff);
+  color: #7e2cff; }
   blockquote p {
     margin: 0; }
 
@@ -177,10 +181,18 @@ footer {
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
-  background: linear-gradient(150deg, #fffcff, #FFEFFE, #FFEFff);
+  background: linear-gradient(150deg, #fffdf4, #ffeafd, #f9e7ff);
   color: #7e2cff;
   border-radius: 5px;
-  font-family: 'Noto Sans KR', sans-serif; }
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem; }
+
+.highlight code {
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6; }
 
 .hidden {
   display: none; }
@@ -486,12 +498,12 @@ a.rainbow_text_hovered:hover {
 
 .page-title {
   margin: 5px 0 12px 0;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  word-break: keep-all; }
+  word-break: keep-all;
+  color: #333; }
 
 .page-date {
-  margin-bottom: 5px;
   font-size: .8rem;
   font-weight: 300;
   color: #aaa;
@@ -505,9 +517,9 @@ a.rainbow_text_hovered:hover {
 
 .page-content {
   margin: 5rem 0;
-  font-size: 1.1rem;
   line-height: 2;
-  letter-spacing: -0.1px; }
+  letter-spacing: -0.1px;
+  color: #333; }
 
 .post-navi {
   display: inline-block;
@@ -544,6 +556,13 @@ a.rainbow_text_hovered:hover {
 
 .category-documents-container {
   margin-bottom: 3rem; }
+
+.post-tag {
+  display: inline-block;
+  padding: 2px 13px;
+  border-radius: 30px;
+  background: linear-gradient(150deg, #fffdf4, #ffeafd, #f9e7ff);
+  color: #555; }
 
 .resume {
   margin: 0 auto;

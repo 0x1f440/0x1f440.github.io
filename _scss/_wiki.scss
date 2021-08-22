@@ -164,12 +164,13 @@
 .page-title {
   margin: 5px 0 12px 0;
 
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   word-break: keep-all;
+
+  color: #333;
 }
 .page-date {
-  margin-bottom: 5px;
   font-size: .8rem;
   font-weight: 300;
   color: #aaa;
@@ -186,9 +187,9 @@
 }
 .page-content {
   margin: 5rem 0;
-  font-size: 1.1rem;
   line-height: 2;
   letter-spacing: -0.1px;
+  color: #333;
 }
 
 .post-navi {
@@ -233,4 +234,12 @@
 
 .category-documents-container {
   margin-bottom: 3rem;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 2px 13px;
+  border-radius: 30px;
+  background: $theme-gradient;
+  color: #555;
 }
