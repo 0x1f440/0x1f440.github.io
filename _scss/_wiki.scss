@@ -236,10 +236,18 @@
   margin-bottom: 3rem;
 }
 
+.post-tag-container {
+  margin-bottom: 3rem;
+}
+
 .post-tag {
   display: inline-block;
   padding: 2px 13px;
   border-radius: 30px;
   background: $theme-gradient;
   color: #555;
+}
+
+#document-container .blog-tag-item {
+  margin-top: 2rem;
 }

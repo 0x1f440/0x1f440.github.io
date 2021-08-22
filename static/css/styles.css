@@ -74,8 +74,14 @@ body {
 section {
   margin: 2rem 0 7rem 0; }
 
-h3 {
+h1 {
+  margin-top: 6.5rem; }
+
+h2 {
   margin-top: 5.5rem; }
+
+h3 {
+  margin-top: 4.5rem; }
 
 hr {
   border-top: 1px solid #eee; }
@@ -193,6 +199,23 @@ code {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8rem;
   line-height: 1.6; }
+
+::-webkit-scrollbar {
+  width: 24px;
+  height: 16px;
+  background: transparent; }
+
+::-webkit-scrollbar-button {
+  background: transparent; }
+
+::-webkit-scrollbar-track-piece {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: linear-gradient(150deg, #fffcee, #ffdbf0, #e6b1ff);
+  background-clip: padding-box;
+  border: 6px solid transparent; }
 
 .hidden {
   display: none; }
@@ -557,12 +580,18 @@ a.rainbow_text_hovered:hover {
 .category-documents-container {
   margin-bottom: 3rem; }
 
+.post-tag-container {
+  margin-bottom: 3rem; }
+
 .post-tag {
   display: inline-block;
   padding: 2px 13px;
   border-radius: 30px;
   background: linear-gradient(150deg, #fffdf4, #ffeafd, #f9e7ff);
   color: #555; }
+
+#document-container .blog-tag-item {
+  margin-top: 2rem; }
 
 .resume {
   margin: 0 auto;

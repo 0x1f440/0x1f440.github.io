@@ -15,8 +15,7 @@
         </div>
         <div class="page-title">{{ page.title }}</div>
 
-        <div class="page-date">created : {{ page.created  | date: '%Y-%m-%d'}}</div>
-        <div class="page-date">updated : {{ page.updated  | date: '%Y-%m-%d'}}</div>
+        <div class="page-date">created : {{ page.created  | date: '%Y-%m-%d'}} | updated : {{ page.updated  | date: '%Y-%m-%d'}}</div>
 
         <div class="page-content">{{ content }}</div>
         
@@ -35,7 +34,7 @@
         {% endif %} 
         
         {% if page.recommend_tags.size > 0 %}
-          <div class="refer">👍 관련 포스트</div><br>
+          <div class="refer">👍 관련 문서</div><br>
           {% for p in site.posts %}
             {% if p.recommend_tags == page.recommend_tags and p.public == true %}
               <div class="refer-content"><a href="{{ p.url }}">{{ p.title }}</a></div>
