@@ -26,7 +26,6 @@
     font-size: 3.5rem;
   }
   
-  
   .thumbnail-wrapper {
     max-width: 100%;
   }
@@ -50,25 +49,32 @@
     }
   }
 
-  .navbar{
+  ul.navbar {
     display: block;
-    margin: 3rem auto 0 auto;
+    margin: 3rem 10% 0 10%;
     text-align: center;
 
     li{
       float: none;
       display: inline-block;
-      padding: 6px 30px;
+      padding-left: 0;
+      padding-right: 0;
+      width: 24%;
     }
   }
 }
 
-@media (max-width : 450px) {
-  .navbar li {
-    display: block;
-  }
 
-  .project-list {
-    padding: 19% 8% 7% 8%;
+@media (max-width : 550px) {
+  ul.navbar {
+    text-align: center;
+    
+    li {
+      float: none;
+      display: inline-block;
+      padding-left: 0;
+      padding-right: 0;
+      width: 49%;
+    } 
   }
 }
