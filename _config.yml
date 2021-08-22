@@ -10,13 +10,10 @@ permalink: /:title/
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jemoji
   
 exclude:
   - Gemfile
   - Gemfile.lock
-  
-plugins:
-  - jemoji
