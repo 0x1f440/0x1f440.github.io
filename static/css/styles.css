@@ -492,9 +492,10 @@ a.rainbow_text_hovered:hover {
 
 .page-date {
   margin-bottom: 5px;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 300;
-  color: #888; }
+  color: #aaa;
+  text-align: right; }
 
 .page-tag {
   color: #bbb;
@@ -525,7 +526,7 @@ a.rainbow_text_hovered:hover {
 .blog-item-list {
   display: block;
   width: 100%;
-  margin: 1rem 0.3rem 1.8rem 0.3rem; }
+  margin: 0.2rem 0.3rem 1.8rem 0.3rem; }
 
 .blog-item-list:hover .blog-item-title, .blog-item-list:hover .blog-item-date {
   color: #7e2cff; }

@@ -10,9 +10,14 @@
     <div id="container">
       {% include header.html %}
       <div class="page-wrapper">
-        <div class="page-date">created : {{ page.date  | date: '%Y-%m-%d'}}</div>
-        <div class="page-date">updated : {{ page.date  | date: '%Y-%m-%d'}}</div>
+        <div class="blog-tag-item">
+          <a href="/wiki?category={{ page.category }}">{{ page.category  | split: "." | last }}</a>
+        </div>
         <div class="page-title">{{ page.title }}</div>
+
+        <div class="page-date">created : {{ page.created  | date: '%Y-%m-%d'}}</div>
+        <div class="page-date">updated : {{ page.updated  | date: '%Y-%m-%d'}}</div>
+
         <div class="page-content">{{ content }}</div>
         
         {% if page.references_link.size > 0 %}
