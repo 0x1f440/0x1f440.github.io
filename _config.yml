@@ -6,7 +6,9 @@ baseurl: ""
 url: "https://0x1f440.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: "ko_KR"
 timezone: "Asia/Seoul"
-permalink: /:title/
+permalink: /wiki/:categories/:title/
+wiki-img-path: "/wiki/images/"
+
 
 # Build settings
 markdown: kramdown

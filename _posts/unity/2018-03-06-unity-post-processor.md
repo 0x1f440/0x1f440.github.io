@@ -1,8 +1,8 @@
 ---
 public: true
-category: "gamedev"
+category: "unity"
 title: "편한 텍스쳐 임포트를 위한 유니티 포스트 프로세서 만들기"
-tags: ["gamedev", "unity"]
+tags: ["gamedev", "unity", "texture"]
 excerpt: "도트 그래픽의 게임을 만들 경우, 필터모드가 `Bilinear`라면 경계부분이 흐려져 버리게 된다."
 
 references_link: https://answers.unity.com/questions/55118/changing-texture-import-default-settings.html

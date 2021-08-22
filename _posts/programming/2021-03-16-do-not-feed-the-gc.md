@@ -17,7 +17,6 @@ group: wiki
 created : 2020-03-16 00:00:00 +0900
 updated : 2020-03-16 00:00:00 +0900
 ---
-
 ## Managed Heap
 
 객체, 문자열, 배열 등이 생성될 때 그 데이터를 저장하기 위한 메모리는 `Heap`이라고 불리는 영역에서 할당됩니다.
@@ -57,7 +56,7 @@ GC가 컬렉션을 수행할 때 힙에 할당된 모든 오브젝트를 순회�
 ### non-compacting (비압축)
 더 이상 참조되지 않는 오브젝트가 해제된 이후 오브젝트들 사이의 빈 공간을 없애기 위해 재배치를 하지 않는 것을 뜻합니다. 이는 메모리 파편화를 유발합니다.
 
-![Boehm GC 메모리 파편화](/assets/images/2021-03/boehmgc.png)
+![Boehm GC 메모리 파편화](/wiki-images/do-not-feed-the-gc/boehmgc.png)
 
 
 위 그림은 메모리 파편화의 예시를 보여줍니다.
@@ -91,7 +90,7 @@ GC가 처리해야 할 메모리의 양에 따라 게임은 수 백 밀리초나
 
 String은 immutable합니다. 즉, 한 번 생성되면 값이 바뀔 수 없습니다. 그렇기 때문에 +  연산자를 사용하여 문자열을 합치면 한 번 합칠 때마다 새로운 객체가 생기게 됩니다.
 
-![immutable string object](/assets/images/2021-03/string-immutable.png)
+![immutable string object](/wiki-images/do-not-feed-the-gc/string-immutable.png)
 
 한 statement에서는 + 연산자를 여러 번 사용한다고 해도 문자열은 한 번만 복사됩니다. (eg. string str = "Hello " + userName + ". Today is " + dateString + "."; )
 

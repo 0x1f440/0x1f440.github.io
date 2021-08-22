@@ -2,7 +2,7 @@
 public: true
 category: "book"
 title: "[A Tour of C++] 문자열과 정규 표현식"
-tags: ["programming", "book"]
+tags: ["c++", "book"]
 excerpt: "C++표준 라이브러리는 string 타입을 제공함으로써 C에서처럼 포인터를 이용해 문자의 배열을 조작하지 않아도 된다."
 
 references_link: []

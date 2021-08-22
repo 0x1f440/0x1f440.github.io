@@ -1,8 +1,8 @@
 ---
 public: true
-category: "diary"
+category: "postmortem"
 title: "호텔 소울즈 회고(1) 시작"
-tags: ["diary"]
+tags: ["postmortem"]
 excerpt: "본래 호텔 소울즈는 2017년 상반기, 내가 C#에 대해서 거의 모르던 시절에 시작한 프로젝트다."
 
 references_link: []

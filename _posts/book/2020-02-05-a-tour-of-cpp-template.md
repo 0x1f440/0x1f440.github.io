@@ -2,7 +2,7 @@
 public: true
 category: "book"
 title: "[A Tour of C++] Template"
-tags: ["programming", "book", "c++"]
+tags: ["book", "c++"]
 excerpt: "템플릿이란 타입이나 값의 집합을 파라미터화한 클래스나 함수다."
 
 references_link: []

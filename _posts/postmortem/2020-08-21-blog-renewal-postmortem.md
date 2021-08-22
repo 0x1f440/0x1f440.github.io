@@ -1,6 +1,6 @@
 ---
 public: 
-category: "diary"
+category: "postmortem"
 title: "블꾸병이 도졌습니다"
 tags: []
 excerpt: "블꾸병이 도졌습니다."

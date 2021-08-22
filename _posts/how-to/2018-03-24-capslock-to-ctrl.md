@@ -1,6 +1,6 @@
 ---
 public: true
-category: ["how-to"]
+category: "how-to"
 title:  "Capslock키를 Ctrl키로 바꾸기"
 tags: ["how-to"]
 excerpt: "새 컴퓨터를 장만하거나 포맷을 할 때마다 캡스락 키를 컨트롤 키로 바꿔서 쓰고 있다."
@@ -22,7 +22,7 @@ ctrl+R등의 단축키는 캡스락 자리에 컨트롤 키가 있어야 편하�
 <br><br>
 방법은 매우 간단하다.
 <br><br>
-![screenshot](/assets/images/2018/180324.png)
+![screenshot](/wiki-images/capslock-to-ctrl/capslock-to-ctrl-registry-editor-screenshot.png)
 
 1.regedit을 연다.<br>
 2.HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout로 이동한다.<br>
