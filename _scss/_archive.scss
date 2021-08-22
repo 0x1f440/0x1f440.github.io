@@ -1,18 +1,18 @@
 .thumbnail-wrapper {
-    display: block;
-    width: 92%;
-    margin: 12% auto;
-    box-sizing: border-box;
-    font-family:'Noto Sans KR', sans-serif;
-    
-    a {
-      color: #333;
-    }
-    a:hover {
-      color: $theme-color;
-      text-decoration-line: none;
-    }
+  display: block;
+  width: 80%;
+  margin: 12% auto;
+  box-sizing: border-box;
+  font-family:'Noto Sans KR', sans-serif;
+  
+  a {
+    color: #333;
   }
+  a:hover {
+    color: $theme-color;
+    text-decoration-line: none;
+  }
+}
   
 .thumbnail-wrapper .tag {
   display: inline-block;

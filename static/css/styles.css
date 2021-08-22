@@ -244,7 +244,7 @@ code {
   background-size: 13px 13px;
   background-repeat: repeat-y;
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 2.3rem;
   padding: 0.4rem 4rem 0.4rem 3rem;
   background-color: #ffdd00;
   font-size: 1.1rem;
@@ -322,7 +322,7 @@ a.rainbow_text_hovered:hover {
 
 .thumbnail-wrapper {
   display: block;
-  width: 92%;
+  width: 80%;
   margin: 12% auto;
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif; }
@@ -719,12 +719,8 @@ a.rainbow_text_hovered:hover {
   .typography {
     text-align: center; } }
 @media (max-width: 768px) {
-  .typography {
-    text-align: center;
-    font-size: 3.5rem; }
-
   .thumbnail-wrapper {
-    max-width: 100%; }
+    width: 100%; }
 
   .page-wrapper {
     padding: 0 3rem;

@@ -21,13 +21,8 @@
 }
 
 @media (max-width : 768px) {
-  .typography {
-    text-align: center;
-    font-size: 3.5rem;
-  }
-  
   .thumbnail-wrapper {
-    max-width: 100%;
+    width: 100%;
   }
   
   .page-wrapper{
