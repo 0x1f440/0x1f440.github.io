@@ -2,7 +2,7 @@
 public: true
 category: "postmortem"
 title:  "호텔 소울즈 회고(2) 인디게임 개발은 험난해"
-tags: ["postmortem"]
+tags: ["diary"]
 excerpt: "사실 회고를 적기로 마음 먹었을 땐 1편에 쓴 추억 위주의 에피소드보다는 지금 이 얘기가 더 하고 싶었던 것 같다. 인디 개발은 험난하다."
 
 references_link: []

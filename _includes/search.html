@@ -5,7 +5,6 @@
 <ul id="search-result"></ul>
 
 <script>
-  const pointColor = '#7e2cff';
   var placeHolderTexts = ["Search anything you want...", "What do you wanna search for?", "Search here!", "Search wiki...", "What can I find for you?"]; 
   var inputElement = document.getElementById('search-input');
   inputElement.placeholder = placeHolderTexts[Math.floor(Math.random() * placeHolderTexts.length)];
@@ -25,7 +24,6 @@
       </li>
       `,
     noResultsText: 'No results found :(',
-    limit: 10,
     fuzzy: false,
   })
 

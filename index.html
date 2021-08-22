@@ -5,15 +5,19 @@ title: Home
 
 <section>
   <div class="index-section-title">💖 Recently Changed</div>
-  <div>
+  <div data-aos='fade-up'>
     {% assign public_posts = site.posts | where: "public", true  %}
     {% assign posts = public_posts | sort: 'updated' | reverse %}
     {% for post in posts limit: 5 %}
+      <div class="blog-tag-item">
+        <a href="/wiki?category={{ post.category }}">{{ post.category  | split: "." | last }}</a>
+      </div>
+      
       <a class="blog-item-list" href="{{ post.url }}">
-          <div class="blog-item-title">{{ post.title }}</div>
-          <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
-          <div class="blog-item-excerpt">{{ post.excerpt }}</div>
-        </a>
+        <div class="blog-item-title">{{ post.title }}</div>
+        <span class="blog-item-date">{{ post.updated | date: '%Y-%m-%d'}}</span>
+        <div class="blog-item-excerpt">{{ post.excerpt }}</div>
+      </a>
     {% endfor %}
     
     <a class="show-more-link" href="/wiki">👀 Show More!</a>
