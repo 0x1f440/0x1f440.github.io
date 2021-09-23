@@ -1,8 +1,8 @@
 ---
 public: true
-category: "how-to"
+category: "tips&tricks"
 title:  "Capslock키를 Ctrl키로 바꾸기"
-tags: ["how-to"]
+tags: []
 excerpt: "새 컴퓨터를 장만하거나 포맷을 할 때마다 캡스락 키를 컨트롤 키로 바꿔서 쓰고 있다."
 
 references_link: []
